@@ -1,0 +1,62 @@
+\chapter{Bousfield localization and $p$-completion of spectra}
+Sources: Lurie chromatic htpy theory, Lecture 20, Bousfield: "The localization of spectra wrt homology", nlab: Bousfield localization of spectra, May Ponto: Chapter 10, https://arxiv.org/pdf/1712.07633.pdf, Bauer arithmetic fracture squares, 
+Barnes-Roitzheim Foundations of stable htpy theory: (8.4.1)
+\bi
+\item More general framework: Bousfield loc. in Model categories at a specified set(class?) of morphisms $\cS$ 
+\item Unification of two known "zooming methods" in algebraic geometry/commutative algebra, namely completion and localization
+\ei
+
+\begin{defn}
+Let $E$ be a spectrum.
+Another spectrum $X$ is called \textbf{$E$-acyclic}, if $E\otimes X\simeq 0$, i.e. the $E$-homology of $X$ is zero. The spectrum $X$ is \textbf{$E$-local}, if every map $Y\rightarrow X $ out of an $E$-acyclic spectrum $Y$ is nullhomotopic. A map of spectra is an \text{$E$-equivalence}, if it is an isomorphism on $E$-(co)homology. An $E$-localization of $X$ consists of a map of spectra $X\rightarrow L_E X$, such that $L_E X$ is $E$-local and $X\rightarrow L_E X$ is an $E$-equivalence. 
+\end{defn}
+\begin{exa}
+a) Let $E=M\Z_{(p)}$ the Moore spectrum of the integers localized away from a prime $p$. Then $E$-localization is called $p$-localization.
+A spectrum $X$ is called $p$-local, if $X\ra L_EX$ is an equivalence, i.e. it is $M\Z_{p}$-local.\newline
+b) Let $E=M\Q$ the Moore spectrum of the rationals. Then $E$-localization is called rationalization. \newline
+c) Let $E=\S/p=M\F_p$. Then $E$-localization is called $p$-completion. A spectrum $X$ is called $p$-complete, if $X\ra L_EX$ is an equivalence, ie. it is $\S/p$-local.
+(nonsmashing in general) (for connective: The same as localization at  $E=H\F_p$)
+\newline
+d) Another important example is localization at Morava K-theories $K(n)$ in chromatic homotopy theory.
+\end{exa}
+We have the following basic Lemma:
+\begin{lem}
+a) A spectrum $X$ is $E$-local if and only if for every $E$-equivalence $Y \ra Z$ the induced map $[Z,X]\ra [Y,X]$ is an isomorphism.
+\newline
+b) $X\ra L_E X$ is an $E$-localization iff $X\ra L_EX$ is an initial map from $X$ to an $E$-local spectrum iff $X\ra L_EX$ is a final map from $X$ that is an $E$-equivalence.\newline
+c) If $E$ is a ring spectrum, then every $E$-module $M$ spectrum is $E$-local.
+\end{lem} 
+\begin{proof}
+a) If $Y$ is $E$-acyclic, then $X\ra 0$ is an $E$-equivalence, so by assumption $0=[0,X]\rai [Y,X]$.
+\newline
+Conversely, the fiber of an $E$-equivalence $\fib:=\fib(Y\ra Z)$ is $E$-acyclic. Applying $[-,X]$ to the fiber sequence $\fib\ra Y\ra Z $
+gives us a short exact sequence of graded abelian groups: $0\ra [Z,X]\ra [Y,X] \ra [\fib, X]\ra 0$. Now it is clear, that $[\fib,X]=0$ is equivalent to $[Z,X]\ra [Y,X]$ being an isomorphism.
+\newline
+b) Fiber argument.
+\newline
+c) Given a map $Y\xrightarrow{f} M$ from an $E$-acyclic spectrum $Y$. We can factor it as $X\simeq\S\otimes X\xrightarrow{\eta\otimes 1}E\otimes X\xrightarrow{1\otimes f}E\otimes M\xrightarrow{\nu}M$, where $\eta, \nu$ are respectively the unit and multiplication map. 
+By assumption $E\otimes X\simeq0$, so the composite is nullhomotopic.
+\end{proof}
+
+\begin{lem}
+The class of $E$-local objects is closed under retracts and limits.
+\end{lem}
+%But not in general under hocolims. This holds iff smashing
+
+\begin{lem}
+Prüfer group: \begin{equation*}
+    p^\infty\text{-torsion subgroup of } U(1) =:C_{p^\infty}=\Q_p/\Z_p=\Q/\Z_{(p)}=\Z[1/p]/\Z
+\end{equation*}
+\end{lem}
+\begin{defn}
+A group $A$ is called derived $p$-complete, iff $\Hom(C_{p^\infty},A)=0$ and the connecting map (from $0\ra \Z\ra \Z[1/p]\ra C_{p^\infty}\ra 0$) is an isomorphism $\Ext(C_{p^\infty},A)\lai A$. 
+(Derived functors, for bounded p-power torsion is equivalent to classical p-complete, but in general weaker notion, forms abelian category).
+\newline
+Derived p completion of $A$ is $\Ext(C_{p^\infty},A)$??
+\end{defn}
+\begin{lem}
+Equivalent definitions of derived p-complete, see Felix masterarbeit. May, Ponto Kapitel 10.
+\end{lem}
+\begin{thm}
+A spectrum is $p$-complete, iff its homotopy groups are derived $p$-complete. 
+\end{thm}

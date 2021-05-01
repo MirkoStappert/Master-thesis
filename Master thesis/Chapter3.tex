@@ -1,0 +1,39 @@
+\chapter{Topological Hochschild homology and cyclotomic spectra}
+Structures deduced from cyclotomic structure on $\THH(A)$.
+\\
+Define $\THH$ and the cyclotomic structure on it. 
+
+
+\begin{defn}\cite[Chapter~2.1]{NS}
+a) For a fixed prime p, a \textbf{$p$-cyclotomic spectrum} is a spectrum with $\pg$-action together with a $\pg$-equivariant map $\varphi_p: X \ra X^{tC_p}$ \newline
+b) A \textbf{cyclotomic spectrum} is a spectrum with $S^1$-action together with  $S^1$-equivariant maps $\varphi_p: X \ra X^{tC_p}$ for every prime $p$.
+\end{defn}
+
+Our main examples of cyclotomic spectra will come from topological Hochschild homology.
+We will only define the cyclotomic structure on topological Hochschild homology in the setting of \Einf-ring spectra. (can also be constructed in greater generality for $\mathbb{E}_1$ but more complicated, see \cite[Chapter~3.2]{NS})
+\begin{defn}
+Let $R$ be an $\mathbb{E}_1$-ring spectrum.
+We define the \thh  as follows
+\begin{equation*}
+    \THH(R)=R\otimes_{R\otimes R^{op}}R
+\end{equation*}
+\end{defn}
+In the case of an \Einf-ring spectrum we can drop the $(\:)^{op}$. \\
+The two main ingredients in the construction of the cyclotomic structure are the Tate diagonal and the following universal description of \thh. Note for this, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$.
+
+\begin{prop}[McClure-Schwänzl-Vogt]
+Let R be an \Einf-ring spectrum, then the map $R\ra \THH(R)$ is initial as a map of \Einf-ring spectra from $R$ to an \Einf-ring spectrum with $S^1$-action.
+\end{prop}
+For the construction of the cyclotomic structure we first note that we can also construct an initial \Einf-map out of $R$, where the target is a spectrum with $C_p$-action: $R\ra \underbrace{R\otimes\dots\otimes R}_{p}$.
+Since $\THH(R)$ has a $S^1$ and hence also a $C_p$-action we therefore get a map $R\otimes\dots\otimes R\ra \THH(R)$. Applying the $C_p$-Tate construction to this map and precomposing it with the Tate diagonal of $R$ we get an \Einf-map $R\xra{\Delta_p} R\otimes\dots\otimes R^{tC_p}\ra \THH(R)^{tC_p}$ whose target has $S^1/C_p\cong S^1$-action.
+\newline
+Hence by the Proposition this factors through $\THH(R)$ and thus produces a map $\THH(R)\xra{\varphi_p} \THH(R)^{tC_p}$.
+\[\begin{tikzcd}
+	{R} & {\text{THH}(R)} \\
+	{(R\otimes\dots\otimes R)^{tC_p}} & {\text{THH}^{tC_p}}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\varphi_p}", from=1-2, to=2-2, dashed]
+	\arrow["{\Delta_p}"', from=1-1, to=2-1]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+This map equips the \thh  of any \Einf-ring spectrum with a cyclotomic structure.

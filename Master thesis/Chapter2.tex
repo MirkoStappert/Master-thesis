@@ -1,0 +1,25 @@
+\chapter{Equivariant spectra and their fixed points}
+Define naive-naive and genuine equivariant spectra. 
+Define different sorts of fixed point:Genuine, ie. categorical, geometric and homotopy.Their relations and properties. Isotropy separation square.
+\todo{Maybe (fixed pt, orbits, Tate) spectral sequence}
+Tate construction, Tate lemmata.
+Cyclotomic spectra, 
+\newline
+Given a group $G$, we can define two different $\infty$-categories of ``$G$-equivariant spectra''.
+
+\begin{defn}
+For every group $G$, we define the $\infty$-category $\Sp^{BG}\coloneqq \Fun(BG,\Sp)$ of \textbf{spectra with $G$-action}.
+\end{defn}
+Isotropy separation
+% https://q.uiver.app/?q=WzAsNixbMCwwLCJYX3toQ19wfSJdLFsxLDAsIlhee0NfcH0iXSxbMiwwLCJcXFBoaV97Q19wfVgiXSxbMiwxLCJYXnt0Q19wfSJdLFsxLDEsIlhee2hDX3B9Il0sWzAsMSwiWF97aENfcH0iXSxbMCwxXSxbMSwyXSxbMiwzXSxbNCwzLCJcXHRleHR7Y2FufSJdLFsxLDRdLFswLDUsIlxcc2ltZXEiLDJdLFs1LDQsIlxcdGV4dHtObX0iXV0=
+\[\begin{tikzcd}
+	{X_{hC_p}} & {X^{C_p}} & {\Phi_{C_p}X} \\
+	{X_{hC_p}} & {X^{hC_p}} & {X^{tC_p}}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=2-3]
+	\arrow["{\text{can}}", from=2-2, to=2-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["\simeq"', from=1-1, to=2-1]
+	\arrow["{\text{Nm}}", from=2-1, to=2-2]
+\end{tikzcd}\]

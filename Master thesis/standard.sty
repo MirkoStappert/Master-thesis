@@ -1,0 +1,106 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{standard}[2020/11/02 ]
+
+
+
+\usepackage{geometry}
+\geometry{margin=3.5cm}
+
+\pagestyle{plain} 
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\usepackage{amsthm, amsmath, amssymb, mathtools}
+\usepackage[english]{babel}
+
+
+
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{constr}[thm]{Construction}
+\newtheorem{warn}[thm]{Warning}
+
+\newcommand{\bi}{\begin{itemize}
+\newcommand{\ei}{\end{itemize}}}
+
+\newcommand{\m}{\ensuremath{\mathfrak{m}}}
+
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\renewcommand{\S}{\ensuremath{\mathbb{S}}}
+\newcommand{\Spc}{\ensuremath{\mathcal{S}}}
+\newcommand{\pg}{\ensuremath{C_{p^\infty}}}
+
+\newcommand{\cL}{\ensuremath{\mathcal{L}}}
+\newcommand{\cW}{\ensuremath{\mathcal{W}}}
+\newcommand{\cH}{\ensuremath{\mathcal{H}}}
+\newcommand{\cA}{\ensuremath{\mathcal{A}}}
+\newcommand{\cS}{\ensuremath{\mathcal{S}}}
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\la}{\ensuremath{\leftarrow}}
+\newcommand{\xra}{\ensuremath{\xrightarrow}}
+\newcommand{\rai}{\ensuremath{\xrightarrow{\sim}}}
+\newcommand{\lai}{\ensuremath{\xleftarrow{\sim}}}
+
+\newcommand{\Einf}{\ensuremath{\mathbb{E}_\infty}}
+\newcommand{\Eone}{\ensuremath{\mathbb{E}_1}}
+\newcommand{\Etwo}{\ensuremath{\mathbb{E}_2}}
+\newcommand{\En}{\ensuremath{\mathbb{E}_n}}
+%Für simplicial diagrams: three arrows on top of each other
+\newcommand\rightthreearrow{%
+        \mathrel{\vcenter{\mathsurround0pt
+                \ialign{##\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+                        \noalign{\nointerlineskip}$\rightarrow$\crcr
+                }%
+        }}%
+}
+
+
+\newcommand{\sip}{\ensuremath{\Sigma^{\infty}_{+}}}
+
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ch}{Ch}
+\DeclareMathOperator{\Map}{Map}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\fib}{fib}
+\DeclareMathOperator{\cofib}{cofib}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\TP}{TP}
+\DeclareMathOperator{\TC}{TC}
+\DeclareMathOperator{\THH}{THH}
+\DeclareMathOperator{\HH}{HH}
+\DeclareMathOperator{\TR}{TR}
+\DeclareMathOperator{\CAlg}{CAlg}
+\DeclareMathOperator{\Alg}{Alg}
+\renewcommand{\H}{\operatorname{H}}
+
+\newcommand{\TCm}{\ensuremath{\TC^{-}}}
+
+\numberwithin{equation}{section}
+\endinput

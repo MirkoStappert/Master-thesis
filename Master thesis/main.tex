@@ -1,0 +1,82 @@
+\documentclass[
+12pt,
+english, % ngerman for German
+singlespacing, % Single line spacing, alternatives onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+headsepline, % Uncomment to get a line under the header,
+openany
+]{book}
+\linespread{1.14}
+\usepackage{standard}
+
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{todonotes}
+\usepackage{csquotes}
+
+
+
+%Chapter customization
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \huge\bfseries  \thechapter.\quad #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\usepackage{hyperref}
+
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage[backend=biber,
+style=alphabetic,
+sorting=nyt]{biblatex}
+\addbibresource{references.bib}
+
+
+
+
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.5cm, % Outer margin
+	bindingoffset=0.5cm, % Binding offset
+	top=3cm, % Top margin
+	bottom=2.1cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+
+
+
+\begin{document}
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+%\include{Thesispreamble}
+
+%\clearpage
+%\tableofcontents
+%\listoftodos
+
+\mainmatter
+\include{Abstract}
+\include{Chapter0}
+%\include{Chapter1}
+%\include{Chapter2}
+%\include{Chapter3}
+%\include{Chapter4}
+\include{Chapter5}
+
+
+\printbibliography
+%\listoffigures
+
+
+
+\end{document}
+
+

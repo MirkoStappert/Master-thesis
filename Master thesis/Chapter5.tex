@@ -422,8 +422,15 @@ This only pinpoints the generator of this submodule up to a unit, which we can c
 \end{proof}
 This result will easily allow us to compute $\THH_*(R;\Z_p)$, which we will do momentarily. But let us first issue the following warning.
 \begin{warn}
-The result of the Lemma implicitely depends on the choice of a uniformizer. While this is not a problem if we are only interested in $\THH_*$ of one particular CDVR, it is a problem if we are dealing with a map of two of those. We are only able to determine the effect on $\THH_*$ of those maps, which preserve the chosen uniformizers.  
-Consider for example the inclusion $\Z_p\hookrightarrow \Z_p[\sqrt{p}]$. Any uniformizer in $\Z_p$ has the form $up$ for $u\in \Z_p^\times$, but of course none of them generate the maximal ideal of $\Z_p[\sqrt{p}]$. There is therefore no choice of uniformizers that is compatible with this map and our method is not able to calculate the induced map $\THH(\Z_p;\Z_p)\ra \THH(\Z_p[\sqrt{p}];\Z_p)$. Exactly the same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\geq 2$. 
+The result of the Lemma implicitely depends on the choice of a uniformizer.
+While this is not a problem if we are only interested in $\THH_*$ of one particular CDVR, it is a problem if we are dealing with a map of two of those.
+We are only able to determine the effect on $\THH_*$ of those maps, which preserve the chosen uniformizers.  
+Consider for example the inclusion $\Z_p\hookrightarrow \Z_p[\sqrt{p}]$. 
+Any uniformizer in $\Z_p$ has the form $up$ for $u\in \Z_p^\times$, but of course none of them generate the maximal ideal of $\Z_p[\sqrt{p}]$. 
+There is therefore no choice of uniformizers that is compatible with this map and our method is not able to calculate the induced map $\THH(\Z_p;\Z_p)\ra \THH(\Z_p[\sqrt{p}];\Z_p)$.
+Exactly the same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\geq 2$. \\
+But even if we can choose the uniformizers, such that one maps onto the other, this is of not much use.
+
 \end{warn}
 Let us now state the evaluation of the spectral sequence for mixed characteristic CDVRs. This result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun.
 \begin{prop} \label{LM}

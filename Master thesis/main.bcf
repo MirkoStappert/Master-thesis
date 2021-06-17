@@ -2367,6 +2367,8 @@
     <bcf:citekey order="15">KN</bcf:citekey>
     <bcf:citekey order="16">lurie2017higher</bcf:citekey>
     <bcf:citekey order="17">HigherToposTheory</bcf:citekey>
+    <bcf:citekey order="18">lurie2017higher</bcf:citekey>
+    <bcf:citekey order="19">stacks-project</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

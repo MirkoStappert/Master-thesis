@@ -1,16 +1,40 @@
-Topics that need to be explained:
+\chapter{Preliminaries}
+Topics that need to be explained (or at least give reference):
 \begin{itemize}
-    \item spectra, constructions like 
-    \item $\otimes$ of spectra, p-completeness (maybe also of ab. groups), fiber sequences
-    \item Basics of infinity categories, (sym) monoidal structures, (co)limits
+    \item spectra, 
+    \item constructions like $\Sigma^\infty,\Omega^\infty$ 
+    \item Eilenberg-Maclane spectra.
+    \item (co)fiber sequences
+    \item $\otimes$ of spectra uniquely determined by being closed symmetric monoidal with unit $\S$ and preserves colimits in each variable (separately)
+    \item p-completeness (maybe also of ab. groups)
+    \item Basics of infinity categories
+    \item (sym) monoidal structures, 
+    \item (co)limits
+    \item adjunctions
     \item Ring spectra ($\Eone$,\dots $\Einf$)
-    \item Definition of $\THH$, maybe also shortly cyclotomic structure and definition of TC
+    \item Postnikov towers?
+    \item Definition of $\THH$, relative $\THH$ aswell as Hochschild homology
+    \item maybe also shortly cyclotomic structure and definition of $\TC$
 \end{itemize}
 
 Further things to cite:
 \begin{itemize}
     \item Barnes-Roitzheim for p-completeness
     \item SAG: z-adic completeness.
-    \item Nikolaus-Krause lecture notes
+    \item Groth, Camarena and Gepner for quick intros to higher algebra and higher category theory.
+    \item Nikolaus-Krause lecture notes 
     \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
 \end{itemize}
+\section{$\infty$-categories}
+\section{Spectra}
+\begin{defn}
+    The $\infty$-category of spectra is defined as the following limit in the (very large) category $\Cat_\infty$
+    \begin{equation*}
+        \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right)
+    \end{equation*}
+\end{defn}
+Objects of this category are thus \todo{...}\\
+By definition of this limit we have a functor $\Sp\rightarrow \Spc_*$, which we call $\Omega^\infty$.
+Using the adjoint functor theorem \cite[5.5.2.9]{lurie2017higher} we obtain a right adjoint 
+$\Sigma^\infty: \Spc_*\rightarrow \Sp$. Composing with the free-forgetful adjunction $\Spc_* \leftrightharpoons \Spc$
+we obtain a further adjunction $\Sp\xleftrightharpoons[\Omega^\infty]{\sip}\Spc$.

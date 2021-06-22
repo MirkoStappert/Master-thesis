@@ -1,5 +1,33 @@
 \chapter*{Extended Abstract}
 
-This thesis deals with certain computations of topological Hochschild homology.  \\
-The included chapter contains an exposition of the work by Krause and Nikolaus which computes $\THH$ of complete mixed characteristic discrete valuation rings (\cite{KN}). This computation hinges on the choice of an uniformizer and is thus only functorial in maps that preserve uniformizers.
-In future chapters we will thus try to identify the action of $\THH$ on arbitrary maps. 
+The algebraic K-theory groups are fundamental invariants of rings. 
+They encapsulate deep knowledge about the ring via its module category.
+For rings of integers in number fields, the K-theory groups contain information about the class group and group of units of the ring, the Brauer group of the field and values of the Dedekind zeta function.
+Algebraic K-theory can also be applied to schemes where it is deeply related to algebraic cycles in the form of (higher) Chow groups.
+But maybe its most spectacular applications have been found in geometry.
+Starting with the early work of Wall, the s-cobordism theorem by Barden-Mazur-Stalling it culminated in the stable parametrized h-cobordism by Waldhausen, Jahren and Rognes.
+One of its implications is that we can calculate many homotopy groups of diffeomorphism groups of spaces as the K-theory groups of certain rings (more precisely ring spectra), which are more less the integral group ring of the fundamental group.
+For example the homotopy groups of the diffeomorphism group of a disc $\pi_* (\operatorname{Diff}(D^n))$ can (in a range depending on $n$) be obtained by computing the K-theory groups of $\Z$.
+\\
+These powerful results and theorems now present us with the challenge to actually compute K-theory groups. 
+The problem is that this is in general very hard! 
+There are therefore several successful approaches towards these computations, which nicely complement each other. Among them are motivic methods, controlled algebra conjecture and trace methods. 
+Let us only describe the last one, as it is the only one of relevance for this thesis.
+The idea of trace methods is to consider other - ideally more computable - invariants of rings and compare K-theory to them via so called trace maps. 
+The hope is that while these invariants are more computable, the difference to K-theory is not too big, in other words the trace map is close to an isomorphism. 
+The most successful of these comparisons is with the trace map $K\xrightarrow{\tr} \TC$ to the so called \textit{topological cyclic homology} introduced by Bökstedt-Hsiang-Madsen.
+By work of Dundas-Goodwillie-McCarthy and Hesselholt-Madsen, we now know, that the trace map is a remarkably close approximation which has been used to calculate K-theory in many cases.
+Due to the recent work of Nikolaus-Scholze, topological cyclic homology itself can essentially be computed via two spectral sequences out of yet another invariant: Topological Hochschild homology ($\THH$).
+This is the main player of this thesis and the goal is to provide a new computation of $\THH$, that has not been done before. \\
+The rings, that we will consider are complete discrete valuation rings of mixed characteristic. 
+To be concrete, all of them are certain extensions of the $p$-adic integers, like $\Z_p[\sqrt[n]{p}]$ or $\Z_p[\zeta_{p^n}]$. They arise for example as completions of rings of integers in number fields and are thus of fundamental importance in algebraic number theory.
+The topological Hochschild homology of these kind of rings has already been computed by work of Lindenstrauss-Madsen. 
+Recently Krause and Nikolaus gave a more conceptual proof of the same result, which we present in the second chapter. 
+Unfortunately both approaches do not give a functorial computation. They only identify $\THH$ of these rings, but do not answer the question what it does to morphisms. 
+This is unsatisfactory for at least two reasons: We might want to understand the action of the Galois group on K-theory. Because the trace map $K\xrightarrow{\tr}\TC$ is a natural transformationa and $\TC$ is functorially obtained from $\THH$, the first step to understand the functoriality of K-theory is to understand it for $\THH$.
+Secondly, functorial description are actually often needed for further computations. For example, in our computation we crucially  need that we not know only the topological Hochschild homology groups of $\Z_p[z]$ but \textit{also}  
+how endomorphisms of $\Z_p[z]$ act on the topological Hochschild homology groups of it. \\
+Let us now give a short outline of our approach to understand the functoriality of $\THH_*(R)$ (more precisely we deal with the $p$-completions of these groups).
+Firstly we use, that by a general classification result all mixed characteristic discrete valuation rings are obtained from $\Z_p$ by adjoining a root of an Eisenstein polynomial, i.e. $R=\Z_p[z]/E(z)$ for $E(z)\in \Z_p[z]$ Eisenstein\footnote{Actually we need to take the Witt vectors of the residue field of $R$, but for sake of exposition we stick to the easiest case that the residue field is $\F_p$ and the Witt vectors are $W(\F_p)=\Z_p$}.
+This allows us to write $R$ as follows $R=\Z_p[z]\otimes_{Z_p[z]}\Z_p$, where $Z_p[z]$ acts on the left factor by the map $z\mapsto E(z)$ and on the right factor by $z\mapsto 0$. 
+Now we can observe, that $\THH$ preserves tensor products of commutative rings, i.e. we get $\THH(R)=\THH(\Z_p[z])\otimes_{\THH(\Z_p[z])}\THH(\Z_p)$. This is progress, because we know what $\THH(\Z_p)$ is. Furthermore, by an Hochschild-Kostant-Rosenberg type result we also obtain $\THH(\Z_p[z])\simeq\THH(\Z_p)\otimes_{\Z_p}\HH(\Z[z]/\Z)$. This is not a natural equivalence on the level of spectra, but it is natural after taking homotopy groups $\THH_*(\Z_p[z])\simeq\THH_*(\Z_p)\otimes_{\Z}\Omega^*_{\Z[z]/\Z}$. We exactly know how Kähler differentials are functorial, thus we now completely understand the functoriality on the level of homotopy groups. 

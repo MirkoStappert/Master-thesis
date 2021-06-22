@@ -5,7 +5,7 @@ or \cite[\href{https://stacks.math.columbia.edu/tag/061Y}{Tag 061Y}]{stacks-proj
 \\
 Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field.
 \begin{enumerate}
-    \item Write $R$ as a pushout as follows $\Z_p[z]\otimes_{\Z_p[z]}\Z_p$ via Eisenstein polynomial (see footnote 5)
+    \item Write $R$ as a pushout $R\cong\Z_p[z]\otimes_{\Z_p[z]}\Z_p$ via Eisenstein polynomial (see footnote 5)
     \item $\THH$ preserves this pushout because the involved rings are commutative, and for $\Einf$-rings, $\THH$ is given by the colimit over $S^1$ in $\CAlg$ which means that it commutes with arbitrary colimits.
     \item Fact that $\THH(\Z_p[z])\simeq \THH(\Z_p)\otimes_\Z \HH(\Z[z]/\Z)$ but not functorially, but have functoriality on homotopy groups
     $\THH*(\Z_p[z])\simeq \THH_*(\Z_p)\otimes_\Z \Omega_{\Z[z]/\Z)}$ functorialy!
@@ -13,6 +13,6 @@ Let $R$ be a mixed characteristic complete discrete valuation ring with perfect 
      $E^2_{i,j}=\Tor_{\pi_*(R)}^i\left( \pi_*(M), \pi_*(M)\right)_{(j)}\Rightarrow \pi_{i+j}\left( M\otimes_R N \right)$
     , i.e. in our case: 
     \\
-    $\Tor_{\THH_*(\Z_p[z])}^i\left( \THH_*(\Z_p[z]),\THH_*(\Z_p)\right)_{(j)}\Rightarrow \pi_{i+j}\left( \THH_*(\Z_p[z])\otimes_{\THH_*(\Z_p[z])} \THH_*(\Z_p) \right)=$
+    $\Tor_{\THH_*(\Z_p[z])}^i\left( \THH_*(\Z_p[z]),\THH_*(\Z_p)\right)_{(j)}\Rightarrow \THH_{i+j}(R)$ (or rather the $p$-completed version)
 
 \end{enumerate}

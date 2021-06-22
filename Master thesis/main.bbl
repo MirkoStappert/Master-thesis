@@ -19,52 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{BMS2}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ae02f9b3c51192e4ff918323559a5815}{%
-           family={Bhatt},
-           familyi={B\bibinitperiod},
-           given={Bhargav},
-           giveni={B\bibinitperiod}}}%
-        {{hash=9c3002d3ae09f3a3c3031fa8e9a13e46}{%
-           family={Morrow},
-           familyi={M\bibinitperiod},
-           given={Matthew},
-           giveni={M\bibinitperiod}}}%
-        {{hash=bc840c61eeaaa9ae992e6d23e75c4a8a}{%
-           family={Scholze},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \strng{fullhash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \strng{bibnamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \strng{authorbibnamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \strng{authornamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \strng{authorfullhash}{9d56041fcea8aaf6a57e347647a8cfb2}
-      \field{labelalpha}{BMS19}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0073-8301}
-      \field{journaltitle}{Publ. Math. Inst. Hautes Études Sci.}
-      \field{title}{Topological {H}ochschild homology and integral {$p$}-adic {H}odge theory}
-      \field{volume}{129}
-      \field{year}{2019}
-      \field{pages}{199\bibrangedash 310}
-      \range{pages}{112}
-      \verb{doi}
-      \verb 10.1007/s10240-019-00106-9
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/s10240-019-00106-9
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/s10240-019-00106-9
-      \endverb
-    \endentry
     \entry{KN}{misc}{}
       \name{author}{2}{}{%
         {{hash=d000b92d4a5aaed1a8aab806b30c04c4}{%
@@ -97,73 +51,6 @@
       \verb 1907.03477
       \endverb
     \endentry
-    \entry{LMTHHofnumberrings}{article}{}
-      \name{author}{2}{}{%
-        {{hash=5828eafd81ce1863c2ccd23df758482f}{%
-           family={{Lindenstrauss}},
-           familyi={L\bibinitperiod},
-           given={Ayelet},
-           giveni={A\bibinitperiod}}}%
-        {{hash=af324c91e065d830d2659db7b9821e3a}{%
-           family={{Madsen}},
-           familyi={M\bibinitperiod},
-           given={Ib},
-           giveni={I\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Mathematical Society (AMS), Providence, RI}%
-      }
-      \strng{namehash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \strng{fullhash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \strng{bibnamehash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \strng{authorbibnamehash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \strng{authornamehash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \strng{authorfullhash}{5c99e8e41630c5acc5a6dfd221b54476}
-      \field{labelalpha}{LM00}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0002-9947; 1088-6850/e}
-      \field{journaltitle}{{Trans. Am. Math. Soc.}}
-      \field{number}{5}
-      \field{title}{{Topological Hochschild homology of number rings}}
-      \field{volume}{352}
-      \field{year}{2000}
-      \field{pages}{2179\bibrangedash 2204}
-      \range{pages}{26}
-    \endentry
-    \entry{HigherToposTheory}{book}{}
-      \name{author}{1}{}{%
-        {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
-           family={Lurie},
-           familyi={L\bibinitperiod},
-           given={Jacob},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Princeton, NJ: Princeton University Press}%
-      }
-      \strng{namehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{fullhash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{bibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \field{extraname}{1}
-      \field{labelalpha}{Lur09}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-691-14049-0}
-      \field{journaltitle}{{Ann. Math. Stud.}}
-      \field{title}{{Higher topos theory}}
-      \field{volume}{170}
-      \field{year}{2009}
-      \field{pages}{xv + 925}
-      \range{pages}{-1}
-    \endentry
     \entry{lurie2017higher}{article}{}
       \name{author}{1}{}{%
         {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
@@ -178,7 +65,6 @@
       \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
       \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
       \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \field{extraname}{2}
       \field{labelalpha}{Lur17}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
@@ -187,86 +73,6 @@
       \field{journaltitle}{preprint available from the author’s website}
       \field{title}{Higher algebra.}
       \field{year}{2017}
-    \endentry
-    \entry{lurie2018elliptic}{article}{}
-      \name{author}{1}{}{%
-        {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
-           family={Lurie},
-           familyi={L\bibinitperiod},
-           given={Jacob},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{fullhash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{bibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
-      \field{extraname}{3}
-      \field{labelalpha}{Lur18}
-      \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{preprint available from the author’s website}
-      \field{title}{Elliptic cohomology II: orientations}
-      \field{year}{2018}
-    \endentry
-    \entry{Richterdividedpower}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=4764cd2e7c5aa7516decdd675b9b3eb7}{%
-           family={{Richter}},
-           familyi={R\bibinitperiod},
-           given={Birgit},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Providence, RI: American Mathematical Society (AMS)}%
-      }
-      \strng{namehash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \strng{fullhash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \strng{bibnamehash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \strng{authorbibnamehash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \strng{authornamehash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \strng{authorfullhash}{4764cd2e7c5aa7516decdd675b9b3eb7}
-      \field{labelalpha}{Ric09}
-      \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{{Alpine perspectives on algebraic topology. Third Arolla conference on algebraic topology, Arolla, Switzerland, August 18--24, 2008}}
-      \field{isbn}{978-0-8218-4839-5}
-      \field{title}{{Divided power structures and chain complexes}}
-      \field{year}{2009}
-      \field{pages}{237\bibrangedash 254}
-      \range{pages}{18}
-    \endentry
-    \entry{SerreLocal}{book}{}
-      \name{author}{1}{}{%
-        {{hash=6eb498320b9e32a9ec89e4110e2e5147}{%
-           family={Serre},
-           familyi={S\bibinitperiod},
-           given={Jean\bibnamedelima Pierre},
-           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer New York}%
-      }
-      \strng{namehash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \strng{fullhash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \strng{bibnamehash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \strng{authorbibnamehash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \strng{authornamehash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \strng{authorfullhash}{6eb498320b9e32a9ec89e4110e2e5147}
-      \field{labelalpha}{Ser95}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780387904245}
-      \field{series}{Graduate Texts in Mathematics}
-      \field{title}{Local Fields}
-      \field{year}{1995}
     \endentry
     \entry{stacks-project}{misc}{}
       \name{author}{1}{}{%

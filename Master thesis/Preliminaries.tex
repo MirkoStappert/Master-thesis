@@ -1,40 +1,91 @@
 \chapter{Preliminaries}
-Topics that need to be explained (or at least give reference):
+We are going to use the language of higher category theory and higher algebra, mainly developed by Jacob Lurie in \cite{HigherToposTheory} and \cite{lurie2017higher}. The online textbook project \cite{kerodon} will contain a revised version of roughly the same content. For a different, model independent perspective on higher category theory, we also recommend the book project \cite{riehl2018elements}. Shorter summaries of most of the material we need can be found in \cite{Grothshortcourse}, \cite{camarena2013whirlwind} and \cite{Gepnerintroductionhigher}.
+\section{Higher Category theory}
+Precisely we will need the following higher categorical concepts:
+
+
 \begin{itemize}
-    \item spectra, 
+    \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a space.
+    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}).
+    \item Stable $\infty$-categories \cite[Section~1.1]{lurie2017higher}
+    \item Slice categories?
+\end{itemize}
+\section{Spectra and higher algebra}
+The most important $\infty$-category for us will be the\textbf{ $\infty$-category of spectra}: $\Sp$. Recall that it is defined as the following limit\footnote{That all limits exist in $\Cat_\infty$ is a result in \cite[Section~3.3.3]{HigherToposTheory}} in the (very large) $\infty$-category of large $\infty$-categories $\Cat_\infty$
+
+\begin{equation*}
+    \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right).
+\end{equation*}
+Thus objects of $\Sp$ are $\Omega$-spectra. \\
+Most important examples are EM-spectra and $\S$.\\
+Important properties of $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. Furthermore it carries a closed symmetric monoidal structure with unit $\S$, called the tensor product of spectra $\otimes_\S$ (\cite[Corollary~4.8.2.19]{lurie2017higher}). Being closed means exactly the same, as in ordinary category theory, i.e. for every object $X\in \Sp$, the functor $X\otimes_\S-:\Sp\to \Sp $ has a right adjoint. 
+%We denote this right adjoint by $\map(X,-)$ called the mapping spectrum.
+Closedness in particular implies, that tensoring with any spectrum preserves all colimits, as it is a left adjoint functor. \\
+With these properties at hand, we are ready to do higher algebra.
+The monoidal structure lets us talk about monoid in $\Sp$ called ring spectra\footnote{}. Here we have to point out two important differences between ordinary and higher algebra.\textit{Commutativity and associativity are no longer  properties but extra structure}. In the usual commutativity/associativity diagrams, we do not require that they strictly commute but only that they commute up to homotopy  
+\\
+From higher algebra, we need:
+\begin{itemize}
+    \item spectra
     \item constructions like $\Sigma^\infty,\Omega^\infty$ 
     \item Eilenberg-Maclane spectra.
     \item (co)fiber sequences
     \item $\otimes$ of spectra uniquely determined by being closed symmetric monoidal with unit $\S$ and preserves colimits in each variable (separately)
     \item p-completeness (maybe also of ab. groups)
-    \item Basics of infinity categories
-    \item (sym) monoidal structures, 
-    \item (co)limits
-    \item adjunctions
     \item Ring spectra ($\Eone$,\dots $\Einf$)
+    \item Modules and algebras over them, the properties of $\Mod_R$, $\CAlg_R$
     \item Postnikov towers?
-    \item Definition of $\THH$, relative $\THH$ aswell as Hochschild homology
-    \item maybe also shortly cyclotomic structure and definition of $\TC$
+    \item Spectral sequences, \cite[Section~1.2.2]{lurie2017higher}, Weibel \cite[Chapter~5]{weibel1994introduction}
 \end{itemize}
-
 Further things to cite:
 \begin{itemize}
-    \item Barnes-Roitzheim for p-completeness
-    \item SAG: z-adic completeness.
-    \item Groth, Camarena and Gepner for quick intros to higher algebra and higher category theory.
+    \item Barnes-Roitzheim for p-completeness \cite[Section~8.4.1]{barnesroitzheim}
+    \item SAG: z-adic completeness \cite[Section~7.3]{SAG}
+    
     \item Nikolaus-Krause lecture notes 
     \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
 \end{itemize}
-\section{$\infty$-categories}
-\section{Spectra}
+\section{Topological Hochschild homology}
+In this section, we will define topological Hochschild homology and establish various properties of it.
+
 \begin{defn}
-    The $\infty$-category of spectra is defined as the following limit in the (very large) category $\Cat_\infty$
+    Let $R$ be an $\Eone$-ring spectrum.
+    We define the topological Hochschild homology of $R$ as follows
     \begin{equation*}
-        \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right)
+        \THH(R)=R\otimes_{R\otimes R^{op}}R
     \end{equation*}
+    \end{defn}
+    In the case of an $\Einf$-ring spectrum we can drop the $(\:)^{op}$. 
+
+\section{Cyclotomic spectra, $\TC$ and all that}
+The content of this section is not necessary for understanding the rest of the thesis. Nevertheless we want to include it, because it gives the main motivation, why one should be interested in $\THH$ in the first place. 
+\todo{Group action, Tate construction, Tate diagonal, TC}
+
+
+
+\begin{defn}\cite[Chapter~2.1]{NS}
+a) For a fixed prime p, a \textbf{$p$-cyclotomic spectrum} is a spectrum with $\pg$-action together with a $\pg$-equivariant map $\varphi_p: X \ra X^{tC_p}$ \newline
+b) A \textbf{cyclotomic spectrum} is a spectrum with $S^1$-action together with  $S^1$-equivariant maps $\varphi_p: X \ra X^{tC_p}$ for every prime $p$.
 \end{defn}
-Objects of this category are thus \todo{...}\\
-By definition of this limit we have a functor $\Sp\rightarrow \Spc_*$, which we call $\Omega^\infty$.
-Using the adjoint functor theorem \cite[5.5.2.9]{lurie2017higher} we obtain a right adjoint 
-$\Sigma^\infty: \Spc_*\rightarrow \Sp$. Composing with the free-forgetful adjunction $\Spc_* \leftrightharpoons \Spc$
-we obtain a further adjunction $\Sp\xleftrightharpoons[\Omega^\infty]{\sip}\Spc$.
+
+Our main examples of cyclotomic spectra will come from topological Hochschild homology.
+We will only define the cyclotomic structure on topological Hochschild homology in the setting of $\Einf$-ring spectra. (can also be constructed in greater generality for $\Eone$ but more complicated, see \cite[Chapter~3.1]{NS})
+The two main ingredients in the construction of the cyclotomic structure are the Tate diagonal and the following universal description of topological Hochschild homology. Note for this, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$.
+
+\begin{prop}[McClure-Schwänzl-Vogt]
+Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a map of \Einf-ring spectra from $R$ to an $\Einf$-ring spectrum with $S^1$-action.
+\end{prop}
+Let us now construct the cyclotomic structure on $\THH(R)$ for $R\in \CAlg$.
+We first note that we can also construct an initial $\Einf$-map out of $R$, where the target is a spectrum with $C_p$-action: $R\ra \underbrace{R\otimes\dots\otimes R}_{p}$.
+Since $\THH(R)$ has a $S^1$-action and hence also a $C_p$-action we get a map $R\otimes\dots\otimes R\ra \THH(R)$. Applying the $C_p$-Tate construction to this map and precomposing it with the Tate diagonal of $R$ we get an $\Einf$-map $R\xra{\Delta_p} R\otimes\dots\otimes R^{tC_p}\ra \THH(R)^{tC_p}$ whose target has $S^1/C_p\cong S^1$-action.
+\\
+Hence by the Proposition this factors through $\THH(R)$ and thus produces a map $\THH(R)\xra{\varphi_p} \THH(R)^{tC_p}$.
+\[\begin{tikzcd}
+	{R} & {\text{THH}(R)} \\
+	{(R\otimes\dots\otimes R)^{tC_p}} & {\text{THH}^{tC_p}}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\varphi_p}", from=1-2, to=2-2, dashed]
+	\arrow["{\Delta_p}"', from=1-1, to=2-1]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+This map equips the topological Hochschild homology of any $\Einf$-ring spectrum with a cyclotomic structure. 

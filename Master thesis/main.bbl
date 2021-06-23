@@ -19,6 +19,119 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{barnesroitzheim}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2b683716dcfcd4b51eeab4ae59f2839c}{%
+           family={Barnes},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bf6ee079428733827b3b153f330279b4}{%
+           family={Roitzheim},
+           familyi={R\bibinitperiod},
+           given={Constanze},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{22895932d78c4bab297d3ae9b54c95ea}
+      \strng{fullhash}{22895932d78c4bab297d3ae9b54c95ea}
+      \strng{bibnamehash}{22895932d78c4bab297d3ae9b54c95ea}
+      \strng{authorbibnamehash}{22895932d78c4bab297d3ae9b54c95ea}
+      \strng{authornamehash}{22895932d78c4bab297d3ae9b54c95ea}
+      \strng{authorfullhash}{22895932d78c4bab297d3ae9b54c95ea}
+      \field{labelalpha}{BR20}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Foundations of Stable Homotopy Theory}
+      \field{volume}{185}
+      \field{year}{2020}
+    \endentry
+    \entry{camarena2013whirlwind}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4caa83bacdf77a720176bc04a824968c}{%
+           family={Camarena},
+           familyi={C\bibinitperiod},
+           given={Omar\bibnamedelima Antol{ı}n},
+           giveni={O\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4caa83bacdf77a720176bc04a824968c}
+      \strng{fullhash}{4caa83bacdf77a720176bc04a824968c}
+      \strng{bibnamehash}{4caa83bacdf77a720176bc04a824968c}
+      \strng{authorbibnamehash}{4caa83bacdf77a720176bc04a824968c}
+      \strng{authornamehash}{4caa83bacdf77a720176bc04a824968c}
+      \strng{authorfullhash}{4caa83bacdf77a720176bc04a824968c}
+      \field{labelalpha}{Cam13}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mexican mathematicians abroad: recent contributions}
+      \field{title}{A whirlwind tour of the world of ({$\infty$}, 1)-categories}
+      \field{year}{2013}
+      \field{pages}{15\bibrangedash 61}
+      \range{pages}{47}
+    \endentry
+    \entry{Gepnerintroductionhigher}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a7d7b23f07c3b62e38dc6f2f4dd245b4}{%
+           family={Gepner},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \strng{fullhash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \strng{bibnamehash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \strng{authorbibnamehash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \strng{authornamehash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \strng{authorfullhash}{a7d7b23f07c3b62e38dc6f2f4dd245b4}
+      \field{labelalpha}{Gep20}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Handbook of Homotopy Theory}
+      \field{title}{An introduction to higher categorical algebra}
+      \field{year}{2020}
+      \field{pages}{487}
+      \range{pages}{1}
+    \endentry
+    \entry{Grothshortcourse}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=6076dc158fd0f4530b21edd49063e57a}{%
+           family={Groth},
+           familyi={G\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall/CRC}%
+      }
+      \strng{namehash}{6076dc158fd0f4530b21edd49063e57a}
+      \strng{fullhash}{6076dc158fd0f4530b21edd49063e57a}
+      \strng{bibnamehash}{6076dc158fd0f4530b21edd49063e57a}
+      \strng{authorbibnamehash}{6076dc158fd0f4530b21edd49063e57a}
+      \strng{authornamehash}{6076dc158fd0f4530b21edd49063e57a}
+      \strng{authorfullhash}{6076dc158fd0f4530b21edd49063e57a}
+      \field{labelalpha}{Gro20}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Homotopy Theory}
+      \field{title}{A short course on {$\infty$}-categories}
+      \field{year}{2020}
+      \field{pages}{549\bibrangedash 617}
+      \range{pages}{69}
+    \endentry
     \entry{KN}{misc}{}
       \name{author}{2}{}{%
         {{hash=d000b92d4a5aaed1a8aab806b30c04c4}{%
@@ -141,6 +254,12 @@
       \field{journaltitle}{preprint available from the author’s website}
       \field{title}{Higher algebra.}
       \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.math.ias.edu/~lurie/papers/HA.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.math.ias.edu/~lurie/papers/HA.pdf
+      \endverb
     \endentry
     \entry{lurie2018elliptic}{article}{}
       \name{author}{1}{}{%
@@ -160,11 +279,106 @@
       \field{labelalpha}{Lur18}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extraalpha}{1}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{preprint available from the author’s website}
       \field{title}{Elliptic cohomology II: orientations}
       \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.math.ias.edu/~lurie/papers/Elliptic-II.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.math.ias.edu/~lurie/papers/Elliptic-II.pdf
+      \endverb
+    \endentry
+    \entry{kerodon}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
+           family={Lurie},
+           familyi={L\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{fullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{bibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \field{extraname}{4}
+      \field{labelalpha}{Lur18}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kerodon.net}}
+      \field{title}{Kerodon}
+      \field{year}{2018}
+    \endentry
+    \entry{SAG}{article}{}
+      \name{author}{1}{}{%
+        {{hash=760ea879284b1a6eeaad87a82be8d1d7}{%
+           family={Lurie},
+           familyi={L\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{fullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{bibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorbibnamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authornamehash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \strng{authorfullhash}{760ea879284b1a6eeaad87a82be8d1d7}
+      \field{extraname}{5}
+      \field{labelalpha}{Lur18}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extraalpha}{3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{preprint available from the author’s website}
+      \field{title}{Spectral Algebraic Geometry.}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.math.ias.edu/~lurie/papers/SAG-rootfile.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.math.ias.edu/~lurie/papers/SAG-rootfile.pdf
+      \endverb
+    \endentry
+    \entry{NS}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=c820b9264cb6f3c669b18cfe75c063b4}{%
+           family={Nikolaus},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bc840c61eeaaa9ae992e6d23e75c4a8a}{%
+           family={Scholze},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{710fd19f199c6d48ec07842c80c4b489}
+      \strng{fullhash}{710fd19f199c6d48ec07842c80c4b489}
+      \strng{bibnamehash}{710fd19f199c6d48ec07842c80c4b489}
+      \strng{authorbibnamehash}{710fd19f199c6d48ec07842c80c4b489}
+      \strng{authornamehash}{710fd19f199c6d48ec07842c80c4b489}
+      \strng{authorfullhash}{710fd19f199c6d48ec07842c80c4b489}
+      \field{labelalpha}{NS18}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AT}
+      \field{eprinttype}{arXiv}
+      \field{title}{On topological cyclic homology}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1707.01799
+      \endverb
     \endentry
     \entry{Richterdividedpower}{incollection}{}
       \name{author}{1}{}{%
@@ -194,6 +408,34 @@
       \field{year}{2009}
       \field{pages}{237\bibrangedash 254}
       \range{pages}{18}
+    \endentry
+    \entry{riehl2018elements}{article}{}
+      \name{author}{2}{}{%
+        {{hash=45a94503b2898b54c4e429a46414d3ad}{%
+           family={Riehl},
+           familyi={R\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+        {{hash=71d856beec0192ccd2aa5c73f8a3e259}{%
+           family={Verity},
+           familyi={V\bibinitperiod},
+           given={Dominic},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{570a4e45c8874af00cb4bc7f520b609b}
+      \strng{fullhash}{570a4e45c8874af00cb4bc7f520b609b}
+      \strng{bibnamehash}{570a4e45c8874af00cb4bc7f520b609b}
+      \strng{authorbibnamehash}{570a4e45c8874af00cb4bc7f520b609b}
+      \strng{authornamehash}{570a4e45c8874af00cb4bc7f520b609b}
+      \strng{authorfullhash}{570a4e45c8874af00cb4bc7f520b609b}
+      \field{labelalpha}{RV21}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Preprint available at www.math.jhu.edu/\~{}eriehl/elements.pdf}
+      \field{title}{Elements of {$\infty$}-category theory}
+      \field{year}{2021}
     \endentry
     \entry{SerreLocal}{book}{}
       \name{author}{1}{}{%
@@ -245,6 +487,32 @@
       \field{shorthand}{Stacks}
       \field{title}{\textit{Stacks Project}}
       \field{year}{2018}
+    \endentry
+    \entry{weibel1994introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=748c93da38984ed20cedc796d519b7ad}{%
+           family={Weibel},
+           familyi={W\bibinitperiod},
+           given={Charles\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{fullhash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{bibnamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authorbibnamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authornamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authorfullhash}{748c93da38984ed20cedc796d519b7ad}
+      \field{labelalpha}{Wei94}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{38}
+      \field{title}{An introduction to homological algebra}
+      \field{year}{1994}
     \endentry
   \enddatalist
 \endrefsection

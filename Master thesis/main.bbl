@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{barnesroitzheim}{book}{}
+    \entry{barnesroitzheimfoundation}{book}{}
       \name{author}{2}{}{%
         {{hash=2b683716dcfcd4b51eeab4ae59f2839c}{%
            family={Barnes},
@@ -74,6 +74,42 @@
       \field{year}{2013}
       \field{pages}{15\bibrangedash 61}
       \range{pages}{47}
+    \endentry
+    \entry{DundasGoodwillieMccarthyLocalstructure}{book}{}
+      \name{author}{3}{}{%
+        {{hash=50ceb7c975d5b0ffa3b5044b4f9932fd}{%
+           family={Dundas},
+           familyi={D\bibinitperiod},
+           given={Bj{ø}rn\bibnamedelima Ian},
+           giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=4219b414beb62a5823816cbed212b1d8}{%
+           family={Goodwillie},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelima G},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=aa04f9e744f3e7bcfa567a7111197102}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Randy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{9cd620c75543b98b2061c603a1bb83f0}
+      \strng{fullhash}{9cd620c75543b98b2061c603a1bb83f0}
+      \strng{bibnamehash}{9cd620c75543b98b2061c603a1bb83f0}
+      \strng{authorbibnamehash}{9cd620c75543b98b2061c603a1bb83f0}
+      \strng{authornamehash}{9cd620c75543b98b2061c603a1bb83f0}
+      \strng{authorfullhash}{9cd620c75543b98b2061c603a1bb83f0}
+      \field{labelalpha}{DGM12}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The local structure of algebraic K-theory}
+      \field{volume}{18}
+      \field{year}{2012}
     \endentry
     \entry{Gepnerintroductionhigher}{article}{}
       \name{author}{1}{}{%
@@ -132,7 +168,7 @@
       \field{pages}{549\bibrangedash 617}
       \range{pages}{69}
     \endentry
-    \entry{KN}{misc}{}
+    \entry{KNBokstedt}{misc}{}
       \name{author}{2}{}{%
         {{hash=d000b92d4a5aaed1a8aab806b30c04c4}{%
            family={Krause},
@@ -409,7 +445,7 @@
       \field{pages}{237\bibrangedash 254}
       \range{pages}{18}
     \endentry
-    \entry{riehl2018elements}{article}{}
+    \entry{RiehlVerityElements}{article}{}
       \name{author}{2}{}{%
         {{hash=45a94503b2898b54c4e429a46414d3ad}{%
            family={Riehl},

@@ -36,7 +36,7 @@ M\otimes_k N\simeq (M\otimes_{k'} N)\otimes_{k\otimes_{k'} k}k.
 \]
 \end{lem}
 \begin{proof}
-We have a canonical map of $k$-modules $M\otimes_{k'} N\ra M\otimes_k N$ induced by the map ${k'} \ra k$. Under the adjunction $-\otimes_{k\otimes_{k'} k}k:\Mod_{k\otimes_{k'} k}\rightleftharpoons \Mod_k:\text{Forget}$ this is adjoint to the map 
+We have a canonical map of $k$-modules $M\otimes_{k'} N\ra M\otimes_k N$ induced by the map ${k'} \ra k$. Under the adjunction $-\otimes_{k\otimes_{k'} k}k:\Mod_{k\otimes_{k'} k}\rightleftarrows{} \Mod_k:\text{Forget}$ this is adjoint to the map 
 \[
 (M\otimes_{k'} N)\otimes_{k\otimes_{k'} k}k\rightarrow M\otimes_k N.
 \]
@@ -153,7 +153,7 @@ Any generator $\pi\in R$ of the maximal ideal will be called a \textit{uniformiz
 Either $R$ and $k$ are both of characteristic $p$ (then we say that $R$ is of \textit{equal characteristic}) or $R$ is of characteristic 0 and $k$ is of characteristic $p$ (the \textit{mixed characteristic} case).
 In the equal characteristic setting, it is known that $R=\nolinebreak k[[x]]$ for $k$ a perfect field of characteristic $p$ (see \cite{SerreLocal}, Part One, Chapter 2.4, Theorem 2). 
 In the mixed characteristic case there are more examples: We again get an example for every perfect field of characteristic $p$, namely $W(k)$. 
-But there are also ramified examples\footnote{\label{description mixed char CDVR}In general every mixed characteristic CDVR can be obtained by adjoining a root of an Eisenstein polynomial to W(k). See \cite{SerreLocal} Part one, chapter 2.5.} like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$.
+But there are also ramified\todo{Make this explicit as we will use this again several times later.} examples\footnote{\label{description mixed char CDVR}In general every mixed characteristic CDVR can be obtained by adjoining a root of an Eisenstein polynomial to W(k). See \cite{SerreLocal} Part one, chapter 2.5.} like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$.
 \newline
 To calculate $\THH(R)$ we first work relative to the maximal ideal which will allow us to use the result from the last section because the residue field is by assumption perfect. In the next section, we will then obtain the non-relative result using a descent spectral sequence. \newline
 We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the spherical monoid ring of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-monoid in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
@@ -467,7 +467,4 @@ For the case $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref
 We can again identify the $d^2$ differential, which is the only one that can occur
 \[d^2(x)=\Phi'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
 \]
-Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed form expression for its homology. For explicit examples see \cite[Chapter~6]{KN}.
-
-\nocite{lurie2017higher}
-\nocite{HigherToposTheory}
+Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.

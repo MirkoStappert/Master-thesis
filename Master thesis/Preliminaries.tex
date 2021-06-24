@@ -1,14 +1,19 @@
 \chapter{Preliminaries}
-We are going to use the language of higher category theory and higher algebra, mainly developed by Jacob Lurie in \cite{HigherToposTheory} and \cite{lurie2017higher}. The online textbook project \cite{kerodon} will contain a revised version of roughly the same content. For a different, model independent perspective on higher category theory, we also recommend the book project \cite{riehl2018elements}. Shorter summaries of most of the material we need can be found in \cite{Grothshortcourse}, \cite{camarena2013whirlwind} and \cite{Gepnerintroductionhigher}.
+We are going to use the language of higher category theory and higher algebra, mainly developed by Jacob Lurie in \cite{HigherToposTheory} and \cite{lurie2017higher}. 
+The online textbook project \cite{kerodon} will contain a revised version of roughly the same content. For a different, model independent perspective on higher category theory, we also recommend the book project \cite{RiehlVerityElements}.
+ Shorter summaries of most of the material we need can be found in \cite{Grothshortcourse}, \cite{camarena2013whirlwind} and \cite{Gepnerintroductionhigher}.
 \section{Higher Category theory}
 Precisely we will need the following higher categorical concepts:
 
 
 \begin{itemize}
     \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a space.
-    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}).
-    \item Stable $\infty$-categories \cite[Section~1.1]{lurie2017higher}
-    \item Slice categories?
+    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and slice categories (\cite[Section~1.2.9]{HigherToposTheory}). The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint.
+    \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as lax and strong symmetric monoidal functors. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
+    The $\infty$-category of spaces has products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}
+    The $\infty$-category of pointed spaces is also symmetric monoidal and the functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures by \cite[Theorem~2.2.2.4]{lurie2017higher}. 
+    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\$Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are Stable $\infty$-categories \cite[Section~1.1]{lurie2017higher}
+    
 \end{itemize}
 \section{Spectra and higher algebra}
 The most important $\infty$-category for us will be the\textbf{ $\infty$-category of spectra}: $\Sp$. Recall that it is defined as the following limit\footnote{That all limits exist in $\Cat_\infty$ is a result in \cite[Section~3.3.3]{HigherToposTheory}} in the (very large) $\infty$-category of large $\infty$-categories $\Cat_\infty$
@@ -16,17 +21,31 @@ The most important $\infty$-category for us will be the\textbf{ $\infty$-categor
 \begin{equation*}
     \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right).
 \end{equation*}
-Thus objects of $\Sp$ are $\Omega$-spectra. \\
+
+An object of $\Sp$ is thus a sequences of pointed spaces $X_n$ together with equivalences $X_n\rai \Omega X_{n+1}$. %$\Omega$-spectra. 
 Most important examples are EM-spectra and $\S$.\\
 Important properties of $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. Furthermore it carries a closed symmetric monoidal structure with unit $\S$, called the tensor product of spectra $\otimes_\S$ (\cite[Corollary~4.8.2.19]{lurie2017higher}). Being closed means exactly the same, as in ordinary category theory, i.e. for every object $X\in \Sp$, the functor $X\otimes_\S-:\Sp\to \Sp $ has a right adjoint. 
 %We denote this right adjoint by $\map(X,-)$ called the mapping spectrum.
 Closedness in particular implies, that tensoring with any spectrum preserves all colimits, as it is a left adjoint functor. \\
 With these properties at hand, we are ready to do higher algebra.
-The monoidal structure lets us talk about monoid in $\Sp$ called ring spectra\footnote{}. Here we have to point out two important differences between ordinary and higher algebra.\textit{Commutativity and associativity are no longer  properties but extra structure}. In the usual commutativity/associativity diagrams, we do not require that they strictly commute but only that they commute up to homotopy  
+The monoidal structure lets us talk about monoids in $\Sp$ called ring spectra\footnote{These monoid objects are called ring spectra, because spectra are already an homotopical incarnation of abelian groups, thus we only need the further multiplication. In particular the homotopy groups of a ring spectrum already form a graded ring.}. Here we have to point out two important differences between ordinary and higher algebra. 
+First of all \textit{commutativity and associativity are no longer  properties but extra structure}. In the usual commutativity/associativity diagrams, we do not require that they strictly commute but only that they commute up to homotopy. 
+Furthermore there is now a whole \textit{hierarchy of commutativity}, starting with only associativity and no commutativity at all called $\Eone$-ring spectra\footnote{$\Eone$ is also called $\mathbb{A}_\infty$, where the 'A' stands for associativity. 'E' then stands for 'everything', meaning associative and commutative.}, followed by $\mathbb{E}_2$, $\mathbb{E}_3$ and $\mathbb{E}_n$-ring spectra for every $n\in \N$ up to full homotopical commutativity $\Einf$. 
+The proper way to precisely treat all this is via the theory of operads, developed by Peter May and transported into the world of $\infty$-categories by Jacob Lurie. 
+He developed an extensive theory in \cite[Chapter~2,3,4]{lurie2017higher}. The definition of the $\En$-operads is given in \cite[Definition~5.1.0.2]{lurie2017higher}, but we will not need any details. \\
+What is essential is that for every $n\in\N\cup\{\infty\}$ and every symmetric monoidal $\infty$-category $\cC$ there is a notion of an \textbf{$\En$-algebra} in $\cC$. 
+These assemble into an $\infty$-category $\Alg_{\En}(\cC)$. 
+In the most important special cases $n=1,n=\infty$ we will denote them by $\CAlg(\cC)\coloneqq \Alg_{\Einf}(\cC)$ and $\Alg(\cC)\coloneqq \Alg_{\Eone}(\cC)$. If $\cC=\Sp$ we will drop the dependence on $\cC$ ans simply write $\Alg$ and $\CAlg$.
+Every $\En$-algebra is also an $\mathbb{E}_{n-1}$-algebra and we get forgetful functors $\CAlg(\cC)\ra \Alg_{\En}(\cC)\ra \Alg(\cC)$. 
+Lax symmetric monoidal functors $\cC\ra\cD$ induce functors $\Alg_{\En}(\cC)\ra \Alg_{\En}(\cC)$. In particular since $H:\Ab\ra\Sp$ is lax symmetric monoidal, we get functors $\Alg(\Ab)\ra \Alg(\Sp)$ and  $\CAlg(\Ab)\ra \CAlg(\Sp)$. $\Alg(\Ab)$ and $\CAlg(\Ab)$ coincide with the ordinary categories of not-necessarily commutative and commutative rings respectively. Thus every ordinary ring $R$ gives rise to an ring spectrum, which has an $\Einf$-structure if $R$ is commutative.
+\\
+Given an algebra $A\in \Alg(\cC)$, we are also able to talk about modules \cite[Definition~4.2.1.13]{lurie2017higher}.
+Finally for $R\in \CAlg$ its category of modules $\Mod_R$ is symmetric monoidal (\cite[Theorem~4.5.2.1]{lurie2017higher}), we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}.  
 \\
 From higher algebra, we need:
 \begin{itemize}
     \item spectra
+    \item homotopy groups
     \item constructions like $\Sigma^\infty,\Omega^\infty$ 
     \item Eilenberg-Maclane spectra.
     \item (co)fiber sequences
@@ -34,17 +53,23 @@ From higher algebra, we need:
     \item p-completeness (maybe also of ab. groups)
     \item Ring spectra ($\Eone$,\dots $\Einf$)
     \item Modules and algebras over them, the properties of $\Mod_R$, $\CAlg_R$
+    \item Free forgetful constructions
     \item Postnikov towers?
     \item Spectral sequences, \cite[Section~1.2.2]{lurie2017higher}, Weibel \cite[Chapter~5]{weibel1994introduction}
 \end{itemize}
 Further things to cite:
 \begin{itemize}
-    \item Barnes-Roitzheim for p-completeness \cite[Section~8.4.1]{barnesroitzheim}
+    \item Barnes-Roitzheim for p-completeness \cite[Section~8.4.1]{barnesroitzheimfoundation}
     \item SAG: z-adic completeness \cite[Section~7.3]{SAG}
     
     \item Nikolaus-Krause lecture notes 
     \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
+    \cite[148]{DundasGoodwillieMccarthyLocalstructure}
 \end{itemize}
+
+
+
+
 \section{Topological Hochschild homology}
 In this section, we will define topological Hochschild homology and establish various properties of it.
 

@@ -50,6 +50,46 @@
       \field{volume}{185}
       \field{year}{2020}
     \endentry
+    \entry{BGTuniversal}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e73a532bb1be860b8805a2c71d2aa224}{%
+           family={Blumberg},
+           familyi={B\bibinitperiod},
+           given={Andrew\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a7d7b23f07c3b62e38dc6f2f4dd245b4}{%
+           family={Gepner},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=79e8fcf8dfbaac320f4f8c644592e40d}{%
+           family={Tabuada},
+           familyi={T\bibinitperiod},
+           given={Gonçalo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mathematical Sciences Publishers}%
+      }
+      \strng{namehash}{d56c7b15501de440649d04b4cabd2b59}
+      \strng{fullhash}{d56c7b15501de440649d04b4cabd2b59}
+      \strng{bibnamehash}{d56c7b15501de440649d04b4cabd2b59}
+      \strng{authorbibnamehash}{d56c7b15501de440649d04b4cabd2b59}
+      \strng{authornamehash}{d56c7b15501de440649d04b4cabd2b59}
+      \strng{authorfullhash}{d56c7b15501de440649d04b4cabd2b59}
+      \field{labelalpha}{BGT13}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geometry \& Topology}
+      \field{number}{2}
+      \field{title}{A universal characterization of higher algebraic K-theory}
+      \field{volume}{17}
+      \field{year}{2013}
+      \field{pages}{733\bibrangedash 838}
+      \range{pages}{106}
+    \endentry
     \entry{camarena2013whirlwind}{article}{}
       \name{author}{1}{}{%
         {{hash=4caa83bacdf77a720176bc04a824968c}{%
@@ -167,6 +207,48 @@
       \field{year}{2020}
       \field{pages}{549\bibrangedash 617}
       \range{pages}{69}
+    \endentry
+    \entry{HMWV}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0cae40bc225eab44451f642ba7b8d91}{%
+           family={Hesselholt},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=af324c91e065d830d2659db7b9821e3a}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={Ib},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{fullhash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{bibnamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authorbibnamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authornamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authorfullhash}{08371f073fae9e84db2704bd3475dfb9}
+      \field{labelalpha}{HM97}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-9383}
+      \field{journaltitle}{Topology}
+      \field{number}{1}
+      \field{title}{On the {$K$}-theory of finite algebras over {W}itt vectors of perfect fields}
+      \field{volume}{36}
+      \field{year}{1997}
+      \field{pages}{29\bibrangedash 101}
+      \range{pages}{73}
+      \verb{doi}
+      \verb 10.1016/0040-9383(96)00003-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0040-9383(96)00003-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0040-9383(96)00003-1
+      \endverb
     \endentry
     \entry{KNBokstedt}{misc}{}
       \name{author}{2}{}{%

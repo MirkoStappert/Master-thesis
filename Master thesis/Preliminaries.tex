@@ -7,12 +7,13 @@ Precisely we will need the following higher categorical concepts:
 
 
 \begin{itemize}
-    \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a space.
-    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and slice categories (\cite[Section~1.2.9]{HigherToposTheory}). The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint.
+    \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a space. 
+    
+    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and slice categories (\cite[Section~1.2.9]{HigherToposTheory}). The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. 
     \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as lax and strong symmetric monoidal functors. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
-    The $\infty$-category of spaces has products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}
-    The $\infty$-category of pointed spaces is also symmetric monoidal and the functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures by \cite[Theorem~2.2.2.4]{lurie2017higher}. 
-    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\$Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are Stable $\infty$-categories \cite[Section~1.1]{lurie2017higher}
+    The $\infty$-category of spaces has all products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}.
+    The $\infty$-category of pointed spaces is also symmetric monoidal with the well known smash product $\wedge$ and the above functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures (\cite[Theorem~2.2.2.4]{lurie2017higher}). 
+    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\$Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are \textbf{stable $\infty$-categories}, a notion introduced in \cite[Section~1.1]{lurie2017higher}. Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra.
     
 \end{itemize}
 \section{Spectra and higher algebra}
@@ -22,8 +23,8 @@ The most important $\infty$-category for us will be the\textbf{ $\infty$-categor
     \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right).
 \end{equation*}
 
-An object of $\Sp$ is thus a sequences of pointed spaces $X_n$ together with equivalences $X_n\rai \Omega X_{n+1}$. %$\Omega$-spectra. 
-Most important examples are EM-spectra and $\S$.\\
+An object of $\Sp$ is thus a sequences of pointed spaces $X_n$ together with equivalences $X_n\rai \Omega X_{n+1}$. They are also called $\Omega$-spectra. Let us give the two main examples of interest. For an abelian group $A$, we can consider the sequence of Eilenberg-Maclane spaces $\left( K(A,0), K(A,1), K(A,2),\dots \right)$. With the usual equivalences $K(A,n)\rai \Omega K(A,n+1)$ this defines a spectrum called the \textbf{Eilenberg-Maclane spectrum }of $A$. This construction assembles into a fully faithful functor $H:\Ab\ra \Sp$ (\cite[Example~1.3.3.5]{lurie2017higher}). 
+\\\
 Important properties of $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. Furthermore it carries a closed symmetric monoidal structure with unit $\S$, called the tensor product of spectra $\otimes_\S$ (\cite[Corollary~4.8.2.19]{lurie2017higher}). Being closed means exactly the same, as in ordinary category theory, i.e. for every object $X\in \Sp$, the functor $X\otimes_\S-:\Sp\to \Sp $ has a right adjoint. 
 %We denote this right adjoint by $\map(X,-)$ called the mapping spectrum.
 Closedness in particular implies, that tensoring with any spectrum preserves all colimits, as it is a left adjoint functor. \\
@@ -113,4 +114,8 @@ Hence by the Proposition this factors through $\THH(R)$ and thus produces a map 
 	\arrow["{\Delta_p}"', from=1-1, to=2-1]
 	\arrow[from=2-1, to=2-2]
 \end{tikzcd}\]
-This map equips the topological Hochschild homology of any $\Einf$-ring spectrum with a cyclotomic structure. 
+This map equips the topological Hochschild homology of any $\Einf$-ring spectrum with a cyclotomic structure. \\
+Cyclotomic trace, conceptual definition using a universal characterization of K-theory is given in \cite[Section~10.3]{BGTuniversal}.
+The following result of Hesselholt and Madsen gives a close relationship between K-theory and $\TC$ for all rings of interest in this thesis. \cite[Theorem~D]{HMWV}. \\
+Dundas-Goodwillie-McCarthy theorem \cite[Theorem~7.2.2.1]{DundasGoodwillieMccarthyLocalstructure}.\\
+Also cite Clausen-Mathew-Morrow?

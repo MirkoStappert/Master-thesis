@@ -90,6 +90,46 @@
       \field{pages}{733\bibrangedash 838}
       \range{pages}{106}
     \endentry
+    \entry{BHMtrace}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0fc2cfee7ee29159094dd0e7046c1c6c}{%
+           family={Bökstedt},
+           familyi={B\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4ff623cc56a5b8998a031f8ecc1e0f0d}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Wu\bibnamedelima Chung},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=af324c91e065d830d2659db7b9821e3a}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={Ib},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b866a0858e32e4c6932da4c27700a627}
+      \strng{fullhash}{b866a0858e32e4c6932da4c27700a627}
+      \strng{bibnamehash}{b866a0858e32e4c6932da4c27700a627}
+      \strng{authorbibnamehash}{b866a0858e32e4c6932da4c27700a627}
+      \strng{authornamehash}{b866a0858e32e4c6932da4c27700a627}
+      \strng{authorfullhash}{b866a0858e32e4c6932da4c27700a627}
+      \field{labelalpha}{BHM93}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inventiones mathematicae}
+      \field{number}{1}
+      \field{title}{The cyclotomic trace and algebraic K-theory of spaces}
+      \field{volume}{111}
+      \field{year}{1993}
+      \field{pages}{465\bibrangedash 539}
+      \range{pages}{75}
+    \endentry
     \entry{camarena2013whirlwind}{article}{}
       \name{author}{1}{}{%
         {{hash=4caa83bacdf77a720176bc04a824968c}{%
@@ -114,6 +154,69 @@
       \field{year}{2013}
       \field{pages}{15\bibrangedash 61}
       \range{pages}{47}
+    \endentry
+    \entry{cisinski2019higher}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7dd2ed2fa26fc7e09189bfc17e41911a}{%
+           family={Cisinski},
+           familyi={C\bibinitperiod},
+           given={Denis-Charles},
+           giveni={D\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \strng{fullhash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \strng{bibnamehash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \strng{authorbibnamehash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \strng{authornamehash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \strng{authorfullhash}{7dd2ed2fa26fc7e09189bfc17e41911a}
+      \field{labelalpha}{Cis19}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher categories and homotopical algebra}
+      \field{volume}{180}
+      \field{year}{2019}
+    \endentry
+    \entry{CMMHenselian}{article}{}
+      \name{author}{3}{}{%
+        {{hash=eceb31742276392c92b1d68d2f0bf521}{%
+           family={Clausen},
+           familyi={C\bibinitperiod},
+           given={Dustin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4c679d47d58562ea8fc92d47566a57c6}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={Akhil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9c3002d3ae09f3a3c3031fa8e9a13e46}{%
+           family={Morrow},
+           familyi={M\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \strng{fullhash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \strng{bibnamehash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \strng{authorbibnamehash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \strng{authornamehash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \strng{authorfullhash}{6e4f6835ab00032db78f3fb5474a7aa3}
+      \field{labelalpha}{CMM21}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Mathematical Society}
+      \field{number}{2}
+      \field{title}{K-theory and topological cyclic homology of henselian pairs}
+      \field{volume}{34}
+      \field{year}{2021}
+      \field{pages}{411\bibrangedash 473}
+      \range{pages}{63}
     \endentry
     \entry{DundasGoodwillieMccarthyLocalstructure}{book}{}
       \name{author}{3}{}{%
@@ -150,6 +253,37 @@
       \field{title}{The local structure of algebraic K-theory}
       \field{volume}{18}
       \field{year}{2012}
+    \endentry
+    \entry{farrellhsiang1978rational}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b1ff50ba670dc40354be0dfb80ceaaa6}{%
+           family={Farrell},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi Thomas},
+           giveni={F\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=82fbc8cc08d845daf9eaaf6d15e67482}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Wu-Chung},
+           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab345a341999fe1300f24a9447e7e6f1}
+      \strng{fullhash}{ab345a341999fe1300f24a9447e7e6f1}
+      \strng{bibnamehash}{ab345a341999fe1300f24a9447e7e6f1}
+      \strng{authorbibnamehash}{ab345a341999fe1300f24a9447e7e6f1}
+      \strng{authornamehash}{ab345a341999fe1300f24a9447e7e6f1}
+      \strng{authorfullhash}{ab345a341999fe1300f24a9447e7e6f1}
+      \field{labelalpha}{FH78}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Algebraic and geometric topology (Proc. Sympos. Pure Math., Stanford Univ., Stanford, Calif., 1976), Part}
+      \field{title}{On the rational homotopy groups of the diffeomorphism groups of discs, spheres and aspherical manifolds}
+      \field{volume}{1}
+      \field{year}{1978}
+      \field{pages}{325\bibrangedash 337}
+      \range{pages}{13}
     \endentry
     \entry{Gepnerintroductionhigher}{article}{}
       \name{author}{1}{}{%
@@ -250,6 +384,37 @@
       \verb https://doi.org/10.1016/0040-9383(96)00003-1
       \endverb
     \endentry
+    \entry{krausenikolausTCnotes}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d000b92d4a5aaed1a8aab806b30c04c4}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={Achim},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c820b9264cb6f3c669b18cfe75c063b4}{%
+           family={Nikolaus},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{890126c68150600a2422fe1de35c14a6}
+      \strng{fullhash}{890126c68150600a2422fe1de35c14a6}
+      \strng{bibnamehash}{890126c68150600a2422fe1de35c14a6}
+      \strng{authorbibnamehash}{890126c68150600a2422fe1de35c14a6}
+      \strng{authornamehash}{890126c68150600a2422fe1de35c14a6}
+      \strng{authorfullhash}{890126c68150600a2422fe1de35c14a6}
+      \field{extraname}{1}
+      \field{labelalpha}{KN18}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lectures on topological Hochschild homology and cyclotomic spectra}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb https://www.uni-muenster.de/IVV5WS/WebHop/user/nikolaus/papers.html
+      \endverb
+    \endentry
     \entry{KNBokstedt}{misc}{}
       \name{author}{2}{}{%
         {{hash=d000b92d4a5aaed1a8aab806b30c04c4}{%
@@ -269,6 +434,7 @@
       \strng{authorbibnamehash}{890126c68150600a2422fe1de35c14a6}
       \strng{authornamehash}{890126c68150600a2422fe1de35c14a6}
       \strng{authorfullhash}{890126c68150600a2422fe1de35c14a6}
+      \field{extraname}{2}
       \field{labelalpha}{KN19}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
@@ -527,6 +693,29 @@
       \field{pages}{237\bibrangedash 254}
       \range{pages}{18}
     \endentry
+    \entry{riehl2018homotopy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=45a94503b2898b54c4e429a46414d3ad}{%
+           family={Riehl},
+           familyi={R\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{45a94503b2898b54c4e429a46414d3ad}
+      \strng{fullhash}{45a94503b2898b54c4e429a46414d3ad}
+      \strng{bibnamehash}{45a94503b2898b54c4e429a46414d3ad}
+      \strng{authorbibnamehash}{45a94503b2898b54c4e429a46414d3ad}
+      \strng{authornamehash}{45a94503b2898b54c4e429a46414d3ad}
+      \strng{authorfullhash}{45a94503b2898b54c4e429a46414d3ad}
+      \field{labelalpha}{Rie18}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint 1801.07404}
+      \field{title}{Homotopy coherent structures}
+      \field{year}{2018}
+    \endentry
     \entry{RiehlVerityElements}{article}{}
       \name{author}{2}{}{%
         {{hash=45a94503b2898b54c4e429a46414d3ad}{%
@@ -605,6 +794,42 @@
       \field{shorthand}{Stacks}
       \field{title}{\textit{Stacks Project}}
       \field{year}{2018}
+    \endentry
+    \entry{WJR2013spaces}{book}{}
+      \name{author}{3}{}{%
+        {{hash=136fcddf3b10601e783f8d7b0c3bcde8}{%
+           family={Waldhausen},
+           familyi={W\bibinitperiod},
+           given={Friedhelm},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9b26ce7af6a1b2170c64e32b1f3fb3f7}{%
+           family={Jahren},
+           familyi={J\bibinitperiod},
+           given={Bj{ø}rn},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d7f48a0f35573c9ff06eb79ca1269c0a}{%
+           family={Rognes},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \strng{fullhash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \strng{bibnamehash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \strng{authorbibnamehash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \strng{authornamehash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \strng{authorfullhash}{6c259b1c7bf438e46d05c6dabbcb8446}
+      \field{labelalpha}{WJR13}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{186}
+      \field{title}{Spaces of PL manifolds and categories of simple maps}
+      \field{year}{2013}
     \endentry
     \entry{weibel1994introduction}{book}{}
       \name{author}{1}{}{%

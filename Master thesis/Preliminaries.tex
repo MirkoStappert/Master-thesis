@@ -2,18 +2,22 @@
 We are going to use the language of higher category theory and higher algebra, mainly developed by Jacob Lurie in \cite{HigherToposTheory} and \cite{lurie2017higher}. 
 The online textbook project \cite{kerodon} will contain a revised version of roughly the same content. For a different, model independent perspective on higher category theory, we also recommend the book project \cite{RiehlVerityElements}.
  Shorter summaries of most of the material we need can be found in \cite{Grothshortcourse}, \cite{camarena2013whirlwind} and \cite{Gepnerintroductionhigher}.
-\section{Higher Category theory}
+\section{Higher Category theory}\todo{Some philosophy}
+Higher category theory is an extension of ordinary category theory, that is tailored to the needs of homotopy theory. In particular it follows the paradigm, that no equality should be taken literally and we should rather provide a specified homotopy, implemented as higher morphism. The $\infty$ in $\infty$-category is supposed to signal, that we not only have objects and morphisms but also 2-morphisms between morphisms, 3-morphisms between 2-morphisms and so on. Similarly diagrams should not commute strictly but only up to homotopy/2-morphism. A consequence of this is, that composition in $\infty$-categories is not strictly commutative and the notion of isomorphism of objects gets replaced by equivalence, which means that we have two maps that are inverse up to homotopy. Often times when we have more then one of these homotopies, they should in some sense be compatible, which is recorded via higher and higher homotopies. This train of thought goes under the name of  \textbf{homotopy coherence}. We recommend \cite{riehl2018homotopy} and \cite[Section~1.2.6]{HigherToposTheory} to the unaquainted reader, who wants  to become familiar with it. The benefit of this approach is that all concepts defined in this framework are naturally homtopy invariant, which is not the case for (co)limits in the category of topological spaces. A further advantage is that we can now consider spaces as $\infty$-categories themselves. Informally we do this by taking points as objects, paths as 1-morphisms, homotopies of paths as 2-morphism, homotopies between homotopies as 3-morphisms and so on. Note that this would not be possible in the realm of 1-categories, because the composition (concatenation) of paths is not strictly associative but only up to homotopy. This is the reason why the fundametal groupoid exists. The reader is advised to think about $\infty$-categories as a greatest common divisor of ordinary categories and topological spaces (or rather homotopy types).\\
+The main thing to take away from this section is that most if not all concepts/constructions from ordinary category theory also exist in the world of $\infty$ categories.
 Precisely we will need the following higher categorical concepts:
 
 
 \begin{itemize}
-    \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a space. 
+    \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. There is also a way to go back\footnote{This provides a (reflective) adjunction between the category of all categories and the $\infty$-category of all $\infty$-categories.} and to associate to every $\infty$-category $\cC$ a 1-category, called its homotopy category $\Ho(\cC)$.
+    The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a whole mapping space. 
     
-    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}) and slice categories (\cite[Section~1.2.9]{HigherToposTheory}). The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. 
-    \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as lax and strong symmetric monoidal functors. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
+    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}), opposite categories (\cite[Section~1.2.1]{HigherToposTheory}), slice categories (\cite[Section~1.2.9]{HigherToposTheory}), \dots. The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. There are also notions of \textbf{filtered }and \textbf{sifted colimits }and the usual statements hold verbatim, i.e. filtered colimits commute with finite limits and sifted colimits commute with finite products.
+    \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as \textbf{lax and strong symmetric monoidal functors}. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
     The $\infty$-category of spaces has all products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}.
     The $\infty$-category of pointed spaces is also symmetric monoidal with the well known smash product $\wedge$ and the above functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures (\cite[Theorem~2.2.2.4]{lurie2017higher}). 
-    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\$Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are \textbf{stable $\infty$-categories}, a notion introduced in \cite[Section~1.1]{lurie2017higher}. Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra.
+    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are \textbf{stable $\infty$-categories}, a notion introduced in \cite[Section~1.1]{lurie2017higher}. The definition is rather simple: An $\infty$-category is stable, if it has all finite limits and colimits, the thus provided initial and terminal object are equivalent \footnote{To be precise, the natural map from the initial to the terminal object should be an equivalence. An object is called initial if mapping spaces out of it are contractible and terminal if mapping spaces into it are contractible.} and a square is a pushout square if and only if it is a pullback square.  Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra. In particular they have a notion of exact sequences also called fiber sequences. We can add maps and thus also take kernels/cokernels of maps because we have a zero object. They are called (homotopy) \textbf{fiber/cofibers} and naturally fit into exact sequences $\fib(f)\ra X\xrightarrow{f} Y$ and $X\xrightarrow{f} Y\ra \cofib(f)$. Furthermore, by a result of Lurie \cite[Theorem~1.1.2.14]{lurie2017higher} the homotopy category of a stable $\infty$-category has the structure of a triangulated category. Stable $\infty$-category are in some aspects preferable to triangulated categories. First of all a triangulation is extra structure, that has to be provided, while stability is a property. Secondly cones (or rather cofibers) are functorial in stable $\infty$-categories. 
+    They also "glue" together more naturally, which is relevant for descent questions in algebraic geometry. For example the functor, that sends a scheme to its derived $\infty$-category of quasi coherent sheaves is a sheaf, which is false on the level of triangulated categories.\todo{check details/reference}
     
 \end{itemize}
 \section{Spectra and higher algebra}
@@ -22,48 +26,85 @@ The most important $\infty$-category for us will be the\textbf{ $\infty$-categor
 \begin{equation*}
     \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right).
 \end{equation*}
-
-An object of $\Sp$ is thus a sequences of pointed spaces $X_n$ together with equivalences $X_n\rai \Omega X_{n+1}$. They are also called $\Omega$-spectra. Let us give the two main examples of interest. For an abelian group $A$, we can consider the sequence of Eilenberg-Maclane spaces $\left( K(A,0), K(A,1), K(A,2),\dots \right)$. With the usual equivalences $K(A,n)\rai \Omega K(A,n+1)$ this defines a spectrum called the \textbf{Eilenberg-Maclane spectrum }of $A$. This construction assembles into a fully faithful functor $H:\Ab\ra \Sp$ (\cite[Example~1.3.3.5]{lurie2017higher}). 
-\\\
-Important properties of $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. Furthermore it carries a closed symmetric monoidal structure with unit $\S$, called the tensor product of spectra $\otimes_\S$ (\cite[Corollary~4.8.2.19]{lurie2017higher}). Being closed means exactly the same, as in ordinary category theory, i.e. for every object $X\in \Sp$, the functor $X\otimes_\S-:\Sp\to \Sp $ has a right adjoint. 
+The existence of such a functor $N(\N)^{\op}\ra \Cat_\infty$ is not obvious. 
+A priori we have to supply further coherence data. That we can avoid doing this is the content of \cite[Corollary~7.3.17]{cisinski2019higher}. A further consequence of this corollary is that we can actually describe the objects of the resulting limit:
+An object of $\Sp$ - a \textbf{spectrum} -  is a sequences of pointed spaces $X_n$ together with equivalences $X_n\rai \Omega X_{n+1}$. To differentiate them to other classically defined notions of spectra, they are also called $\Omega$-spectra.
+Let us give the two main examples of interest. For an abelian group $A$, we can consider the sequence of Eilenberg-Maclane spaces $\left( K(A,0), K(A,1), K(A,2),\dots \right)$. With the usual equivalences $K(A,n)\rai \Omega K(A,n+1)$ this defines a spectrum called the \textbf{Eilenberg-Maclane spectrum }of $A$. 
+This construction assembles into a fully faithful functor $H:\Ab\ra \Sp$ (\cite[Example~1.3.3.5]{lurie2017higher}).Therefore, we will often abuse notation and denote the Eilenberg-Maclane spectrum of $R$ simply by $R$ itself unless we want to stress, that we are talking about a discrete ring, in which case we will write $HR$. Spaces also give rise to spectra under the \textbf{suspension spectrum} functor $\Sigma^{\infty}:\Spc_*\ra \Sp$. 
+This allows us to define the most important spectrum, the \textbf{sphere spectrum} $\S\coloneqq \Sigma^{\infty}(S^0)$. The suspension spectrum functor has a right adjoint $\Omega^\infty:\Sp\to\Spc_*$ simply given by sending a spectrum to its zeroth space. We can also compose this adjunction with the $(\Spc,\Spc_*)$-adunction to obtain an adjunction with unbased spaces $\sip:\Spc\leftrightarrows\Sp:\Omega^\infty$.
+Similarly to spaces, spectra also have \textbf{homotopy groups}, which are defined via the ordinary homotopy groups of their spaces but now we can also define negative homotopy groups. For $X\in \Sp$ and $i\in\Z$ define $\pi_i(X)=\pi_{i+k}(X_k)$ as long as $i+k\geq 0$. This makes sense, because $X_k\simeq \Omega X_{k+1}$. They are all abelian because we can always write them as higher homotopy groups of some space.
+The homotopy groups of a suspension spectrum are the stable homotopy groups of the space. In particular $\pi_*(\S)$ are the stable homotopy groups of spheres. A spectrum is called \textbf{connective}, if all its negative homotopy groups vanish. It is called \textbf{bounded below}, if they vanish below some degree (which is not necessarily 0). Suspension spectra and Eilenberg-Maclane spectra are connective.
+\\
+Important structural properties of the $\infty$-category $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. 
+Furthermore it carries a closed symmetric monoidal structure with unit $\S$, called the tensor product of spectra $\otimes_\S$ (\cite[Corollary~4.8.2.19]{lurie2017higher}).
+Being closed means exactly the same, as in ordinary category theory, i.e. for every object $X\in \Sp$, the functor $X\otimes_\S-:\Sp\to \Sp $ has a right adjoint. 
 %We denote this right adjoint by $\map(X,-)$ called the mapping spectrum.
 Closedness in particular implies, that tensoring with any spectrum preserves all colimits, as it is a left adjoint functor. \\
 With these properties at hand, we are ready to do higher algebra.
-The monoidal structure lets us talk about monoids in $\Sp$ called ring spectra\footnote{These monoid objects are called ring spectra, because spectra are already an homotopical incarnation of abelian groups, thus we only need the further multiplication. In particular the homotopy groups of a ring spectrum already form a graded ring.}. Here we have to point out two important differences between ordinary and higher algebra. 
+The monoidal structure lets us talk about monoids in $\Sp$ called \textbf{ring spectra}\footnote{These monoid objects are called ring spectra, because spectra are already an homotopical incarnation of abelian groups, thus we only need the further multiplication. In particular the homotopy groups of a ring spectrum already form a graded ring.}.
+Here we have to point out two important differences between ordinary and higher algebra. 
 First of all \textit{commutativity and associativity are no longer  properties but extra structure}. In the usual commutativity/associativity diagrams, we do not require that they strictly commute but only that they commute up to homotopy. 
 Furthermore there is now a whole \textit{hierarchy of commutativity}, starting with only associativity and no commutativity at all called $\Eone$-ring spectra\footnote{$\Eone$ is also called $\mathbb{A}_\infty$, where the 'A' stands for associativity. 'E' then stands for 'everything', meaning associative and commutative.}, followed by $\mathbb{E}_2$, $\mathbb{E}_3$ and $\mathbb{E}_n$-ring spectra for every $n\in \N$ up to full homotopical commutativity $\Einf$. 
 The proper way to precisely treat all this is via the theory of operads, developed by Peter May and transported into the world of $\infty$-categories by Jacob Lurie. 
 He developed an extensive theory in \cite[Chapter~2,3,4]{lurie2017higher}. The definition of the $\En$-operads is given in \cite[Definition~5.1.0.2]{lurie2017higher}, but we will not need any details. \\
-What is essential is that for every $n\in\N\cup\{\infty\}$ and every symmetric monoidal $\infty$-category $\cC$ there is a notion of an \textbf{$\En$-algebra} in $\cC$. 
-These assemble into an $\infty$-category $\Alg_{\En}(\cC)$. 
-In the most important special cases $n=1,n=\infty$ we will denote them by $\CAlg(\cC)\coloneqq \Alg_{\Einf}(\cC)$ and $\Alg(\cC)\coloneqq \Alg_{\Eone}(\cC)$. If $\cC=\Sp$ we will drop the dependence on $\cC$ ans simply write $\Alg$ and $\CAlg$.
-Every $\En$-algebra is also an $\mathbb{E}_{n-1}$-algebra and we get forgetful functors $\CAlg(\cC)\ra \Alg_{\En}(\cC)\ra \Alg(\cC)$. 
-Lax symmetric monoidal functors $\cC\ra\cD$ induce functors $\Alg_{\En}(\cC)\ra \Alg_{\En}(\cC)$. In particular since $H:\Ab\ra\Sp$ is lax symmetric monoidal, we get functors $\Alg(\Ab)\ra \Alg(\Sp)$ and  $\CAlg(\Ab)\ra \CAlg(\Sp)$. $\Alg(\Ab)$ and $\CAlg(\Ab)$ coincide with the ordinary categories of not-necessarily commutative and commutative rings respectively. Thus every ordinary ring $R$ gives rise to an ring spectrum, which has an $\Einf$-structure if $R$ is commutative.
-\\
-Given an algebra $A\in \Alg(\cC)$, we are also able to talk about modules \cite[Definition~4.2.1.13]{lurie2017higher}.
-Finally for $R\in \CAlg$ its category of modules $\Mod_R$ is symmetric monoidal (\cite[Theorem~4.5.2.1]{lurie2017higher}), we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}.  
-\\
-From higher algebra, we need:
+What is essential to us are the following facts:
+
 \begin{itemize}
-    \item spectra
-    \item homotopy groups
-    \item constructions like $\Sigma^\infty,\Omega^\infty$ 
-    \item Eilenberg-Maclane spectra.
-    \item (co)fiber sequences
-    \item $\otimes$ of spectra uniquely determined by being closed symmetric monoidal with unit $\S$ and preserves colimits in each variable (separately)
-    \item p-completeness (maybe also of ab. groups)
-    \item Ring spectra ($\Eone$,\dots $\Einf$)
-    \item Modules and algebras over them, the properties of $\Mod_R$, $\CAlg_R$
-    \item Free forgetful constructions
-    \item Postnikov towers?
-    \item Spectral sequences, \cite[Section~1.2.2]{lurie2017higher}, Weibel \cite[Chapter~5]{weibel1994introduction}
+    \item For every $n\in\N\cup\{\infty\}$ and every symmetric monoidal $\infty$-category $\cC$ there is a notion of an \textbf{$\En$-algebra} in $\cC$. 
+    These assemble into an $\infty$-category $\Alg_{\En}(\cC)$. 
+    In the most important special cases $n=1,n=\infty$ we will denote them by $\CAlg(\cC)\coloneqq \Alg_{\Einf}(\cC)$ and $\Alg(\cC)\coloneqq \Alg_{\Eone}(\cC)$. If $\cC=\Sp$ we will drop the dependence on $\cC$ and simply write $\Alg$ and $\CAlg$. The objects will be called ($\Eone$-)ring spectra and commutative/$\Einf$-ring spectra respectively.
+    Every $\En$-algebra is also an $\mathbb{E}_{n-1}$-algebra and we get forgetful functors $\CAlg(\cC)\ra \Alg_{\En}(\cC)\ra \Alg(\cC)$. 
+    Lax symmetric monoidal functors $\cC\ra\cD$ induce functors $\Alg_{\En}(\cC)\ra \Alg_{\En}(\cC)$. In particular since $H:\Ab\ra\Sp$ is lax symmetric monoidal, we get functors $\Alg(\Ab)\ra \Alg(\Sp)$ and  $\CAlg(\Ab)\ra \CAlg(\Sp)$. $\Alg(\Ab)$ and $\CAlg(\Ab)$ coincide with the ordinary categories of not-necessarily commutative and commutative rings respectively. Thus every ordinary ring $R$ gives rise to an ring spectrum, which has an $\Einf$-structure if $R$ is commutative. Another supply of algebras is given by \textbf{free algebras}. The forgetful functor $\Alg_{\En}(\cC)\to \cC$ has a left adjoint \cite[Section~3.1]{lurie2017higher}, which provides us with several free spectra generated by spaces. The category $\Alg_{\En}(\cC)$ has all limits and colimits by \cite[Section~3.2]{lurie2017higher}.
+
+    \item Given an algebra $A\in \Alg(\cC)$, we also able to talk about its $\infty$-category of left and right \textbf{modules }$\LMod_A, \RMod_A$ \cite[Definition~4.2.1.13]{lurie2017higher}. In the case, that $A$ is commutative, they are equivalent (\cite[Section~4.3.2]{lurie2017higher}) and we will simply denote it by $\Mod_A$. $\LMod_A$ and $\RMod_A$ have all limits and colimits, provided that $\cC$ does (\cite[Section~4.2.3]{lurie2017higher}). For $\S\in\Sp$ we have $\Mod_\S=\Sp$ and for ordinary rings $R$, $\Mod_{HR}=D(R)$.
+    \item Finally for $R\in \CAlg$ its category of modules $\Mod_R$ is symmetric monoidal (\cite[Theorem~4.5.2.1]{lurie2017higher}). Thus we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}. 
+    \item For a connective $\Einf$ ring spectrum $R$ We have \textbf{Postnikov towers} in $\Mod_R$ as well as truncations/covers $\tau_{\geq n},\tau_{\leq n}:\Mod_R\to \Mod_R$ (\cite[Proposition~7.1.1.13]{lurie2017higher}). In particular they exist for spectra.
+    \item \textbf{Filtered objects} (i.e. objects of $\Fun((N\Z)^{\op},\cC)$ in stable $\infty$-categories like the ones above provide \textbf{spectral sequences} with values in the abelian category of $\pi_0(R)$-modules (\cite[Section~1.2.2]{lurie2017higher}). For a classical reference on spectral sequence, the reader can confer \cite[Chapter~5]{weibel1994introduction}.
+
 \end{itemize}
+The last construction from higher algebra, that we need is a generalization of $p$-completion of abelian groups. A textbook resource on $p$-completion of spectra can be found in \cite[Section~8.4.1]{barnesroitzheimfoundation}.
+Let us directly start with the definition, which is notationally identical to ordinary $p$-completion of abelian groups.
+\begin{defn}
+    Let $X$ be a spectrum. We define its \textbf{$p$-completion} $X^\wedge_p$ as the following limit
+    \begin{equation*}
+        X^\wedge_p\coloneqq \lim (\dots\ra X/p^3\ra X/p^2\ra X/p).
+    \end{equation*}
+    This evidently provides an endofunctor of $\Sp$.
+    $X$ has a canonical map to $X^\wedge_p$ induced by the projections $X\ra X/p^n$. We call $X$ \textbf{$p$-complete} if this map is an equivalence. A map of spectra is called a \textbf{$p$-adic equivalence} if the induced map on $p$-completions is an equivalence.  
+\end{defn}
+Let us be precise about the terms in the definition. For a spectrum $X$ we of course always have the identity map $X\xrightarrow{1}X$. Since we can add maps between spectra, we can consider the $n$-fold addition of this map to itself to obtain $X\xrightarrow{n}X$. We denote the cofiber of this map as $X/n\coloneqq \cofib(X\xrightarrow{n}X)$. The natural maps $X/p^n\ra X/p^{n-1}$ are induced from taking horizontal cofibers in the commutative diagram.
+An immediate observation is that $p$-completion commutes with arbitrary limits and finite colimits. From this we can also see, that $X/p\rai (X_p^{\wedge}/p)$ is an equivalence. The crucial Lemma about $p$-complete spectra and the main reason why we have introduced the concept, is the following.
+\begin{lem}
+    Let $f:X\ra Y$ be a map of spectra. Then $f$ is a $p$-adic equivalence if and only if $f/p:X/p\ra Y/p$ is an equivalence. In particular we can test whether a map of $p$-complete spectra is an equivalence by checking it mod $p$. 
+\end{lem}
+Let us now collect a few further facts about $p$-completion, that we will need.
+\begin{itemize}
+    \item The Eilenberg-Maclane spectrum of a $p$-complete abelian group is a $p$-complete spectrum. More generally $HA$ is $p$-complete if and only $A$ is \textbf{derived $p$-complete} in the sense of \href{https://stacks.math.columbia.edu/tag/091S}{Tag 091S}.
+    \item A spectrum is $p$-complete if and only if all of its homotopy groups are derived $p$-complete.
+    \item $p$-completion is symmetric monoidal, in particular the $p$-completion of an $\En$-ring $R$ spectrum is an $\En$-ring spectrum. Furthermore the map $R\ra R_p^{\wedge}$ equips the $p$-completion with an $\En$-$R$-algebra structure.
+    \item $p$-completion of tensor product, different ways to write it (use Lemma).
+\end{itemize}
+\todo{Finish p-completion}
+Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can still talk about the $z$-completion of module spectra over $R$, which is defined completely analogously. The previous discussion was the case $R=\S$, $z=p\in\pi_0(\S)=\Z$ and $\Mod_\S=\Sp$. More or less everything goes through in this general setting aswell. For everything that we need (and much, much more) we refer to \cite[Section~7.3]{SAG}.
+
+% %From higher algebra, we need:
+% %\begin{itemize}
+%     \item spectra
+%     \item homotopy groups
+%     \item constructions like $\Sigma^\infty,\Omega^\infty$ 
+%     \item Eilenberg-Maclane spectra.
+%     \item (co)fiber sequences
+%     \item $\otimes$ of spectra uniquely determined by being closed symmetric monoidal with unit $\S$ and preserves colimits in each variable (separately)
+%     \item p-completeness (maybe also of ab. groups)
+%     \item Ring spectra ($\Eone$,\dots $\Einf$)
+%     \item Modules and algebras over them, the properties of $\Mod_R$, $\CAlg_R$
+%     \item Free forgetful constructions
+%     \item Postnikov towers?
+%     \item Spectral sequences, \cite[Section~1.2.2]{lurie2017higher}, Weibel \cite[Chapter~5]{weibel1994introduction}
+% %\end{itemize}
 Further things to cite:
 \begin{itemize}
-    \item Barnes-Roitzheim for p-completeness \cite[Section~8.4.1]{barnesroitzheimfoundation}
-    \item SAG: z-adic completeness \cite[Section~7.3]{SAG}
-    
-    \item Nikolaus-Krause lecture notes 
+    \item Nikolaus-Krause lecture notes \cite{krausenikolausTCnotes} 
     \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
     \cite[148]{DundasGoodwillieMccarthyLocalstructure}
 \end{itemize}
@@ -76,36 +117,64 @@ In this section, we will define topological Hochschild homology and establish va
 
 \begin{defn}
     Let $R$ be an $\Eone$-ring spectrum.
-    We define the topological Hochschild homology of $R$ as follows
+    We define the \textbf{topological Hochschild homology} of $R$ as follows
     \begin{equation*}
-        \THH(R)=R\otimes_{R\otimes R^{op}}R
+        \THH(R)=R\otimes_{R\otimes_\S R^{op}}R.
     \end{equation*}
-    \end{defn}
-    In the case of an $\Einf$-ring spectrum we can drop the $(\:)^{op}$. 
+    If $R$ is a $\Eone$-$S$-algebra, with $S\in\CAlg$ we can also define a relative version
+    \begin{equation*}
+        \THH(R/S)=R\otimes_{R\otimes_S R^{op}}R.
+    \end{equation*}
+    In both cases, we abbreviate their $p$-completions:
+    \begin{equation*}
+        \THH(R;\Z_p)\coloneqq\THH(R)^{\wedge}_p,\ \THH(R/S;\Z_p)\coloneqq\THH(R/S)^{\wedge}_p.
+    \end{equation*}
+    In the same way as for K-theory, we denote the homotopy groups by $\THH_*(R)\coloneqq \pi_*(\THH(R))$ and for the relative and $p$-completed version in the same way.
+\end{defn}
+In the case of an $\Einf$-ring spectrum we can drop the $(\phantom{R})^{op}$. If $S$ is an ordinary commutative ring, we will also use the notation $\HH(R/S)\coloneqq \THH(R/S)$, because it agrees with a derived version of the classical Hochschild homology.
+Using the Bar construction we get the following formula, 
+\\
+Note for the next proposition, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$.
+
+\begin{prop}[McClure-Schwänzl-Vogt]\label{McClureSchwaenzlVogt}
+Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a non-equivariant map of $\Einf$-ring spectra from $R$ to an $\Einf$-ring spectrum with $S^1$-action (i.e. an object in $\Fun(BS^1,\CAlg)$). In other words $\THH$ of an commutative ring spectrum is the colimit over the constant diagram $S^1\ra \CAlg$ with value $R$.
+\end{prop}
+\begin{proof}
+    Use simplicial model of circle to obtain it from cyclic Bar construction \cite[114]{NS}.
+\end{proof}
+
 
 \section{Cyclotomic spectra, $\TC$ and all that}
-The content of this section is not necessary for understanding the rest of the thesis. Nevertheless we want to include it, because it gives the main motivation, why one should be interested in $\THH$ in the first place. 
+The content of this section is not necessary for understanding the rest of the thesis. Nevertheless we want to include it, because it gives the main motivation, why one should be interested in $\THH$ in the first place. We can construct $\TC$ out of it which is extremely useful in calculations in K-theory.
 \todo{Group action, Tate construction, Tate diagonal, TC}
-
-
-
-\begin{defn}\cite[Chapter~2.1]{NS}
-a) For a fixed prime p, a \textbf{$p$-cyclotomic spectrum} is a spectrum with $\pg$-action together with a $\pg$-equivariant map $\varphi_p: X \ra X^{tC_p}$ \newline
-b) A \textbf{cyclotomic spectrum} is a spectrum with $S^1$-action together with  $S^1$-equivariant maps $\varphi_p: X \ra X^{tC_p}$ for every prime $p$.
+A cyclotomic structure on a spectrum is certain equivariant extra data, that are exactly what is necessary to define $\TC$.
+ To define it, we first need to discuss our equivariant setup. Let us stress that it is vastly different to genuine equivariant homotopy theory.
+\begin{defn}
+    Let $G$ be a topological group like $S^1$, $C_p$ (the discrete cyclic group with $p$-elements) 
+    %or $\pg$ (the $p$-Prüfer group\footnote{The group of all roots of unity in $S^1\subset \C$ of $p$-power order.}. 
+    A \textbf{spectrum with $G$-action} is a functor $BG\to \Sp$ from the classifying space of $G$ to spectra. A \textbf{$G$-equivariant map} is a natural transformation i.e. a 1-cell in the functor category $\Fun(BG,\Sp)$. The \textbf{homotopy orbits} and \textbf{homotopy fixed points} of a spectrum with $G$-action $X:BG\to \Sp$ are defined as the colimit and limit of the functor.
+    \begin{equation*}
+        X^{hG}\coloneqq \lim(F:BG\to \Sp),\quad X_{hG}\coloneqq \colim(F:BG\to \Sp)
+    \end{equation*}
+    There is also a third operation, that we need, called the \textbf{Tate construction} $X^{tG}$, which comes equipped with a canonical map from the fixed points $X^{hG}\xrightarrow{\mathrm{can}}X^{tG}$ . \todo{Do I need something else?}
 \end{defn}
 
-Our main examples of cyclotomic spectra will come from topological Hochschild homology.
-We will only define the cyclotomic structure on topological Hochschild homology in the setting of $\Einf$-ring spectra. (can also be constructed in greater generality for $\Eone$ but more complicated, see \cite[Chapter~3.1]{NS})
-The two main ingredients in the construction of the cyclotomic structure are the Tate diagonal and the following universal description of topological Hochschild homology. Note for this, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$.
+\begin{defn}\cite[Chapter~2.1]{NS}
+%A spectrum with $S^1$-action is a functor $BS^1\to \Sp$, $S^1$-equivariant maps are natural transformations in the functor category $\Fun(BS^1,\Sp)$.  SEE ABOVE  
+%a) For a fixed prime p, a \textbf{$p$-cyclotomic spectrum} is a spectrum with $\pg$-action together with a $\pg$-equivariant map $\varphi_p: X \ra X^{tC_p}$ \newline
+A \textbf{cyclotomic spectrum} is a spectrum with $S^1$-action $X$ together with  $S^1$-equivariant maps $\varphi_p: X \ra X^{tC_p}$ for every prime $p$.
+\end{defn}
 
-\begin{prop}[McClure-Schwänzl-Vogt]
-Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a map of \Einf-ring spectra from $R$ to an $\Einf$-ring spectrum with $S^1$-action.
-\end{prop}
-Let us now construct the cyclotomic structure on $\THH(R)$ for $R\in \CAlg$.
-We first note that we can also construct an initial $\Einf$-map out of $R$, where the target is a spectrum with $C_p$-action: $R\ra \underbrace{R\otimes\dots\otimes R}_{p}$.
-Since $\THH(R)$ has a $S^1$-action and hence also a $C_p$-action we get a map $R\otimes\dots\otimes R\ra \THH(R)$. Applying the $C_p$-Tate construction to this map and precomposing it with the Tate diagonal of $R$ we get an $\Einf$-map $R\xra{\Delta_p} R\otimes\dots\otimes R^{tC_p}\ra \THH(R)^{tC_p}$ whose target has $S^1/C_p\cong S^1$-action.
+Our main examples of cyclotomic spectra will 
+come from topological Hochschild homology.
+We will only define the cyclotomic structure on topological Hochschild homology in the setting of $\Einf$-ring spectra. It can also be constructed in the greater generality of $\Eone$-ring spectra but it is more complicated, see \cite[Chapter~3.1]{NS}).
+The two main ingredients in the construction of the cyclotomic structure are the \textbf{Tate diagonal} and Proposition \ref{McClureSchwaenzlVogt} from the last section. Since we already did not discuss the Tate construction, we will also blackbox the Tate diagonal and simply assert that there is a natural map of spectra $X\ra (\underbrace{X\otimes_\S\dots\otimes_\S X}_{p})^{tC_p}$.
+For details see \cite[Section~3.1]{NS}.
+Let us now construct the cyclotomic structure on $\THH(R)$ for $R\in \CAlg$. 
+We first note that we can construct an initial $\Einf$-map out of $R$, where the target is a spectrum with $C_p$-action: $R\ra \underbrace{R\otimes\dots\otimes R}_{p}$.
+Since $\THH(R)$ has a $S^1$-action and hence also a $C_p$-action we get a map $R\otimes_\S\dots\otimes_\S R\ra \THH(R)$. Applying the $C_p$-Tate construction to this map and precomposing it with the Tate diagonal of $R$ we get an $\Einf$-map $R\xra{\Delta_p} (R\otimes\dots\otimes R)^{tC_p}\ra \THH(R)^{tC_p}$ whose target has $S^1/C_p\cong S^1$-action.
 \\
-Hence by the Proposition this factors through $\THH(R)$ and thus produces a map $\THH(R)\xra{\varphi_p} \THH(R)^{tC_p}$.
+Hence by Proposition \ref{McClureSchwaenzlVogt} this factors through $\THH(R)$ and thus produces a map $\THH(R)\xra{\varphi_p} \THH(R)^{tC_p}$.
 \[\begin{tikzcd}
 	{R} & {\text{THH}(R)} \\
 	{(R\otimes\dots\otimes R)^{tC_p}} & {\text{THH}^{tC_p}}
@@ -114,8 +183,61 @@ Hence by the Proposition this factors through $\THH(R)$ and thus produces a map 
 	\arrow["{\Delta_p}"', from=1-1, to=2-1]
 	\arrow[from=2-1, to=2-2]
 \end{tikzcd}\]
-This map equips the topological Hochschild homology of any $\Einf$-ring spectrum with a cyclotomic structure. \\
-Cyclotomic trace, conceptual definition using a universal characterization of K-theory is given in \cite[Section~10.3]{BGTuniversal}.
-The following result of Hesselholt and Madsen gives a close relationship between K-theory and $\TC$ for all rings of interest in this thesis. \cite[Theorem~D]{HMWV}. \\
-Dundas-Goodwillie-McCarthy theorem \cite[Theorem~7.2.2.1]{DundasGoodwillieMccarthyLocalstructure}.\\
-Also cite Clausen-Mathew-Morrow?
+This map equips the topological Hochschild homology of any $\Einf$-ring spectrum with a cyclotomic structure. 
+For every cyclotomic spectrum we can now define $\TC$, which is our main object of interest for this section.
+First of all we define \textbf{negative topological cyclic homology} and \textbf{topological periodic  homology}. For this we only need, that $\THH(R)$ has an $S^1$-action.
+\begin{defn}
+    Let $R$ be a $\Eone$ ring spectrum. define
+        \begin{equation*}
+          \TCm(R)\coloneqq \THH(R)^{hS^1},\quad   \TP(R)\coloneqq \THH(R)^{tS^1}
+        \end{equation*} 
+\end{defn}
+\begin{defn}
+    Let $X$ be a cyclotomic spectrum with structure maps $\varphi_p:X\ra X^{tC_p}$ for $p\in\pP$. We define $\TC(X)$ as the following fiber:
+    \begin{equation*}
+        \TC(X)\ra X^{hS^1}\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\textrm{can} \right)}\prod_{p\in\pP}(X^{tC_p})^{hS^1} 
+    \end{equation*}
+    For $R\in \Alg$ we define $\TC(R)\coloneqq \TC(\THH(R))$.
+\end{defn}
+If $X$ is bounded below (e.g. $\THH(R)$ for $R$ bounded below), we can rewrite the last term in an easier way using the result \cite[Lemma~II.4.2]{NS}, that $(X^{tCp})^{hS^1}\simeq (X^{tS^1})_p^{\wedge}$. We thus get the formula
+\begin{equation*}
+    \TC(X)=\fib\left(  \TCm(X)\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\textrm{can} \right)}\prod_{p\in\pP} \TP(X)^{\wedge}_p\right).
+\end{equation*}
+The crucial relationship with K-theory is provided via the \textbf{cyclotomic trace}, which is a natural transformation $K\xrightarrow{\tr} \TC$. A conceptual definition using a universal characterization of K-theory is given in \cite[Section~10.3]{BGTuniversal}.
+The first crucial theorem establishing the intimate relationship between K-theory and $\TC$ was proven by Dundas-Goodwillie-McCarthy (\cite[Theorem~7.2.2.1]{DundasGoodwillieMccarthyLocalstructure}).
+\begin{thm}
+    Let $R\ra S$ be a map of $\Eone$-ring spectra. Assume that the induced map on $\pi_0$ is surjective with a nilpotent kernel. Then the induced maps on K-theory and $\TC$ together with the respective cyclotomic traces give a pullback square of spectra:
+    \[\begin{tikzcd}
+        {K(R)} & {\mathrm{TC}(R)} \\
+        {K(S)} & {\mathrm{TC}(S)}
+        \arrow[from=1-1, to=1-2]
+        \arrow[from=1-2, to=2-2]
+        \arrow[from=1-1, to=2-1]
+        \arrow[from=2-1, to=2-2]
+    \end{tikzcd}\]
+\end{thm}
+In fact, we can even get away with a weaker conditions on the map $R\to S$ by recent work of Clausen-Mathew-Morrow (\cite[Theorem~A]{CMMHenselian}).\\
+The following result of Hesselholt and Madsen, proven using the Dundas-Goodwillie-McCarthy theorem, shows that for all rings of interest in this thesis, we can fully obtain their $p$-adic K-theory from knowledge of their topological cyclic homology.  
+\cite[Theorem~D]{HMWV}. 
+\begin{thm}
+    Let $k$ be a perfect field of characteristic $p$ and $R$ a $W(k)$-algebra, that is finitely generated as a $W(k)$-module. Then the cyclotomic trace map induces the following isomorphism
+    \begin{align*}
+        K(R)_p^{\wedge}\rai \tau_{\geq 0}\TC(R)_p^{\wedge}.
+    \end{align*}
+\end{thm}
+For example we get $K(\F_p)_p^{\wedge}\simeq \tau_{\geq 0}\TC(\F_p)_p^{\wedge}=H\Z_p$. Together with the fact, that for all other primes $q$ we have a $q$-adic equivalence with connective complex (topological) K-theory $K(\F_p)_q^{\wedge}\simeq (\mathrm{ku})_q^{\wedge}$, this allows us to fully determine the homotopy type of $K(\F_p)$. 
+Furthermore, this result applies to all complete discrete valuation rings of mixed characteristic with complete residue field because they are finite $W(k)$-modules, i.e. all rings of interest in Chapter 3. \\
+Another interesting application of a more geometric flavour is the following: The A-theory spectrum of a based space $X$ is defined to be $K(\sip(\Omega X))$. Observe, that the $\Eone$-map $\sip(\Omega X)\ra \sip(\Omega X)\otimes_\S\Z\ra \Z[\pi_1(X)]$ is an isomorphism on $\pi_0$. Hence we can apply the Dundas-Goodwillie-McCarthy theorem and obtain the following pullback square.
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJLKFxcU2lnbWFeXFxpbmZ0eV8rKFxcT21lZ2EgWCkpIl0sWzEsMCwiXFx0ZXh0e1RDfShcXFNpZ21hXlxcaW5mdHlfKyhcXE9tZWdhIFgpKSJdLFsxLDEsIlxcdGV4dHtUQ30oXFxtYXRoYmJ7Wn1bXFxwaV8xKFgpXSkiXSxbMCwxLCJLKFxcbWF0aGJie1p9W1xccGlfMShYKV0pIl0sWzAsMV0sWzEsMl0sWzAsM10sWzMsMl1d
+\[\begin{tikzcd}
+	{K(\Sigma^\infty_+(\Omega X))} & {\mathrm{TC}(\Sigma^\infty_+(\Omega X))} \\
+	{K(\mathbb{Z}[\pi_1(X)])} & {\mathrm{TC}(\mathbb{Z}[\pi_1(X)])}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+This gives us significant insight into $A(X)$, because we know a lot about the three other constituents.
+${\text{TC}(\Sigma^\infty_+(\Omega X))}$ is to a large part understood by work of Bökstedt-Hsiang-Madsen \cite{BHMtrace} (for a modern presentation see \cite[Section~IV.3]{NS}). 
+$K(\mathbb{Z}[\pi_1(X)])$ can often be computed if the the Farrell Jones conjecture for $\pi_1(X)$ is confirmed. \todo{What is with $\mathrm{TC}(\mathbb{Z}[\pi_1(X)])$ }
+Calculations of $A(X)$ are highly sought after because they contain a lot of geometric information about $X$ due to the celebrated stable parametrized h-cobordism theorem by Wadlhausen-Jahren-Rognes (\cite{WJR2013spaces}). If $X$ is a smooth manifold this allows us in particular to compute $\pi_*(\mathrm{Diff}(X))$ in a certain range of degrees. This connection (predating the invention of topological cyclic homology) was used by Farrell-Hsiang to compute $\Q\otimes\pi_*(\text{Diff}(D^n))$ in \cite{farrellhsiang1978rational} using a theorem of Waldhausen and Borel's work on the rational homotopy groups of $K(\Z)$.

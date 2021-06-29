@@ -50,6 +50,46 @@
       \field{volume}{185}
       \field{year}{2020}
     \endentry
+    \entry{BartelsLückReich-FJC}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4111953a9ff7481e2801347cacc03dc5}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=15aab2ee54a37440507ff05a5fdfe402}{%
+           family={Lück},
+           familyi={L\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8873dfc5d6ebc1c563845f16b9c8a778}{%
+           family={Reich},
+           familyi={R\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{e514e073360eec4663e8bb02a4cfcf67}
+      \strng{fullhash}{e514e073360eec4663e8bb02a4cfcf67}
+      \strng{bibnamehash}{e514e073360eec4663e8bb02a4cfcf67}
+      \strng{authorbibnamehash}{e514e073360eec4663e8bb02a4cfcf67}
+      \strng{authornamehash}{e514e073360eec4663e8bb02a4cfcf67}
+      \strng{authorfullhash}{e514e073360eec4663e8bb02a4cfcf67}
+      \field{labelalpha}{BLR08}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Topology}
+      \field{number}{1}
+      \field{title}{On the Farrell--Jones conjecture and its applications}
+      \field{volume}{1}
+      \field{year}{2008}
+      \field{pages}{57\bibrangedash 86}
+      \range{pages}{30}
+    \endentry
     \entry{BGTuniversal}{article}{}
       \name{author}{3}{}{%
         {{hash=e73a532bb1be860b8805a2c71d2aa224}{%
@@ -483,6 +523,32 @@
       \field{year}{2000}
       \field{pages}{2179\bibrangedash 2204}
       \range{pages}{26}
+    \endentry
+    \entry{loday2013cyclic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f849a5a56c8173c2bec598a49122cfbf}{%
+           family={Loday},
+           familyi={L\bibinitperiod},
+           given={Jean-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{f849a5a56c8173c2bec598a49122cfbf}
+      \strng{fullhash}{f849a5a56c8173c2bec598a49122cfbf}
+      \strng{bibnamehash}{f849a5a56c8173c2bec598a49122cfbf}
+      \strng{authorbibnamehash}{f849a5a56c8173c2bec598a49122cfbf}
+      \strng{authornamehash}{f849a5a56c8173c2bec598a49122cfbf}
+      \strng{authorfullhash}{f849a5a56c8173c2bec598a49122cfbf}
+      \field{labelalpha}{Lod13}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cyclic homology}
+      \field{volume}{301}
+      \field{year}{2013}
     \endentry
     \entry{HigherToposTheory}{book}{}
       \name{author}{1}{}{%

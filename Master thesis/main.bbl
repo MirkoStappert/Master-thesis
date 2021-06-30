@@ -130,6 +130,74 @@
       \field{pages}{733\bibrangedash 838}
       \range{pages}{106}
     \endentry
+    \entry{BV1968homotopyHspaces}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3d6cf039305b5ae555e99ec01839682f}{%
+           family={Boardman},
+           familyi={B\bibinitperiod},
+           given={John\bibnamedelima Michael},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5498a469541dd922eb433a330fdd0480}{%
+           family={Vogt},
+           familyi={V\bibinitperiod},
+           given={Rainer\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{fullhash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{bibnamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authorbibnamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authornamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authorfullhash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \field{extraname}{1}
+      \field{labelalpha}{BV68}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American mathematical society}
+      \field{number}{6}
+      \field{title}{Homotopy-everything $ H $-spaces}
+      \field{volume}{74}
+      \field{year}{1968}
+      \field{pages}{1117\bibrangedash 1122}
+      \range{pages}{6}
+    \endentry
+    \entry{BV2006homotopyalgstructures}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3d6cf039305b5ae555e99ec01839682f}{%
+           family={Boardman},
+           familyi={B\bibinitperiod},
+           given={John\bibnamedelima Michael},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5498a469541dd922eb433a330fdd0480}{%
+           family={Vogt},
+           familyi={V\bibinitperiod},
+           given={Rainer\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{fullhash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{bibnamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authorbibnamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authornamehash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \strng{authorfullhash}{75e45e1af24af4dc84305f1ac18fc16e}
+      \field{extraname}{2}
+      \field{labelalpha}{BV06}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Homotopy invariant algebraic structures on topological spaces}
+      \field{volume}{347}
+      \field{year}{2006}
+    \endentry
     \entry{BHMtrace}{article}{}
       \name{author}{3}{}{%
         {{hash=0fc2cfee7ee29159094dd0e7046c1c6c}{%
@@ -428,6 +496,7 @@
       \strng{authorbibnamehash}{08371f073fae9e84db2704bd3475dfb9}
       \strng{authornamehash}{08371f073fae9e84db2704bd3475dfb9}
       \strng{authorfullhash}{08371f073fae9e84db2704bd3475dfb9}
+      \field{extraname}{1}
       \field{labelalpha}{HM97}
       \field{sortinit}{H}
       \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
@@ -449,6 +518,43 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1016/0040-9383(96)00003-1
+      \endverb
+    \endentry
+    \entry{HMlocalfields}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0cae40bc225eab44451f642ba7b8d91}{%
+           family={Hesselholt},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=af324c91e065d830d2659db7b9821e3a}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={Ib},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{fullhash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{bibnamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authorbibnamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authornamehash}{08371f073fae9e84db2704bd3475dfb9}
+      \strng{authorfullhash}{08371f073fae9e84db2704bd3475dfb9}
+      \field{extraname}{2}
+      \field{labelalpha}{HM03}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{1}
+      \field{title}{On the {$K$}-theory of local fields}
+      \field{volume}{158}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 113}
+      \range{pages}{113}
+      \verb{doi}
+      \verb 10.4007/annals.2003.158.1
       \endverb
     \endentry
     \entry{krausenikolausTCnotes}{misc}{}
@@ -724,6 +830,32 @@
       \verb{url}
       \verb https://www.math.ias.edu/~lurie/papers/SAG-rootfile.pdf
       \endverb
+    \endentry
+    \entry{may2006geometryloop}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bc5edf523100fc6c87752e43e8bbce30}{%
+           family={May},
+           familyi={M\bibinitperiod},
+           given={J\bibnamedelima Peter},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bc5edf523100fc6c87752e43e8bbce30}
+      \strng{fullhash}{bc5edf523100fc6c87752e43e8bbce30}
+      \strng{bibnamehash}{bc5edf523100fc6c87752e43e8bbce30}
+      \strng{authorbibnamehash}{bc5edf523100fc6c87752e43e8bbce30}
+      \strng{authornamehash}{bc5edf523100fc6c87752e43e8bbce30}
+      \strng{authorfullhash}{bc5edf523100fc6c87752e43e8bbce30}
+      \field{labelalpha}{May06}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The geometry of iterated loop spaces}
+      \field{volume}{271}
+      \field{year}{2006}
     \endentry
     \entry{NS}{misc}{}
       \name{author}{2}{}{%

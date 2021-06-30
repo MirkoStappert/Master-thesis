@@ -170,6 +170,33 @@
       \field{pages}{465\bibrangedash 539}
       \range{pages}{75}
     \endentry
+    \entry{borel1974stable}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=0ee895917eb0a33121189b88eecae67e}{%
+           family={Borel},
+           familyi={B\bibinitperiod},
+           given={Armand},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{fullhash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{bibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorbibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authornamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorfullhash}{0ee895917eb0a33121189b88eecae67e}
+      \field{labelalpha}{Bor74}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Annales scientifiques de l'École Normale Supérieure}
+      \field{number}{2}
+      \field{title}{Stable real cohomology of arithmetic groups}
+      \field{volume}{7}
+      \field{year}{1974}
+      \field{pages}{235\bibrangedash 272}
+      \range{pages}{38}
+    \endentry
     \entry{camarena2013whirlwind}{article}{}
       \name{author}{1}{}{%
         {{hash=4caa83bacdf77a720176bc04a824968c}{%
@@ -860,6 +887,34 @@
       \field{shorthand}{Stacks}
       \field{title}{\textit{Stacks Project}}
       \field{year}{2018}
+    \endentry
+    \entry{waldhausen1985algebraic}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=136fcddf3b10601e783f8d7b0c3bcde8}{%
+           family={Waldhausen},
+           familyi={W\bibinitperiod},
+           given={Friedhelm},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \strng{fullhash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \strng{bibnamehash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \strng{authorbibnamehash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \strng{authornamehash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \strng{authorfullhash}{136fcddf3b10601e783f8d7b0c3bcde8}
+      \field{labelalpha}{Wal85}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Algebraic and geometric topology}
+      \field{title}{Algebraic K-theory of spaces}
+      \field{year}{1985}
+      \field{pages}{318\bibrangedash 419}
+      \range{pages}{102}
     \endentry
     \entry{WJR2013spaces}{book}{}
       \name{author}{3}{}{%

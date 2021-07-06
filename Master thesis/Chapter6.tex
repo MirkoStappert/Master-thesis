@@ -25,4 +25,21 @@ Let $R$ be a mixed characteristic complete discrete valuation ring with perfect 
     \item Compute Homology of this, concentrated in odd degrees and given by the same group
     \item But different functoriality, power.
 \end{enumerate}
-First describe functoriality of Hochschild homology.
+First describe functoriality of Hochschild homology.\\
+We have the following Hochschild-Kostant-Rosenbery style result.
+\begin{lem}
+    Let $R$ be an ordinary ring. Then we have the following expression for the topological Hochschild homology of the polynomial ring over $R$.
+    \begin{equation*}
+        \THH(R[x])\simeq \THH(R)\otimes_\Z \HH(\Z[x]).
+    \end{equation*}
+    This is not a natural equivalence. But the resulting isomorphism on homotopy groups $\THH_*(R[x])\simeq \THH_*(R)\otimes_\Z \Omega_{\Z[x]/\Z}$ is a natural isomorphism.
+\end{lem}
+\begin{proof} Using the basic properties of $\THH$ and the equivalence $R[x]\simeq R\otimes_\S \S[x]$ we obtain
+    \begin{align*}
+        \THH(R[x])\simeq \THH(R\otimes_\S \S[x])&\simeq\THH(R)\otimes_\S \THH(\S[x]) \\
+        &\simeq \THH(R)\otimes_\Z (\Z\otimes \THH(\S[x])) \\
+        &\simeq\THH(R)\otimes_\Z (\THH(\Z\otimes \S[x]/\Z))\\
+        &\simeq 
+         \THH(R)\otimes_\Z \HH(\Z[x])
+    \end{align*}
+\end{proof}

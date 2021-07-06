@@ -28,7 +28,7 @@ This applies in particular to the functor $-\otimes_{k'} k:\Mod_k'\ra \Mod_{k}$,
 \end{proof}
 \noindent An important special case is $k'=\S$, which gives us
 $\THH(R)\otimes_\S k=\THH(R\otimes_\S k/k)$. \\
-The next base change formula will allow us to 'decompose' relative $\THH$ computations. We prepare it with a small Lemma.
+The next base change formula will allow us to ´decompose' relative $\THH$ computations. We prepare it with a small Lemma.
 \begin{lem}\label{tpovertp}
 Let $k'\ra k$ be a map of $\Einf$-ring spectra and $M,N\in \Mod_k$ modules over $k$ (and thus also over $k'$). Consider $k$ as a module over $k\otimes_{k'} k$ via multiplication. We then have the following natural equivalence
 \[
@@ -67,7 +67,7 @@ Let us start by writing the left hand side in terms of its cyclic bar constructi
   (\dots  \rightthreearrow R\otimes_{k'} R\rightrightarrows R)
   \otimes_{(\dots  k\otimes_{k'} k \rightrightarrows k)} (\dots \rightthreearrow k \rightrightarrows k)\right)
 \end{align*}
-In the last line we consider the category $\Fun(\Delta^{\op},\Sp)$ as a symmetric monoidal category equipped with the Day convolution tensor product. In this situation $(\dots \rightrightarrows  k\otimes_{k'} k \rightrightarrows k)$ is a commutative algebra object in $\Fun(\Delta^{\op},\Sp)$ and $(\dots  \rightthreearrow R\otimes_{k'} R\rightrightarrows R)$, $(\dots \rightthreearrow k \rightrightarrows k)$   are modules over it. The tensor product over
+In the last line we consider the category $\Fun(\Delta^{\op},\Sp)$ as a symmetric monoidal category equipped with the Day convolution tensor product (see \cite[Section~2.2.6]{lurie2017higher}). In this situation $(\dots \rightrightarrows  k\otimes_{k'} k \rightrightarrows k)$ is a commutative algebra object in $\Fun(\Delta^{\op},\Sp)$ and $(\dots  \rightthreearrow R\otimes_{k'} R\rightrightarrows R)$, $(\dots \rightthreearrow k \rightrightarrows k)$   are modules over it. The tensor product over
 $(\dots \rightrightarrows  k\otimes_{k'} k \rightrightarrows k)$ is then to be understood in the sense of \cite[Section~4.5.2]{lurie2017higher}. \\ 
 Now we can use that $\Delta^{\op}$ is sifted, i.e. the diagonal $\Delta^{\op}\ra \Delta^{\op}\times \Delta^{\op}$ is cofinal and thus also $\Delta^{\op}\ra \Delta^{\op}\times \Delta^{\op}\times \Delta^{\op}$ is cofinal (see \cite[Lemma~5.5.8.4]{HigherToposTheory}). 
 Applying this cofinality (under the equivalent characterization of cofinality proven in \cite[Proposition~4.1.1.8]{HigherToposTheory}); that the tensor product commutes with colimits in both variables separately and that we can also pull geometric realizations out of the ring, we are tensoring over\footnote{This itself uses the construction of the relative tensor product as the geometric realization of the bar construction (\cite[Section~4.4.2]{lurie2017higher}) and once more the cofinality of $\Delta^{\op}\ra \Delta^{\op}\times \Delta^{\op}$.},  we obtain:

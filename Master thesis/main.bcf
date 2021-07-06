@@ -2421,23 +2421,24 @@
     <bcf:citekey order="69">waldhausen1985algebraic</bcf:citekey>
     <bcf:citekey order="70">borel1974stable</bcf:citekey>
     <bcf:citekey order="71">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="72">HigherToposTheory</bcf:citekey>
+    <bcf:citekey order="72">lurie2017higher</bcf:citekey>
     <bcf:citekey order="73">HigherToposTheory</bcf:citekey>
-    <bcf:citekey order="74">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="75">lurie2018elliptic</bcf:citekey>
-    <bcf:citekey order="76">SerreLocal</bcf:citekey>
+    <bcf:citekey order="74">HigherToposTheory</bcf:citekey>
+    <bcf:citekey order="75">lurie2017higher</bcf:citekey>
+    <bcf:citekey order="76">lurie2018elliptic</bcf:citekey>
     <bcf:citekey order="77">SerreLocal</bcf:citekey>
-    <bcf:citekey order="78">stacks-project</bcf:citekey>
+    <bcf:citekey order="78">SerreLocal</bcf:citekey>
     <bcf:citekey order="79">stacks-project</bcf:citekey>
-    <bcf:citekey order="80">Richterdividedpower</bcf:citekey>
-    <bcf:citekey order="81">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="82">LMTHHofnumberrings</bcf:citekey>
-    <bcf:citekey order="83">KNBokstedt</bcf:citekey>
-    <bcf:citekey order="84">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="85">stacks-project</bcf:citekey>
-    <bcf:citekey order="86">barwickK-theory</bcf:citekey>
+    <bcf:citekey order="80">stacks-project</bcf:citekey>
+    <bcf:citekey order="81">Richterdividedpower</bcf:citekey>
+    <bcf:citekey order="82">lurie2017higher</bcf:citekey>
+    <bcf:citekey order="83">LMTHHofnumberrings</bcf:citekey>
+    <bcf:citekey order="84">KNBokstedt</bcf:citekey>
+    <bcf:citekey order="85">lurie2017higher</bcf:citekey>
+    <bcf:citekey order="86">stacks-project</bcf:citekey>
     <bcf:citekey order="87">GGNuniversalityloop</bcf:citekey>
-    <bcf:citekey order="88">BGTuniquenessmulti</bcf:citekey>
+    <bcf:citekey order="88">barwickK-theory</bcf:citekey>
+    <bcf:citekey order="89">barwick2013multiplicative</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -90,6 +90,30 @@
       \field{pages}{57\bibrangedash 86}
       \range{pages}{30}
     \endentry
+    \entry{barwick2013multiplicative}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f6fd7baec206ef21e1ca9f12a7b96f77}{%
+           family={Barwick},
+           familyi={B\bibinitperiod},
+           given={Clark},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \strng{fullhash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \strng{bibnamehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \strng{authorbibnamehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \strng{authornamehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \strng{authorfullhash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \field{extraname}{1}
+      \field{labelalpha}{Bar13}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1304.4867}
+      \field{title}{Multiplicative structures on algebraic K-theory}
+      \field{year}{2013}
+    \endentry
     \entry{barwickK-theory}{article}{}
       \name{author}{1}{}{%
         {{hash=f6fd7baec206ef21e1ca9f12a7b96f77}{%
@@ -107,6 +131,7 @@
       \strng{authorbibnamehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
       \strng{authornamehash}{f6fd7baec206ef21e1ca9f12a7b96f77}
       \strng{authorfullhash}{f6fd7baec206ef21e1ca9f12a7b96f77}
+      \field{extraname}{2}
       \field{labelalpha}{Bar16}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
@@ -147,7 +172,6 @@
       \strng{authorbibnamehash}{d56c7b15501de440649d04b4cabd2b59}
       \strng{authornamehash}{d56c7b15501de440649d04b4cabd2b59}
       \strng{authorfullhash}{d56c7b15501de440649d04b4cabd2b59}
-      \field{extraname}{1}
       \field{labelalpha}{BGT13}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
@@ -160,46 +184,6 @@
       \field{year}{2013}
       \field{pages}{733\bibrangedash 838}
       \range{pages}{106}
-    \endentry
-    \entry{BGTuniquenessmulti}{article}{}
-      \name{author}{3}{}{%
-        {{hash=e73a532bb1be860b8805a2c71d2aa224}{%
-           family={Blumberg},
-           familyi={B\bibinitperiod},
-           given={Andrew\bibnamedelima J},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=a7d7b23f07c3b62e38dc6f2f4dd245b4}{%
-           family={Gepner},
-           familyi={G\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=79e8fcf8dfbaac320f4f8c644592e40d}{%
-           family={Tabuada},
-           familyi={T\bibinitperiod},
-           given={Gonçalo},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{d56c7b15501de440649d04b4cabd2b59}
-      \strng{fullhash}{d56c7b15501de440649d04b4cabd2b59}
-      \strng{bibnamehash}{d56c7b15501de440649d04b4cabd2b59}
-      \strng{authorbibnamehash}{d56c7b15501de440649d04b4cabd2b59}
-      \strng{authornamehash}{d56c7b15501de440649d04b4cabd2b59}
-      \strng{authorfullhash}{d56c7b15501de440649d04b4cabd2b59}
-      \field{extraname}{2}
-      \field{labelalpha}{BGT14}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Advances in Mathematics}
-      \field{title}{Uniqueness of the multiplicative cyclotomic trace}
-      \field{volume}{260}
-      \field{year}{2014}
-      \field{pages}{191\bibrangedash 232}
-      \range{pages}{42}
     \endentry
     \entry{BV1968homotopyHspaces}{article}{}
       \name{author}{2}{}{%

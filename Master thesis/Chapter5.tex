@@ -1,6 +1,7 @@
-\chapter{Topological Hochschild Homology of CDVRs}
+\chapter{Topological Hochschild Homology of CDVRs}\label{THHofCDVR}
 In this chapter we will calculate topological Hochschild homology of (certain) complete discrete valuation rings. \\
-Our main input for this is the following fundamental result of Bökstedt. We give two statements.
+Our main input for this is the following fundamental result of Bökstedt.
+% We give two statements.
 \begin{thm}[Bökstedt] \label{Bökstedt}
 On homotopy groups there is an isomorphism of graded rings $\THH_*(\F_p)=\F_p[x]$  for  $x\in \THH_2(\F_p)$ a generator. 
 We can also phrase this more conceptually as follows: $\THH(\F_p)$ is the free $\Eone$-$\F_p$-algebra on an element in degree 2, i.e. on the two sphere $S^2$. In other words $\THH(\F_p)\cong \F_p\otimes_{\S}\sip \Omega S^3$.
@@ -8,11 +9,12 @@ We can also phrase this more conceptually as follows: $\THH(\F_p)$ is the free $
 Note that the second statement implies the first\footnote{Both statements are actually equivalent. For the other direction observe that a generator of $\THH_2(\F_p)$ gives a map of $\Eone$-$\F_p$-algebras $\F_p\otimes_{\S}\sip \Omega S^3\ra \THH(\F_p)$ because the domain is the free $\Eone$-$\F_p$-algebra on an element in degree 2 and the target is even an $\Einf$-$\F_p$-algebra. By assumption this map induces an isomorphism on homotopy groups and since equivalences of $\En$-algebras can be detected on the underlying spectra, the map is an equivalence of $\Eone$-$\F_p$-algebras.}, because the homotopy groups of $\F_p\otimes_{\S}\sip \Omega S^3$ are the $\F_p$-homology groups of $\Omega S^3$, which can be computed by the Serre spectral sequence associated to the path space fibration of $S^3$.
 The ring structure on $H_*(\Omega S^3;\F_p)$ is given by the Pontryagin product induced by the $\Eone$-structure on $\Omega S^3$.
 \newline
-This periodicity in homotopy groups is called Bökstedt periodicity.
-In fact, the same phenomenon occurs in a much greater class of examples, namely for perfect $\F_p$-algebras and even all perfectoid rings. 
+This periodicity in homotopy groups is called \textit{Bökstedt periodicity}.
+In fact, the same phenomenon occurs in a much greater class of examples, namely for perfect $\F_p$-algebras and even all perfectoid rings (\cite[Chapter~6]{BMS2}). 
 There is also a relative version for complete discrete valuation rings with perfect residue field of characteristic $p$.
 The proof for these results bootstraps the Bökstedt periodicity of $\F_p$ using two base change formulas that we will introduce now. 
 
+\section{Base change formulas}\label{basechangeformulas}
 \begin{prop}\label{base change THH}
 Let $k'\ra k$ be a map of $\Einf$-ring spectra and $R$ an \Eone-$k'$-algebra. Then we have 
 \begin{equation*}
@@ -22,13 +24,13 @@ Let $k'\ra k$ be a map of $\Einf$-ring spectra and $R$ an \Eone-$k'$-algebra. Th
 \begin{proof}
 The base change functor $-\otimes_{k'} k:\Mod_{k'}\ra \Mod_{k}$ is left adjoint to the forgetful functor, so it preserves all colimits. 
 It furthermore carries a symmetric monoidal structure. 
-Since topological Hochschild homology in a symmetric monoidal category is built via the geometric realization of the cyclic bar construction it only uses the monoidal structures and geometric realization.
+Since topological Hochschild homology is built via the geometric realization of the cyclic bar construction it only uses the monoidal structure and geometric realization.
 Hence any symmetric monoidal functor that also preserves geometric realizations will induce an equivalence on topological Hochschild homology. 
 This applies in particular to the functor $-\otimes_{k'} k:\Mod_k'\ra \Mod_{k}$, since it preserves all colimits.
 \end{proof}
 \noindent An important special case is $k'=\S$, which gives us
 $\THH(R)\otimes_\S k=\THH(R\otimes_\S k/k)$. \\
-The next base change formula will allow us to ´decompose' relative $\THH$ computations. We prepare it with a small Lemma.
+The next base change formula will allow us to `decompose' relative $\THH$ computations. We prepare it with a small Lemma.
 \begin{lem}\label{tpovertp}
 Let $k'\ra k$ be a map of $\Einf$-ring spectra and $M,N\in \Mod_k$ modules over $k$ (and thus also over $k'$). Consider $k$ as a module over $k\otimes_{k'} k$ via multiplication. We then have the following natural equivalence
 \[
@@ -151,18 +153,24 @@ In this section we assume that $R$ is complete with respect to the ideal $\m$, i
 Any generator $\pi\in R$ of the maximal ideal will be called a \textit{uniformizer}, completeness with respect to the ideal $\m$ is then equivalent to completeness with respect to the element $\pi$.
 \newline
 Either $R$ and $k$ are both of characteristic $p$ (then we say that $R$ is of \textit{equal characteristic}) or $R$ is of characteristic 0 and $k$ is of characteristic $p$ (the \textit{mixed characteristic} case).
-In the equal characteristic setting, it is known that $R=\nolinebreak k[[x]]$ for $k$ a perfect field of characteristic $p$ (see \cite{SerreLocal}, Part One, Chapter 2.4, Theorem 2). 
+In the equal characteristic setting, it is known that $R=\nolinebreak k[[x]]$ for $k$ a perfect field of characteristic $p$ . 
 In the mixed characteristic case there are more examples: We again get an example for every perfect field of characteristic $p$, namely $W(k)$. 
-But there are also ramified\todo{Make this explicit as we will use this again several times later.} examples\footnote{\label{description mixed char CDVR}In general every mixed characteristic CDVR can be obtained by adjoining a root of an Eisenstein polynomial to W(k). See \cite{SerreLocal} Part one, chapter 2.5.} like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$.
-\newline
+But there are also ramified examples like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$. We can fully characterize them, as certain extensions of the unramified examples. This will be extremely useful later on.
+\begin{prop} \label{description mixed char CDVR}   
+    Let $R$ be a complete discrete valuation ring of mixed characteristic with residue field $k$. Then $R$ is of the form $R\cong W(k)[z]/E(z)$ for an Eisenstein polynomial $E(z)\in W(k)[z]$. Under the map $W(k)[z]\ra R$, the element $z$ gets mapped to a uniformizer in $R$ and $E$ is a minimal polynomial of $\pi$.
+\end{prop}
+\begin{proof}
+    See \cite{SerreLocal} Part one, Section 2.5.
+\end{proof}
+
 To calculate $\THH(R)$ we first work relative to the maximal ideal which will allow us to use the result from the last section because the residue field is by assumption perfect. In the next section, we will then obtain the non-relative result using a descent spectral sequence. \newline
-We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the spherical monoid ring of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-monoid in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
-To work relative to $\S[z]$ we need an $\Eone$-map $\S[z]\ra HR$, which informally is just given by $z\mapsto \pi$ for $\pi$ a uniformizer in $R$. 
+We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the \textit{spherical monoid ring} of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-algebra in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
+To work relative to $\S[z]$, we need an $\Eone$-map $\S[z]\ra HR$, which informally is just given by $z\mapsto \pi$ for $\pi$ a uniformizer in $R$. 
 To make this map precise, note that the ($\sip, \Omega^\infty$)-adjunction is compatible with the symmetric monoidal structures\footnote{i.e. $\sip$ is (strong) symmetric monoidal and $\Omega^\infty$ is (lax) symmetric monoidal with respect to the cartesian product on $\Spc$ and the tensor product on $\Sp$.} on $\Spc$ and $\Sp$, so we get an induced
 %\todo{reference: Vielleicht GGN 3.6}
 adjunction between $\CAlg(\Spc)$ and $\CAlg(\Sp)$. 
 Thus giving a map $\S[z]\ra   HR$  of $\Einf$-ring spectra is equivalent to giving an map $\N_0\ra R$ of $\Einf$-monoids in spaces.
-This is just a morphism of ordinary (commutative) monoids and since $\N_0$ is the free monoid (in sets) on one generator, we get such a map for each element of $R$. In particular we have a map corresponding to $\pi\in R$ and this is what we mean by $\S[z]\ra R,\ z\mapsto \pi$.
+This is just a morphism of ordinary commutative monoids and since $\N_0$ is the free monoid (in sets) on one generator, we get such a map for each element of $R$. In particular we have a map corresponding to $\pi\in R$ and this is what we mean by $\S[z]\ra R,\ z\mapsto \pi$.
 We are now ready to state and prove a relative variant of Bökstedt's theorem for CDVRs.
 \begin{thm} \label{Relative Bökstedt for CDVR}
 Let $R$ be a complete discrete valuation ring with perfect residue field of characteristic p. Choose a uniformizer $\pi\in R$ and give $R$ a $\S[z]$-algebra structure by $z\mapsto \pi$. Then
@@ -184,7 +192,7 @@ In the last line we used that $z$ acts by multiplication by $\pi$ on $R$ and tha
 \begin{equation*}
     \THH(R/\S[z];\Z_p)\xrightarrow{\cdot \pi}\THH(R/\S[z];\Z_p)\ra \THH(k).
 \end{equation*}
-Since $k$ is by assumption perfect of characteristic $p$ it is in particular a perfect $\F_p$-algebra, so Theorem \ref{Bökstedt for perfect rings} applies and tells us the homotopy groups of $\THH(k)$. Thus the long exact sequence for the odd homotopy groups looks as follows 
+Since $k$ is by assumption perfect of characteristic $p$, it is in particular a perfect $\F_p$-algebra, so Theorem \ref{Bökstedt for perfect rings} applies and tells us the homotopy groups of $\THH(k)$. Thus the long exact sequence for the odd homotopy groups looks as follows 
 \[
 \dots \ra k\ra \THH_{2i+1}(R/\S[z];\Z_p)\xrightarrow{\cdot \pi} \THH_{2i+1}(R/\S[z];\Z_p) \ra 0 \ra \dots
 \]
@@ -198,18 +206,23 @@ The long exact sequence takes the form
 \]
 which gives us that they are $\pi$-torsion free and their mod $\pi$ reduction is $k$. They are also derived $\pi$-complete.
 The same holds for $R$, so once we have an $R$-module map (over $k$) we get an isomorphism by the derived Nakayama Lemma ($\pi$-torsion freeness guarantees that the derived mod $\pi$ reduction agrees with the ordinary one). 
-Let $M\coloneqq \THH_2(R/\S[z];\Z_p)$. By the long exact sequence we have a surjective map $M\ra k$. Giving an $R$-module map $R\ra M$ is the same as choosing an element $x \in M$. To also ensure that the map is an equivalence after reducing mod $\pi$, the reduction of $x$ must generate $k$ as an $R$-module. So we have to choose a preimage of any non-zero element of $k$ under the map $M\ra k$, which always exists, since the map is surjective by the long exact sequence. Thus choosing such a lift provides an isomorphism $\THH_2(R/\S[z];\Z_p)\cong R$. The same applies to all positive even homotopy groups once we also choose lifts for all of them. A priori the choices of all these lifts might be unrelated. But since the map $\THH_*(R/\S[z];\Z_p)\ra \THH_*(k)$ is multiplicative, the elements $x^{i}\in \THH_{2i}(R/\S[z];\Z_p)$ provide canonical choices of all of those. 
+Let $M\coloneqq \THH_2(R/\S[z];\Z_p)$. By the long exact sequence we have a surjective map $M\ra k$. Giving an $R$-module map $R\ra M$ is the same as choosing an element $x \in M$. 
+To also ensure that the map is an equivalence after reducing mod $\pi$, the reduction of $x$ must generate $k$ as an $R$-module. So we have to choose a preimage of any non-zero element of $k$ under the map $M\ra k$, which always exists, since the map is surjective by the long exact sequence. 
+Thus choosing such a lift provides an isomorphism $\THH_2(R/\S[z];\Z_p)\cong R$. The same applies to all positive even homotopy groups once we also choose lifts for all of them. A priori the choices of all these lifts might be unrelated. But since the map $\THH_*(R/\S[z];\Z_p)\ra \THH_*(k)$ is multiplicative, the elements $x^{i}\in \THH_{2i}(R/\S[z];\Z_p)$ provide canonical choices of all of those. 
 Hence the choice of $x$ already suffices and gives us an isomorphism of graded rings $\THH_*(R/\S[z];\Z_p)\rai \THH_*(k)$.
 
 
 If $R$ is of equal characteristic, we have already remarked that necessarily $R=k[[z]]$ for $k$ perfect of positive characteristic.
 We proceed similarly to the proof of Theorem \ref{Bökstedt for perfect rings}. 
 Defining $\S_{W(k)}[[z]]$ as the $z$-adic completion of $\S_{W(k)}\otimes_\S \S[z]$, gives us the following base change
-\[ \S_{W(k)}[[z]]\otimes_\S \F_p=k[[z]].
-\]
+\begin{equation*}
+    \S_{W(k)}[[z]]\otimes_\S \F_p=k[[z]].
+\end{equation*} 
 To see this,
 %\todo{Vielleicht in eigenes Lemma?}
-note that the right hand side is the $z$-completion of the left hand side, as in general we have $(X\otimes_\S Y)^\wedge_z=(X^\wedge_z\otimes_\S Y^\wedge_z)^\wedge_z$. To establish that the map to the completion is an isomorphism we thus have to show that the left hand side is already $z$-complete. Since $\F_p$ is finite type over the sphere, we can write it as a filtered colimit of finite spectra along strictly increasingly connective maps, i.e. $\F_p=\colim_i X_i$ with $X_i$ finite and $X_i\rightarrow X_{i+1}$ is $i$-connective. Hence $\pi_n(\F_p\otimes_\S \S_{W(k)}[[z]])=\pi_n(X_n\otimes_\S \S_{W(k)}[[z]])$. As $X_n$ is finite and completion is preserved under \textit{finite} colimits, $X_n\otimes_\S \S_{W(k)}[[z]]$ is $z$-complete, which implies that its homotopy groups are derived $z$-complete. Thus all homotopy groups of $\S_{W(k)}[[z]]\otimes_\S \F_p$ are derived $z$-complete, meaning that $\S_{W(k)}[[z]]\otimes_\S \F_p$ is $z$-complete\footnote{\label{sequential p completion}Note that this shows in general that although being complete is normally not closed under infinite colimits it is indeed preserved if we are taking a sequential colimit along strictly increasingly connective maps. We will use this again later.}.
+note that the right hand side is the $z$-completion of the left hand side, as in general we have $(X\otimes_\S Y)^\wedge_z=(X^\wedge_z\otimes_\S Y^\wedge_z)^\wedge_z$. To establish that the map to the completion is an isomorphism we thus have to show that the left hand side is already $z$-complete. 
+Since $\F_p$ is finite type over the sphere, we can write it as a filtered colimit of finite spectra along strictly increasingly connective maps, i.e. $\F_p=\colim_i X_i$ with $X_i$ finite and $X_i\rightarrow X_{i+1}$ is $i$-connective. Hence $\pi_n(\F_p\otimes_\S \S_{W(k)}[[z]])=\pi_n(X_n\otimes_\S \S_{W(k)}[[z]])$.
+As $X_n$ is finite and completion is preserved under \textit{finite} colimits, $X_n\otimes_\S \S_{W(k)}[[z]]$ is $z$-complete, which implies that its homotopy groups are derived $z$-complete. Thus all homotopy groups of $\S_{W(k)}[[z]]\otimes_\S \F_p$ are derived $z$-complete, meaning that $\S_{W(k)}[[z]]\otimes_\S \F_p$ is $z$-complete\footnote{\label{sequential p completion}Note that this shows in general that although being complete is normally not closed under infinite colimits it is indeed preserved if we are taking a sequential colimit along strictly increasingly connective maps. We will use this again later.}.
 \\
 After establishing this base change, we can use  \ref{base change THH} again :
 \begin{align*}
@@ -355,7 +368,7 @@ Therefore we get a homological (Serre graded) spectral sequence
 \[
 E_{i,j}^2=\THH_i(R/\S[z])\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j \Rightarrow \THH_{i+j}(R).
 \]
-The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the filtration is multiplicative\footnote{i.e. it is an algebra in the category of filtered spectra $\Fun(\Z^{\op},\Sp)$ equipped with Day convolution }.
+The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the filtration is multiplicative\footnote{i.e. it is an algebra in the category of filtered spectra $\Fun((N\Z)^{\op},\Sp)$ equipped with the Day convolution tensor product}.
 \newline
 By $p$-completing everywhere and using that $p$-completion is exact we also get the following spectral sequence with the same formal properties:
 \[
@@ -364,7 +377,7 @@ E_{i,j}^2=\THH_i(R/\S[z];\Z_p)\otimes_{\Z_p[z]}\Omega_{\Z_p[z]/\Z_p}^j \Rightarr
 
 \end{constr}
 In our case of interest $R$ is again a CDVR with perfect residue field of positive characteristic. We completely know the $E^2$-page which by Theorem \ref{Relative Bökstedt for CDVR} takes the form 
-$E^2=R[x]\otimes_Z\Lambda_\Z(dz)$ for elements $|x|=(0,2)$ and $|dz|=(1,0)$ as pictured below.% https://q.uiver.app/?q=WzAsMjgsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiUlxce3hcXH0iXSxbMSwyLCJSXFx7IGR6XFx9Il0sWzMsMiwiUlxce3hkelxcfSJdLFs0LDIsIjAiXSxbNCwzLCIwIl0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDMsIlJcXHt4XjJcXH0iXSxbNSwyLCJSXFx7eF4yZHpcXH0iXSxbNSwxLCIwIl0sWzYsMywiXFxkb3RzIl0sWzYsMiwiXFxkb3RzIl0sWzYsMSwiXFxkb3RzIl0sWzEsMCwiXFxkb3RzIl0sWzIsMCwiXFxkb3RzIl0sWzMsMCwiXFxkb3RzIl0sWzQsMCwiXFxkb3RzIl0sWzUsMCwiXFxkb3RzIl0sWzYsMCwiXFxkb3RzIl0sWzAsNF0sWzAsM10sWzYsNF0sWzAsMF0sWzMsNF0sWzEyLDVdLFsyNCwyNiwiIiwwLHsib2Zmc2V0IjotNH1dLFsyNCwyNywiIiwyLHsib2Zmc2V0Ijo0fV1d
+$E^2=R[x]\otimes_\Z\Lambda_\Z(dz)$ for elements $|x|=(0,2)$ and $|dz|=(1,0)$ as pictured below.% https://q.uiver.app/?q=WzAsMjgsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiUlxce3hcXH0iXSxbMSwyLCJSXFx7IGR6XFx9Il0sWzMsMiwiUlxce3hkelxcfSJdLFs0LDIsIjAiXSxbNCwzLCIwIl0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDMsIlJcXHt4XjJcXH0iXSxbNSwyLCJSXFx7eF4yZHpcXH0iXSxbNSwxLCIwIl0sWzYsMywiXFxkb3RzIl0sWzYsMiwiXFxkb3RzIl0sWzYsMSwiXFxkb3RzIl0sWzEsMCwiXFxkb3RzIl0sWzIsMCwiXFxkb3RzIl0sWzMsMCwiXFxkb3RzIl0sWzQsMCwiXFxkb3RzIl0sWzUsMCwiXFxkb3RzIl0sWzYsMCwiXFxkb3RzIl0sWzAsNF0sWzAsM10sWzYsNF0sWzAsMF0sWzMsNF0sWzEyLDVdLFsyNCwyNiwiIiwwLHsib2Zmc2V0IjotNH1dLFsyNCwyNywiIiwyLHsib2Zmc2V0Ijo0fV1d
 \[\begin{tikzcd}
 	{} & \dots & \dots & \dots & \dots & \dots & \dots \\
 	& 0 & 0 & 0 & 0 & 0 & \dots \\
@@ -382,17 +395,17 @@ Furthermore because multiplicatively everything with potential for non-vanishing
 \[
 d^2: R\{x\}\ra R\{dz\}. 
 \]
-If $R$ has equal characteristic, this differential actually has to vanish. The reason for this is that by the construction of the spectral sequence, we know that the edge homomorphism is given by $\THH_*(R;\Z_p)\ra \THH_*(R/\S[z];\Z_p)$ and everything that lies in the image of this map, has to be a permanent cycle. Because $R$ has equal characteristic, we can precompose the map by $\THH(k)\ra \THH(R;\Z_p)$ and choose $x\in \THH_2(R/\S[z];\Z_p)$ to be the image of the Bökstedt element under the composition of the two maps. Thus $x$ has to be a permanent cycle and $d^2$ vanishes.
+If $R$ has equal characteristic, this differential actually has to vanish. The reason for this is that by the construction of the spectral sequence, we know that the edge homomorphism is given by $\THH_*(R;\Z_p)\ra \THH_*(R/\S[z];\Z_p)$ and everything that lies in the image of this map, has to be a permanent cycle. Because $R$ has equal characteristic, we can precompose the map by $\THH(k)\ra \THH(R;\Z_p)$ and choose $x\in \THH_2(R/\S[z];\Z_p)$ to be the image of the Bökstedt element under the composition of the two maps. Thus $x$ has to be a permanent cycle and $d^2$ vanishes. We hence get that $\THH_*(R;\Z_p)=R[x]\otimes_\Z \Lambda_\Z(dz)$, in particular $\THH_i(R;\Z_p)=R$ for all $i\geq 0$.
 \\
 For mixed characteristic $R$ we will identify it in the following Lemma.
-Recall from footnote \ref{description mixed char CDVR} that every mixed characteristic CDVR $R$ with perfect residue field $k$ has the form $R=W(k)[\pi]$, where $\pi$ satisfies $\Phi(\pi)=0$ for an Eisenstein polynomial $\Phi\in W(k)[z]$.\footnote{In this case $\pi$ is a uniformizer of $R$. For example 
-$\Z_p[\sqrt[n]{p}]=W(\F_p)[\pi]$, $ \Phi(z)=z^n-p.$}
+Recall from Proposition \ref{description mixed char CDVR} that every mixed characteristic CDVR $R$ with perfect residue field $k$ has the form $R=W(k)[\pi]$, where $\pi$ satisfies $E(\pi)=0$ for an Eisenstein polynomial $E\in W(k)[z]$.\footnote{In this case $\pi$ is a uniformizer of $R$. For example 
+$\Z_p[\sqrt[n]{p}]=W(\F_p)[\pi]$, $ E(z)=z^n-p.$}
 \begin{lem} \label{differential}
 For a mixed characteristic CDVR $R$, there is a generator \\ 
-$x\in \THH_2(R;\Z_p)$ with differential $d^2(x)=\Phi'(\pi)dz$.
+$x\in \THH_2(R;\Z_p)$ with differential $d^2(x)=E'(\pi)dz$.
 \end{lem}
 \begin{proof}
-We want to work relative to $\S_{W(k)}$ because this will enable us to make use of the description $R=W(k)[z]/\Phi(z)$. To do this we again employ the base change for relative $\THH$:
+We want to work relative to $\S_{W(k)}$ because this will enable us to make use of the description $R=W(k)[z]/E(z)$. To do this we again employ the base change for relative $\THH$:
 \[
 \THH(R/\S_{W(k)};\Z_p)\stackrel{\ref{relative THH formula}}{=}\THH(R;\Z_p)\otimes_{\THH(\S_{W(k)};\Z_p)} \S_{W(k)}
 \]
@@ -407,17 +420,17 @@ We can now identify the differential using that Hochschild homology and topologi
 \[
 \THH_1(R;\Z_p)=\THH_1(R/\S_{W(k)})=\HH_1(R/W(k)).
 \]
-Furthermore Hochschild homology and Kähler differentials always agree in degree 1 and Kähler differentials are easy to compute, since $R=W(k)[z]/\Phi(z)$.
+Furthermore Hochschild homology and Kähler differentials always agree in degree 1 and Kähler differentials are easy to compute, since $R=W(k)[z]/E(z)$.
 \[
 \HH_1(R/W(k))=\Omega_{R/W(k)}^1=
-%\Omega_{(W(k)[z]/\Phi(z))/W(k)}^1=
-R\{dz\}/\Phi'(\pi)dz.
+%\Omega_{(W(k)[z]/E(z))/W(k)}^1=
+R\{dz\}/E'(\pi)dz.
 \]
 By the spectral sequence we also know 
 \[
 \THH_1(R;\Z_p)=R\{dz\}/\im(d^2:E_{2,0}^2\ra E_{0,1}^2),
 \]
-which finally implies that $\im(d^2:E_{2,0}^2\ra E_{0,1}^2)$ is equal to the submodule of $R\{dz\}$ generated by $\Phi'(\pi)dz$.
+which finally implies that $\im(d^2:E_{2,0}^2\ra E_{0,1}^2)$ is equal to the submodule of $R\{dz\}$ generated by $E'(\pi)dz$.
 This only pinpoints the generator of this submodule up to a unit, which we can choose.
 \end{proof}
 This result will easily allow us to compute $\THH_*(R;\Z_p)$, which we will do momentarily. But let us first issue the following warning.
@@ -435,11 +448,11 @@ But even if we can choose the uniformizers such that one maps onto the other as 
 \end{warn}
 Let us now state the evaluation of the spectral sequence for mixed characteristic CDVRs. This result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun.
 \begin{prop} \label{LM}
-Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field and uniformizer $\pi$. The topological Hochschild homology groups are then given by
+Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field and uniformizer $\pi$ with minimal polynomial $E$. The topological Hochschild homology groups are then given by
 \[\THH_i(R;\Z_p)=
 \begin{cases}
 R &\text{for } n=0 \\
-R/n\Phi'(\pi)&\text{for } i=2n-1, n\geq 1 \\
+R/nE'(\pi)&\text{for } i=2n-1, n\geq 1 \\
 0 & \text{else } 
 
 \end{cases}
@@ -447,13 +460,13 @@ R/n\Phi'(\pi)&\text{for } i=2n-1, n\geq 1 \\
 \end{prop}
 In the case $R=\Z_p$, we can make this more explicit using the Chinese remainder theorem\footnote{together with knowledge of the quotients: $\Z_p/n=0$ for $n\neq p^k$ and $\Z_p/p^k=\Z/p^k$.}: $\THH_{2n-1}(\Z_p;\Z_p)=\Z_p/n\Z_p=\Z/p^{\nu_p(n)}$, where $\nu_p$ denotes the $p$-adic valuation. Emplyoing a fracture square, this can also be used to recover Bökstedt's calculation of $\THH_*(\Z)$.
 \begin{proof}[Proof of Proposition \ref{LM}]
-By Lemma \ref{differential} and the multiplicativity of the spectral sequence we know that $d^2(x^n)=nd^2(x)x^{n-1}=n\Phi'(\pi)x^{n-1}dz$.
+By Lemma \ref{differential} and the multiplicativity of the spectral sequence we know that $d^2(x^n)=nd^2(x)x^{n-1}=nE'(\pi)x^{n-1}dz$.
 All higher differentials vanish for degree reasons, so the $E^3$-page is already the $E^\infty$-page, which takes the form
 % https://q.uiver.app/?q=WzAsMjMsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiMCJdLFsxLDIsIlIvXFxQaGknKFxccGkpIl0sWzMsMiwiUi8yXFxQaGknKFxccGkpIl0sWzQsMiwiMCJdLFs0LDMsIjAiXSxbNSwzLCIwIl0sWzUsMiwiUi8zXFxQaGknKFxccGkpIl0sWzYsMywiXFxkb3RzIl0sWzYsMiwiXFxkb3RzIl0sWzAsNF0sWzAsM10sWzYsNF0sWzAsMF0sWzAsMV0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDEsIjAiXSxbNiwxLCJcXGRvdHMiXSxbMTIsMTQsIiIsMCx7Im9mZnNldCI6LTR9XSxbMTIsMTUsIiIsMix7Im9mZnNldCI6NCwic2hvcnRlbiI6eyJ0YXJnZXQiOjEwfX1dXQ==
 \[\begin{tikzcd}
 	{} \\
 	{} & 0 & 0 & 0 & 0 & 0 & \dots \\
-	& {R/\Phi'(\pi)} & 0 & {R/2\Phi'(\pi)} & 0 & {R/3\Phi'(\pi)} & \dots \\
+	& {R/E'(\pi)} & 0 & {R/2E'(\pi)} & 0 & {R/3E'(\pi)} & \dots \\
 	{} & R & 0 & 0 & 0 & 0 & \dots \\
 	{} &&&&&& {}
 	\arrow[shift left=4, from=5-1, to=5-7]
@@ -465,6 +478,6 @@ For the case $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref
 \[E^2=R'[x]\langle y\rangle \otimes_Z\Lambda_\Z(dz)\Rightarrow \THH_*(R').
 \]
 We can again identify the $d^2$ differential, which is the only one that can occur
-\[d^2(x)=\Phi'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
+\[d^2(x)=E'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
 \]
 Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.

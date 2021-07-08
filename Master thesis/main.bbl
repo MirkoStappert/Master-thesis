@@ -145,6 +145,52 @@
       \field{pages}{245\bibrangedash 347}
       \range{pages}{103}
     \endentry
+    \entry{BMS2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ae02f9b3c51192e4ff918323559a5815}{%
+           family={Bhatt},
+           familyi={B\bibinitperiod},
+           given={Bhargav},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9c3002d3ae09f3a3c3031fa8e9a13e46}{%
+           family={Morrow},
+           familyi={M\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bc840c61eeaaa9ae992e6d23e75c4a8a}{%
+           family={Scholze},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \strng{fullhash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \strng{bibnamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \strng{authorbibnamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \strng{authornamehash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \strng{authorfullhash}{9d56041fcea8aaf6a57e347647a8cfb2}
+      \field{labelalpha}{BMS19}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0073-8301}
+      \field{journaltitle}{Publ. Math. Inst. Hautes Études Sci.}
+      \field{title}{Topological {H}ochschild homology and integral {$p$}-adic {H}odge theory}
+      \field{volume}{129}
+      \field{year}{2019}
+      \field{pages}{199\bibrangedash 310}
+      \range{pages}{112}
+      \verb{doi}
+      \verb 10.1007/s10240-019-00106-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10240-019-00106-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10240-019-00106-9
+      \endverb
+    \endentry
     \entry{BGTuniversal}{article}{}
       \name{author}{3}{}{%
         {{hash=e73a532bb1be860b8805a2c71d2aa224}{%
@@ -951,6 +997,46 @@
       \field{title}{The geometry of iterated loop spaces}
       \field{volume}{271}
       \field{year}{2006}
+    \endentry
+    \entry{mcclureschwaenzlvogt}{article}{}
+      \name{author}{3}{}{%
+        {{hash=574c84855967ec8d78c48918ea6c86ca}{%
+           family={McClure},
+           familyi={M\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=66ba594b402fbb613bff61691f94ebb8}{%
+           family={Schwänzl},
+           familyi={S\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8a111effbee298ed77e608e55dbd95f1}{%
+           family={Vogt},
+           familyi={V\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \strng{fullhash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \strng{bibnamehash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \strng{authorbibnamehash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \strng{authornamehash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \strng{authorfullhash}{0782e6ec82cfc19cd68a4471c2a3c3f9}
+      \field{labelalpha}{MSV97}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Pure and Applied Algebra}
+      \field{number}{2}
+      \field{title}{{$\THH(R)\cong R\otimes S^1$} for {$\Einf$} ring spectra}
+      \field{volume}{121}
+      \field{year}{1997}
+      \field{pages}{137\bibrangedash 159}
+      \range{pages}{23}
     \endentry
     \entry{NS}{misc}{}
       \name{author}{2}{}{%

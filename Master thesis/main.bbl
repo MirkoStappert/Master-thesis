@@ -454,6 +454,37 @@
       \field{pages}{411\bibrangedash 473}
       \range{pages}{63}
     \endentry
+    \entry{DoldPuppeHomologie}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=36daff467e54b673d51e5462a69f75e4}{%
+           family={Dold},
+           familyi={D\bibinitperiod},
+           given={Albrecht},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fc730f4dc8c5c60f8c06684a20b6ba7c}{%
+           family={Puppe},
+           familyi={P\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed8b80c047c981f0223b81c79738f1c8}
+      \strng{fullhash}{ed8b80c047c981f0223b81c79738f1c8}
+      \strng{bibnamehash}{ed8b80c047c981f0223b81c79738f1c8}
+      \strng{authorbibnamehash}{ed8b80c047c981f0223b81c79738f1c8}
+      \strng{authornamehash}{ed8b80c047c981f0223b81c79738f1c8}
+      \strng{authorfullhash}{ed8b80c047c981f0223b81c79738f1c8}
+      \field{labelalpha}{DP61}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Annales de l'institut Fourier}
+      \field{title}{Homologie nicht-additiver funktoren. anwendungen}
+      \field{volume}{11}
+      \field{year}{1961}
+      \field{pages}{201\bibrangedash 312}
+      \range{pages}{112}
+    \endentry
     \entry{DundasGoodwillieMccarthyLocalstructure}{book}{}
       \name{author}{3}{}{%
         {{hash=50ceb7c975d5b0ffa3b5044b4f9932fd}{%
@@ -971,6 +1002,32 @@
       \verb{url}
       \verb https://www.math.ias.edu/~lurie/papers/SAG-rootfile.pdf
       \endverb
+    \endentry
+    \entry{OnderiveddeRhamcohomoology}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=7b66794a77c118527d7eaa67f5fb82dd}{%
+           family={Marangoni},
+           familyi={M\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de Bordeaux; Università degli studi (Milan, Italie)}%
+      }
+      \strng{namehash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \strng{fullhash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \strng{bibnamehash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \strng{authorbibnamehash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \strng{authornamehash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \strng{authorfullhash}{7b66794a77c118527d7eaa67f5fb82dd}
+      \field{labelalpha}{Mar20}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On Derived de Rham cohomology}
+      \field{type}{phdthesis}
+      \field{year}{2020}
     \endentry
     \entry{may2006geometryloop}{book}{}
       \name{author}{1}{}{%

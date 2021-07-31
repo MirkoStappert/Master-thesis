@@ -1,9 +1,9 @@
 \chapter{Functoriality for THH of CDVRs}
-In this chapter, we will use the Tor-spectral sequence to understand the effect of THH on maps between complete discrete valuation rings.
+In this chapter, we will investigate functorial computations. In the first section we will warm-up with Hochschild homology. In the second section we will employ the Tor-spectral sequence and use its functoriality to give a description of the functoriality for $\THH$. We can relate a certain part of this spectral sequence with a similar spectral sequence for $\HH$. \\ In the third and last section we will discuss a 'partial' functoriality of the descent spectral sequence from section 3.4, which allows us to compute $\THH$ for certain maps. We will then compare these computations to the ones of section two.\\
 See \cite[~Proposition 7.2.1.19]{lurie2017higher} for a statement of the Tor spectral sequence for module spectra over a ring spectrum 
 or \cite[\href{https://stacks.math.columbia.edu/tag/061Y}{Tag 061Y}]{stacks-project} for the more classical result in the case of chain complexes.
 \\
-Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field. The following are the main steps in our proof.
+Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field. The following are the main steps in our computation in section two.
 \begin{enumerate}
     \item Write $R$ as a pushout $R\cong\Z_p[z]\otimes_{\Z_p[z]}\Z_p$ via action through the Eisenstein polynomial (see footnote 5)
     \item $\THH$ preserves this pushout because the involved rings are commutative, and for $\Einf$-rings, $\THH$ is given by the colimit over $S^1$ in $\CAlg$ which means that it commutes with arbitrary colimits.
@@ -16,30 +16,171 @@ Let $R$ be a mixed characteristic complete discrete valuation ring with perfect 
     $\Tor_{\THH_*(\Z_p[z])}^i\left( \THH_*(\Z_p[z]),\THH_*(\Z_p)\right)_{(j)}\Rightarrow \THH_{i+j}(R)$ (or rather the $p$-completed version)
     \item Analyze the differentials and extension problems in the spectral sequence.
 \end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Functoriality of $\HH$ for CDVRs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{HHfunctoriality}
+In this section we will describe the functoriality of Hochschild homology. To do this, we will need to make use of nonabelian derived functors. They are a generalization of ordinary derived functors, which have the advantage that they also work in non-additive settings, i.e. for non-additive categories or non-additive functors. This originally goes back to \cite{DoldPuppeHomologie}, for a modern formulation see \cite[Section~5.5.8]{HigherToposTheory}.
+The main idea is to use simplicial resolutions, which make sense in every category, instead of resolutions by chain complexes, which are only sensible in an additive setting. 
+We will only need the concept to derived the non-additive exterior product functor $\Lambda^n_R:\Mod_R\to \Mod_R$, for $R$ an ordinary ring and $\Mod_R$ the 1-category of $R$-modules. The nonabelian derived functor is then a functor $L\Lambda^n_R:D(R)_{\geq 0}\to D(R)_{\geq 0}$. 
+The general recipe to compute it goes as follows\footnote{In general we would need to resolve by finitely generated, projective modules, but since $\Lambda_R^n$ preserves filtered colimits this is not necessary in out case.}: Take a complex (e.g. an ordinary module concentrated in degree 0) find a resolution by a chain complex of projective $R$-modules, use the Dold-Kan correspondence (see e.g. \cite[Section~1.2.3]{lurie2017higher}) to turn this complex into an simplicial $R$-module. 
+Then apply the functor $\Lambda^n_R$ levelwise to this simplicial object and finally convert it back into a chain complex using the inverse of the Dold-Kan correspondence. \\
+The difference to ordinary derived functors only consists in the fact that we apply the functor that we want to derive \textit{after} turning the projective resolution into an simplicial object. 
+As in the ordinary case the value does not depend on the choice of projective resolution.
 \begin{enumerate}
     \item Write down pushout square, apply HH to it
     \item Need to compute derived TP, 
     \item Resolve $\Z_p$ over exterior algebra $\Lambda_{\Z_p}(e)$ gives divided power algebra
     \item TP then gives same DP algebra but with different differential
     \item Compute Homology of this, concentrated in odd degrees and given by the same group
-    \item But different functoriality, power.
+    %\item But different functoriality, power.
 \end{enumerate}
-First describe functoriality of Hochschild homology.\\
-We have the following Hochschild-Kostant-Rosenbery style result.
+
+\begin{lem}
+    For all rings in consideration the cotangent complex relative to $\Z_p$ is concentrated in degree 0 and given by the Kähler differentials
+    \begin{equation*}
+        \bL_{R/\Z_p}=\Omega^1_{R/\Z_p}[0].
+    \end{equation*}
+\end{lem}
+\begin{proof}
+    Using Proposition \ref{description mixed char CDVR}, we get a map $\Z_p[z]\to R\simeq \Z_p[z]/E$. 
+    The maps $\Z_p\to \Z_p[z]\to R$ then induce the fiber sequence
+    \begin{equation*}
+        \bL_{\Z_p[z]/\Z_p}\otimes_{\Z_p[z]}R\to \bL_{R/\Z_p}\to \bL_{R/\Z_p[z]}.
+    \end{equation*}
+    By general facts about the cotangent complex, we know that $\bL_{\Z_p[z]/\Z_p}=\Omega^1_{\Z_p[z]/\Z_p}[0]$ (this is a free $\Z_p[z]$-modules, so we do not need to derive the tensor product) and $\bL_{R/\Z_p[z]}=(E)/(E))^2[1]$.
+    Since they are concentrated in degree 0 and 1 respectively, $\bL_{R/\Z_p}$ can also only have homology in degrees 0 and 1. To prove the statement we thus have to check, that $H_1(\bL_{R/\Z_p})=0$. Let us look at the long exact sequence associated to the fiber sequence.
+    \begin{equation*}
+        0=H_1(\bL_{\Z_p[z]/\Z_p})\to H_1(\bL_{R/\Z_p})\to (E)/(E)^2 \xrightarrow{\delta} \Omega^1_{\Z_p[z]/\Z_p}\otimes_{\Z_p[z]}R.
+    \end{equation*} 
+    The map $\delta$ sends the class of $E$ to $E'dz\otimes 1$ and is thus injective, which implies that $H_1(\bL_{R/\Z_p})=0$.
+\end{proof}
+Section 2.1 of the thesis \cite{OnderiveddeRhamcohomoology} contains this example and many more as well as a recollection of the necessary tools to compute the cotangent complex.
+
+\begin{prop}
+    For all rings $R$ in consideration we have the natural isomosphism 
+    \begin{equation*}
+        \HH_{2n-1}(R;\Z_p)=\HH_{2n-1}(R/\Z_p)=H_{n-1}(L\Lambda^{n}_R \Omega^1_{R/\Z_p}).
+    \end{equation*} 
+\end{prop}
+\begin{proof}
+    Use HKR filtration to obtain SS, this degenerates. Cotangent complex is just given by Kähler differentials. 
+\end{proof}
+Using this and computing the nonabelian derived functor of the Kähler differentials.
+
+
+\begin{lem}
+    For the rings in consideration we have
+    \begin{equation*}
+        \HH_{2n-1}(R;\Z_p)=R/E'(\pi).
+    \end{equation*}
+\end{lem}
+\begin{proof}
+    By the previous lemma, we want to compute $H_{n-1}(L\Lambda^{n}_R \Omega^1_{R/\Z_p})$. We will use the recipe, explained at the beginning of the section. Thus we need a projective resolution of the $R$-module $\Omega^1_{R/\Z_p}$, which is conveniently provided by 
+    \begin{equation*}
+       R\xrightarrow{\cdot E'(\pi)} R\to \Omega^1_{R/\Z_p}. 
+    \end{equation*}
+    Using Dold-Kan, we get a simplicial $R$-module with $R^{n+1}$ in degree $n$. Applying $\Lambda_R^n$ levelwise and converting it back into gives a chain complex again. We want to compute $H_{n-1}$ of it, so we only need the degrees $n-2,n-1,n$, which look as follows 
+    \begin{equation*}
+        \Lambda_R^nR^{n-1}=0\la \Lambda_R^n R^n=R \xleftarrow{d} \Lambda_R^n R^{n+1}=R^{n+1}. 
+    \end{equation*} 
+    Chasing through the Dold-Kan construction we see that the differential is given by multiplication with $E'(\pi)$. Thus $H_{n-1}\left( L\Lambda_R^n(\Omega^1_{R/\Z_p}) \right)=R/E'(\pi)$, which by the last lemma is exactly $\HH_{2n-1}(R;\Z_p)$.
+\end{proof}
+Furthermore, we obtain the following Proposition, which describes the functoriality of Hochschild homology.
+\begin{prop}
+    Let $R\xrightarrow{\varphi} S$ be a map of CDVRs. We get an induced map $\mathrm{d}\varphi:\Omega^1_{R/\Z_p}\to \Omega^1_{S/\Z_p}$. Choose uniformizers with respective Eisenstein polynomials $E,\tilde{E}$. These Eisenstein polynomials give a resolution of the Kähler differentials and by the fundamental theorem of homological algebra we can lift $\mathrm{d}\varphi$ to maps $f$ and $g$ on the terms of the resolutions. 
+    
+    
+    % https://q.uiver.app/?q=WzAsNixbMSwwLCJSIl0sWzIsMCwiXFxPbWVnYV4xX3tSL1xcbWF0aGJie1p9X3B9Il0sWzAsMCwiUiJdLFswLDEsIlMiXSxbMSwxLCJTIl0sWzIsMSwiXFxPbWVnYV4xX3tTL1xcbWF0aGJie1p9X3B9Il0sWzAsMV0sWzIsMCwiXFxjZG90IEUoXFxwaSkiXSxbMyw0LCJcXGNkb3QgXFx0aWxkZXtGfShcXHRpbGRle1xccGl9KSJdLFs0LDVdLFsxLDUsIlxcbWF0aHJte2R9XFx2YXJwaGkiXSxbMCw0LCJmIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsMywiZyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\[\begin{tikzcd}
+	R & R & {\Omega^1_{R/\mathbb{Z}_p}} \\
+	S & S & {\Omega^1_{S/\mathbb{Z}_p}}
+	\arrow[from=1-2, to=1-3]
+	\arrow["{\cdot E(\pi)}", from=1-1, to=1-2]
+	\arrow["{\cdot \tilde{E}(\tilde{\pi})}", from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["{\mathrm{d}\varphi}", from=1-3, to=2-3]
+	\arrow["f", dashed, from=1-2, to=2-2]
+	\arrow["g", dashed, from=1-1, to=2-1]
+\end{tikzcd}\]
+    The map on Hochschild homology groups $\HH_{2n-1}(R;\Z_p)\to         \HH_{2n-1}(S;\Z_p)$ is now induced by the map $fg^{n-1}:R\to S,\ a\mapsto f(a)g(a)^{n-1}$.
+\end{prop}
+\begin{proof}
+    This is simply a matter of understanding the functoriality of the statement in the last lemma. We get the diagram
+    % https://q.uiver.app/?q=WzAsNixbMSwwLCJcXExhbWJkYV9SXm5SXm4iXSxbMiwwLCIwIl0sWzEsMSwiXFxMYW1iZGFfU15uU15uIl0sWzIsMSwiMCJdLFswLDEsIlxcTGFtYmRhX1NeblNee24rMX0iXSxbMCwwLCJcXExhbWJkYV9SXm5SXntuKzF9Il0sWzAsMV0sWzIsM10sWzQsMiwiZCJdLFs1LDAsImQiXSxbNSw0XSxbMCwyXV0=
+    \[\begin{tikzcd}
+	{\Lambda_R^nR^{n+1}} & {\Lambda_R^nR^n} & 0 \\
+	{\Lambda_S^nS^{n+1}} & {\Lambda_S^nS^n} & 0
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=2-2, to=2-3]
+	\arrow["d", from=2-1, to=2-2]
+	\arrow["d", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+    \end{tikzcd}\]
+    The relevant map $\Lambda_R^nR^n\to \Lambda_S^nS^n$ is induced by the map $R^n\to S^n$ given by the diagonal matrix $diag(g,\dots, g, f)$. This matrix has determinant $fg^{n-1}$, which is thus the induced map on homology.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Functoriality of $\THH$ via the Tor spectral sequence}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We will crucially use Lemma \ref{description mixed char CDVR} to write all our rings as quotients of $\Z_p[z]$. This allows us to deduce our computations from the computation for $\THH(\Z_p[z])$ and to understand the functoriality of $\THH(\Z_p[z])$ under self maps of $\Z_p[z]$. We do not understand the functoriality of $\THH(\Z_p[z])$ on the level of spectra, but for homotopy groups we have a relative Hochschild-Kostant-Rosenberg style result.
 \begin{lem}
     Let $R$ be an ordinary ring. Then we have the following expression for the topological Hochschild homology of the polynomial ring over $R$.
     \begin{equation*}
-        \THH(R[x])\simeq \THH(R)\otimes_\Z \HH(\Z[x]).
+        \THH(R[z])\simeq \THH(R)\otimes_\Z \HH(\Z[z]).
     \end{equation*}
-    This is not a natural equivalence. But the resulting isomorphism on homotopy groups $\THH_*(R[x])\simeq \THH_*(R)\otimes_\Z \Omega_{\Z[x]/\Z}$ is a natural isomorphism.
+    This is not a natural equivalence. But the resulting isomorphism on homotopy groups $\THH_*(R[z])\simeq \THH_*(R)\otimes_\Z \Omega_{\Z[z]/\Z}$ is a natural isomorphism.
 \end{lem}
-\begin{proof} Using the basic properties of $\THH$ and the equivalence $R[x]\simeq R\otimes_\S \S[x]$ we obtain
+\begin{proof} Using the basic properties of $\THH$ and the equivalence $R[z]\simeq R\otimes_\S \S[z]$ we obtain
     \begin{align*}
-        \THH(R[x])\simeq \THH(R\otimes_\S \S[x])&\simeq\THH(R)\otimes_\S \THH(\S[x]) \\
-        &\simeq \THH(R)\otimes_\Z (\Z\otimes \THH(\S[x])) \\
-        &\simeq\THH(R)\otimes_\Z (\THH(\Z\otimes \S[x]/\Z))\\
+        \THH(R[z])\simeq \THH(R\otimes_\S \S[z])&\simeq\THH(R)\otimes_\S \THH(\S[z]) \\
+        &\simeq \THH(R)\otimes_\Z (\Z\otimes \THH(\S[z])) \\
+        &\simeq\THH(R)\otimes_\Z (\THH(\Z\otimes \S[z]/\Z))\\
         &\simeq 
          \THH(R)\otimes_\Z \HH(\Z[x])
     \end{align*}
 \end{proof}
+In particular we have a natural isomorphism $\THH(\Z_p[z])\simeq \THH(\Z_p)\otimes_\Z \HH(\Z[z])$. Taking the $p$-completion yields 
+\begin{equation*}
+    \THH(\Z_p[z];\Z_p)\simeq \THH(\Z_p;\Z_p)\otimes_{\Z_p} \HH(\Z_p[z]/Z_p).
+\end{equation*} 
+We do not need to $p$-complete on the outside of the tensor product, because ...\todo{Write reason}.\\
+Let us now apply this result. For this and for the rest of the section let $R$ be a mixed-characteristic complete discrete discrete valuation ring with perfect residue field of characteristic $p$. By Lemma \ref{description mixed char CDVR} we can thus find an Eisenstein polynomial $E(z)$ such that
+\begin{equation*}
+    R=\Z_p[z]/E(z)=\Z_p[z]\otimes_{\Z_p[z]}\Z_p,
+\end{equation*}
+with actions prescribed by the map $\Z_p[z]\ra \Z_p[z], z\mapsto E(z)$ and $\Z_p[z]\to \Z_p, z\mapsto 0$. \\
+Using the monoidality of $\THH$ (Proposition 2.6) we therefore get 
+\begin{equation*}
+    \THH(R)=\THH(\Z_p[z])\otimes_{\THH(\Z_p[z])}\THH(\Z_p).
+\end{equation*}
+To $p$-complete the left hand side, we again only have to $p$-complete all the involved terms and not on the outside because ...\todo{Write reason}. We then know all the homotopy groups of the terms involved on the right side, because we know $\THH(\Z_p[z];\Z_p) $ and $\THH(\Z_p;\Z_p)$. But we of course want to know the homotopy groups of $\THH(R;\Z_p)$ and for this we can use the Tor-spectral sequence. \textbf{The $E^2$-page only contains terms we functorially know}. This will allow us to compute the effect of $\THH$ on maps $R\to S$.
+\section{(Partial) Functoriality of $\THH$ via the descent spectral sequence}
+Have functoriality in monomial maps, i.e. $\S[z]\to \S[z],\  z\mapsto z^n$, that provide squares. This applies for example in the cases that of the inclusions $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}]$ or $\Z_p[\sqrt[k]{p}]\hookrightarrow \Z_p[\sqrt[kn]{p}]$. \\
+Using the base change formula 
+\begin{equation*}
+    \THH(R/\S[z])=\THH(R)\otimes_{\THH(\S{z]})}\S[z]
+\end{equation*}
+We obtain the following map of pushout squares and thus get the dashed induced map.
+% https://q.uiver.app/?q=WzAsOCxbMCwzLCJcXFRISChcXFNbel0pIl0sWzIsMywiXFxUSEgoUi9cXFNbel0pIl0sWzAsMSwiXFxUSEgoUikiXSxbMiwxLCJcXFNbel0iXSxbMSwwLCJcXFRISChTKSJdLFszLDAsIlxcU1t3XSJdLFszLDIsIlxcVEhIKFMvXFxTW3ddIl0sWzEsMiwiXFxUSEgoXFxTW3ddKSJdLFswLDFdLFsyLDBdLFsyLDNdLFszLDFdLFsyLDRdLFszLDVdLFsxLDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDZdLFswLDddLFs3LDZdLFs0LDddLFs0LDVdXQ==
+\[\begin{tikzcd}
+	& {\THH(S)} && {\S[w]} \\
+	{\THH(R)} && {\S[z]} \\
+	& {\THH(\S[w])} && {\THH(S/\S[w])} \\
+	{\THH(\S[z])} && {\THH(R/\S[z])}
+	\arrow[from=4-1, to=4-3]
+	\arrow[from=2-1, to=4-1]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-3, to=4-3]
+	\arrow[from=2-1, to=1-2]
+	\arrow[from=2-3, to=1-4]
+	\arrow[dashed, from=4-3, to=3-4]
+	\arrow[from=1-4, to=3-4]
+	\arrow[from=4-1, to=3-2]
+	\arrow[from=3-2, to=3-4]
+	\arrow[from=1-2, to=3-2]
+	\arrow[from=1-2, to=1-4]
+\end{tikzcd}\]

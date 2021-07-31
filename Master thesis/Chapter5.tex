@@ -85,7 +85,7 @@ Applying this cofinality (under the equivalent characterization of cofinality pr
   \colim_{\Delta^{\op}}(\dots \rightthreearrow k \rightrightarrows k) \\
   &=\THH(R/k)\otimes_{\THH(k/k')}k
 \end{align*}
-This proves the desired result.
+This 
 \end{proof}
 \noindent
 Again there is the important special case of $k'=\S$, which gives us $\THH(R/k)=\THH(R)\otimes_{\THH(k)} k$. \newline
@@ -150,14 +150,14 @@ Together with the Hochschild-Kostant-Rosenberg filtration on Hochschild homology
 \section{Relative Bökstedt periodicity for complete discrete valuation rings}
 Let $R$ be a discrete valuation ring, i.e. a local principal ideal domain that is not a field. Denote its unique maximal ideal by $\m$ and the residue field by $k=R/\m$.
 In this section we assume that $R$ is complete with respect to the ideal $\m$, i.e. $R\rai \lim (R/\m\la R/\m^2 \la \dots)$ and that the residue field $k$ is perfect of characteristic $p>0$. We will abreviate the term complete discrete valuation ring to CDVR.
-Any generator $\pi\in R$ of the maximal ideal will be called a \textit{uniformizer}, completeness with respect to the ideal $\m$ is then equivalent to completeness with respect to the element $\pi$.
+Any generator $\pi\in R$ of the maximal ideal will be called a \textit{uniformizer}. Completeness with respect to the ideal $\m$ is then equivalent to completeness with respect to the element $\pi$.
 \newline
 Either $R$ and $k$ are both of characteristic $p$ (then we say that $R$ is of \textit{equal characteristic}) or $R$ is of characteristic 0 and $k$ is of characteristic $p$ (the \textit{mixed characteristic} case).
 In the equal characteristic setting, it is known that $R=\nolinebreak k[[x]]$ for $k$ a perfect field of characteristic $p$ . 
 In the mixed characteristic case there are more examples: We again get an example for every perfect field of characteristic $p$, namely $W(k)$. 
 But there are also ramified examples like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$. We can fully characterize them, as certain extensions of the unramified examples. This will be extremely useful later on.
 \begin{prop} \label{description mixed char CDVR}   
-    Let $R$ be a complete discrete valuation ring of mixed characteristic with residue field $k$. Then $R$ is of the form $R\cong W(k)[z]/E(z)$ for an Eisenstein polynomial $E(z)\in W(k)[z]$. Under the map $W(k)[z]\ra R$, the element $z$ gets mapped to a uniformizer in $R$ and $E$ is a minimal polynomial of $\pi$.
+    Let $R$ be a complete discrete valuation ring of mixed characteristic with perfect residue field $k$. Then $R$ is of the form $R\cong W(k)[z]/E(z)$ for an Eisenstein polynomial $E(z)\in W(k)[z]$. Under the map $W(k)[z]\ra R$, the element $z$ goes to a uniformizer in $R$ and $E$ is a minimal polynomial of $\pi$.
 \end{prop}
 \begin{proof}
     See \cite{SerreLocal} Part one, Section 2.5.
@@ -215,11 +215,12 @@ Hence the choice of $x$ already suffices and gives us an isomorphism of graded r
 If $R$ is of equal characteristic, we have already remarked that necessarily $R=k[[z]]$ for $k$ perfect of positive characteristic.
 We proceed similarly to the proof of Theorem \ref{Bökstedt for perfect rings}. 
 Defining $\S_{W(k)}[[z]]$ as the $z$-adic completion of $\S_{W(k)}\otimes_\S \S[z]$, gives us the following base change
-\begin{equation*}
-    \S_{W(k)}[[z]]\otimes_\S \F_p=k[[z]].
-\end{equation*} 
+\begin{equation}
+    \S_{W(k)}[[z]]\otimes_\S \F_p=k[[z]].  
+\end{equation} 
+Refer to Lemma \ref{PropertiesTHH} \todo{do that}\\
 To see this,
-%\todo{Vielleicht in eigenes Lemma?}
+\todo{In anderem Lemma?}
 note that the right hand side is the $z$-completion of the left hand side, as in general we have $(X\otimes_\S Y)^\wedge_z=(X^\wedge_z\otimes_\S Y^\wedge_z)^\wedge_z$. To establish that the map to the completion is an isomorphism we thus have to show that the left hand side is already $z$-complete. 
 Since $\F_p$ is finite type over the sphere, we can write it as a filtered colimit of finite spectra along strictly increasingly connective maps, i.e. $\F_p=\colim_i X_i$ with $X_i$ finite and $X_i\rightarrow X_{i+1}$ is $i$-connective. Hence $\pi_n(\F_p\otimes_\S \S_{W(k)}[[z]])=\pi_n(X_n\otimes_\S \S_{W(k)}[[z]])$.
 As $X_n$ is finite and completion is preserved under \textit{finite} colimits, $X_n\otimes_\S \S_{W(k)}[[z]]$ is $z$-complete, which implies that its homotopy groups are derived $z$-complete. Thus all homotopy groups of $\S_{W(k)}[[z]]\otimes_\S \F_p$ are derived $z$-complete, meaning that $\S_{W(k)}[[z]]\otimes_\S \F_p$ is $z$-complete\footnote{\label{sequential p completion}Note that this shows in general that although being complete is normally not closed under infinite colimits it is indeed preserved if we are taking a sequential colimit along strictly increasingly connective maps. We will use this again later.}.
@@ -346,7 +347,7 @@ Observe that $\HH(\Z[z])\stackrel{\ref{base change THH}}{=}\THH(\S[z])\otimes_\S
 \[ 0 \ra  \tau_{\geq1} \HH(\Z[z])\otimes_{\HH(\Z[z])} \THH(R)
 \ra \HH(\Z[z])\otimes _{\HH(\Z[z])} \THH(R)=\THH(R)
 \]
-Similar to filtered chain complex, filtered spectra also give rise to spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
+Similar to filtered chain complex, filtered spectra also give rise to spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
 To state the spectral sequence, we thus have to identify the associated graded. 
 \newline
 Since tensor products preserve cofiber sequences, the associated graded of the filtration on $\THH(R)$ can simply be obtained by tensoring the associated graded of the filtration on $\HH(\Z[z])$ with $\THH(R)$. The associated graded of the filtration on $\HH(\Z[z])$ is given by $\HH_i(\Z[z])=\Omega_{\Z[z]/\Z}^i$.
@@ -416,7 +417,7 @@ In the proof of Theorem \ref{Bökstedt for perfect rings} we already saw that $\
 \]
 As $R$ is $p$-complete and finite type over $\S_{W(k)}$, we can even drop the $p$-completion, i.e. 
 $\THH(R/\S_{W(k)})=\THH(R/\S_{W(k)};\Z_p)$. This holds because we can write $\THH(R/\S_{W(k)})$ as a colimit along the skeletal filtration of its cyclic Bar construction. These maps get increasingly connective and all terms are by induction $p$-complete, which allows us to apply the observation from footnote \ref{sequential p completion} and conclude that $\THH(R/\S_{W(k)})$ is already $p$-complete.   \\
-We can now identify the differential using that Hochschild homology and topological Hochschild homology agree in low degrees:
+We can now identify the differential using that Hochschild homology and topological Hochschild homology agree in low degrees (Lemma \ref{PropertiesTHH}.part 3):
 \[
 \THH_1(R;\Z_p)=\THH_1(R/\S_{W(k)})=\HH_1(R/W(k)).
 \]
@@ -446,7 +447,7 @@ Exactly the same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\g
 But even if we can choose the uniformizers such that one maps onto the other as for example in the case $\Z_p[\sqrt{p}]\to \Z_p[\sqrt{p}], \ \sqrt{p}\mapsto -\sqrt{p}$, this is of not much use. For a meaningful calculation, we would need to choose the same uniformizer in domain and target. Compare this to the analogous situation for vector spaces. If we want to find a matrix representation of a vector space endomorphism, we should of course choose the same basis in domain and target. Otherwise every automorphism can be represented by the identity matrix when taking any basis in the domain and the image of this basis in the target.
 
 \end{warn}
-Let us now state the evaluation of the spectral sequence for mixed characteristic CDVRs. This result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun.
+Let us now state the evaluation of the spectral sequence for mixed characteristic CDVRs. 
 \begin{prop} \label{LM}
 Let $R$ be a mixed characteristic complete discrete valuation ring with perfect residue field and uniformizer $\pi$ with minimal polynomial $E$. The topological Hochschild homology groups are then given by
 \[\THH_i(R;\Z_p)=
@@ -458,7 +459,7 @@ R/nE'(\pi)&\text{for } i=2n-1, n\geq 1 \\
 \end{cases}
 \]
 \end{prop}
-In the case $R=\Z_p$, we can make this more explicit using the Chinese remainder theorem\footnote{together with knowledge of the quotients: $\Z_p/n=0$ for $n\neq p^k$ and $\Z_p/p^k=\Z/p^k$.}: $\THH_{2n-1}(\Z_p;\Z_p)=\Z_p/n\Z_p=\Z/p^{\nu_p(n)}$, where $\nu_p$ denotes the $p$-adic valuation. Emplyoing a fracture square, this can also be used to recover Bökstedt's calculation of $\THH_*(\Z)$.
+In the case $R=\Z_p$, we can make this more explicit using the Chinese remainder theorem\footnote{together with knowledge of the quotients: $\Z_p/n=0$ for $p\nmid n$ and $\Z_p/p^k=\Z/p^k$.}: $\THH_{2n-1}(\Z_p;\Z_p)=\Z_p/n\Z_p=\Z/p^{\nu_p(n)}$, where $\nu_p$ denotes the $p$-adic valuation. Emplyoing a fracture square, this can also be used to recover Bökstedt's calculation of $\THH_*(\Z)$.
 \begin{proof}[Proof of Proposition \ref{LM}]
 By Lemma \ref{differential} and the multiplicativity of the spectral sequence we know that $d^2(x^n)=nd^2(x)x^{n-1}=nE'(\pi)x^{n-1}dz$.
 All higher differentials vanish for degree reasons, so the $E^3$-page is already the $E^\infty$-page, which takes the form
@@ -474,9 +475,34 @@ All higher differentials vanish for degree reasons, so the $E^3$-page is already
 \end{tikzcd}\]
 There is no room for extensions and we can directly read of the result.
 \end{proof}
+
+\begin{rmk}
+    The above result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun. They give a description in terms of the \textbf{inverse different} 
+    \begin{equation*}
+        \THH_{2n-1}(R;\Z_p)=\cD_R^{-1}/n.
+    \end{equation*}
+    The inverse different $\cD_R^{-1}$ of $R$ (or more precisely, the inverse different relative to the Witt vectors of the residue field $\cD_{R/W(k)}^{-1}$) is a fractional ideal of $R$. As the name suggests it is the inverse fractional ideal of the different $\cD_R$, which is an ideal of $R$. The different can be defined as the annihilator ideal of the module of Kähler differentials (see \cite[Chapter~3.7]{SerreLocal})
+    \begin{equation*}
+        \cD_R\coloneqq\Ann_R(\Omega^1_{R/\Z_p})
+    \end{equation*}
+    We can rewrite the annihilator ideal to make its functoriality more clear
+    \begin{equation*}
+        \Ann_R(\Omega^1_{R/\Z_p})=\ker\left(R\to \End(\Omega^1_{R/\Z_p})\right).
+    \end{equation*} Here we consider elements of $R$ as endomorphisms via their multiplication action. Since $M\mapsto \End(M)=\Hom(M,M)$ is a combination of a covariant and a contravariant functor, it is only functorial in automorphisms. 
+    Thus the description $\THH_{2n-1}(R;\Z_p)=\cD_R^{-1}/n$ only has the chance to be natural for automorphisms $R\rai R$. But even in this case, both sides behave completely differently. In degree 1, we have $\THH_1(R;\Z_p)=\HH_1(R;\Z_p)=\Omega^1_{R/\Z_p}$. Thus for an automorphism $\varphi:R\to R$ the induced map on Kähler differentials is given by the derivative $\mathrm{d}\varphi$, while the map $\cD_R\to\cD_R$ is simply the restriction of $\varphi$ to $\cD_R$.
+    For a concrete counterexample, consider the automorphism $\varphi: \Z_p[\zeta_p]\to \Z_p[\zeta_p],\ \zeta_p\mapsto \zeta_p^2 \quad (\text{for } p\neq 2)$. This shows that the isomorphism $\THH_1(R;\Z_p)\cong \cD_R^{-1}/R$ cannot be a natural isomorphism. \\
+    Nevertheless the description using the inverse different, while not functorial, is still useful because it allows us to deduce statements for $\THH$ of rings of integers in number fields. For these rings, the definition of the different as the annihilator ideal of the Kähler differentials still makes sense if we take the Kähler differentials relative\footnote{This should then more appropriately be called the diffent relative to $\Z$, while the different we discussed before is the different relative to $\Z_p$ or the Witt vectors of the residue field.}
+    to $\Z$ instead of $\Z_p$. It is then possible to express this different ideal in terms of the different ideals of all the completions of the ring of integers. This allowed Lindenstrauss and Madsen to give the following expression: For $A$ the ring of integers in a number field, we have
+    \begin{equation*}
+        \THH_{2n-1}(A)=\cD_A^{-1}/nA.
+    \end{equation*}
+\end{rmk}
+
 For the case $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref{descentSS} gives us a spectral sequence which by Proposition \ref{relative Bökstedt for quotients} takes the form 
-\[E^2=R'[x]\langle y\rangle \otimes_Z\Lambda_\Z(dz)\Rightarrow \THH_*(R').
-\]
+\begin{equation*}
+    E^2=R'[x]\langle y\rangle \otimes \Lambda_{\Z}(dz)\Rightarrow \THH_*(R').
+\end{equation*}
+    
 We can again identify the $d^2$ differential, which is the only one that can occur
 \[d^2(x)=E'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
 \]

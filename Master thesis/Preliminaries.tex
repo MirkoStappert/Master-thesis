@@ -16,14 +16,18 @@ Precisely we will need the following higher categorical concepts:
 
 \begin{itemize}
     \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. There is also a way to go back\footnote{This provides a (reflective) adjunction between the (2,1)-category of all categories and the $\infty$-category of all $\infty$-categories.} and to associate to every $\infty$-category $\cC$ a 1-category, called its homotopy category $\Ho(\cC)$.
-    The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.6]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a whole mapping space. 
+    The most important example of an $\infty$-category, that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.16]{HigherToposTheory}). Its role in higher category theory is analogous to the role, that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category, we now no longer only have a set of maps between two objects but a whole mapping space. 
     
     \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}), opposite categories (\cite[Section~1.2.1]{HigherToposTheory}), slice categories (\cite[Section~1.2.9]{HigherToposTheory}), \dots. The only slice category that we will need is the $\infty$-category of pointed spaces, which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$, whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. There are also notions of \textbf{filtered }and \textbf{sifted colimits }and the usual statements hold verbatim, i.e. filtered colimits commute with finite limits and sifted colimits commute with finite products.
     \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as \textbf{lax and strong symmetric monoidal functors}. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
     The $\infty$-category of spaces has all products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}.
     The $\infty$-category of pointed spaces is also symmetric monoidal with the well known smash product $\wedge$ and the above functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures (\cite[Theorem~2.2.2.4]{lurie2017higher}). Similarly if an $\infty$-category has all finite coproducts, it also admits a symmetric monoidal structure by \cite[Section~2.4.3]{lurie2017higher}. 
-    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are \textbf{stable $\infty$-categories}, a notion introduced in \cite[Section~1.1]{lurie2017higher}. The definition is rather simple: An $\infty$-category is stable, if it has all finite limits and colimits, the thus provided initial and terminal object are equivalent \footnote{An object is called initial if mapping spaces out of it are contractible and terminal if mapping spaces into it are contractible.} and a square is a pushout square if and only if it is a pullback square.  Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra. In particular they have a notion of exact sequences also called fiber sequences. We can add maps and thus also take kernels/cokernels of maps because we have a zero object. They are called (homotopy) \textbf{fiber/cofibers} and naturally fit into exact sequences $\fib(f)\ra X\xrightarrow{f} Y$ and $X\xrightarrow{f} Y\ra \cofib(f)$. Furthermore, the homotopy category of a stable $\infty$-category has the structure of a triangulated category (see e.g. \cite[Theorem~1.1.2.14]{lurie2017higher}). Stable $\infty$-category are in some aspects preferable to triangulated categories. First of all a triangulation is extra structure, that has to be provided, while stability is a property. Secondly cones (or rather cofibers) are functorial in stable $\infty$-categories. 
-    They also ``glue'' together more naturally, which is relevant for descent questions in algebraic geometry. For example the functor, that sends a scheme to its derived $\infty$-category of quasi coherent sheaves is a sheaf, which is false on the level of triangulated categories.\todo{check details/reference}
+    \item Most $\infty$-categories\footnote{Besides $\Spc$ and $\Spc_*$}, that we will consider in the next section and in this thesis in general, have an additional property. They are \textbf{stable $\infty$-categories}, a notion introduced in \cite[Section~1.1]{lurie2017higher}.
+    The definition is rather simple: An $\infty$-category is stable, if it has all finite limits and colimits, the thus provided initial and terminal object are equivalent\footnote{An object is called initial if mapping spaces out of it are contractible and terminal if mapping spaces into it are contractible.} and a square is a pushout square if and only if it is a pullback square. 
+    Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra. In particular they have a notion of exact sequences also called fiber sequences. We can add maps and thus also take kernels/cokernels of maps because we have a zero object. 
+    They are called (homotopy) \textbf{fiber/cofibers} and naturally fit into exact sequences $\fib(f)\ra X\xrightarrow{f} Y$ and $X\xrightarrow{f} Y\ra \cofib(f)$. Furthermore, the homotopy category of a stable $\infty$-category has the structure of a triangulated category (see e.g. \cite[Theorem~1.1.2.14]{lurie2017higher}). Stable $\infty$-category are in some aspects preferable to triangulated categories.
+    First of all a triangulation is extra structure, that has to be provided, while stability is a property. Secondly cones (or rather cofibers) are functorial in stable $\infty$-categories. 
+    They also ``glue'' together more naturally, which is relevant for descent questions in algebraic geometry. For example the functor, that sends a scheme to its derived $\infty$-category of quasi coherent sheaves is a sheaf of $\infty$-categories, which is false on the level of triangulated categories.\todo{check details/reference}
     
 \end{itemize}
 \section{Spectra and higher algebra}\label{higheralg}
@@ -61,9 +65,10 @@ What is essential to us are the following facts:
     These assemble into an $\infty$-category $\Alg_{\En}(\cC)$, which is itself again symmetric monoidal. 
     In the most important special cases $n=1,n=\infty$ we will denote them by $\CAlg(\cC)\coloneqq \Alg_{\Einf}(\cC)$ and $\Alg(\cC)\coloneqq \Alg_{\Eone}(\cC)$. If $\cC=\Sp$ we will drop the dependence on $\cC$ and simply write $\Alg$ and $\CAlg$. The objects will be called ($\Eone$-)ring spectra and commutative/$\Einf$-ring spectra respectively.
     Every $\En$-algebra is also an $\mathbb{E}_{n-1}$-algebra and we get forgetful functors $\CAlg(\cC)\ra \Alg_{\En}(\cC)\ra \Alg(\cC)\ra \cC$. 
-    \item Lax symmetric monoidal functors $\cC\ra\cD$ induce functors $\Alg_{\En}(\cC)\ra \Alg_{\En}(\cD)$. In particular since $H:\Ab\ra\Sp$ is lax symmetric monoidal, we get functors $\Alg(\Ab)\ra \Alg(\Sp)$ and  $\CAlg(\Ab)\ra \CAlg(\Sp)$. The categories $\Alg(\Ab)$ and $\CAlg(\Ab)$ coincide with the (nerves of the) ordinary categories of not-necessarily commutative and commutative rings respectively. Thus every ordinary ring $R$ gives rise to an ring spectrum, which has an $\Einf$-structure if $R$ is commutative.
+    \item Lax symmetric monoidal functors $\cC\ra\cD$ induce functors $\Alg_{\En}(\cC)\ra \Alg_{\En}(\cD)$. In particular since $H:\Ab\ra\Sp$ is lax symmetric monoidal, we get functors $\Alg(\Ab)\ra \Alg(\Sp)$ and  $\CAlg(\Ab)\ra \CAlg(\Sp)$. The categories $\Alg(\Ab)$ and $\CAlg(\Ab)$ coincide\footnote{In general in a 1-category, this hierarchy of commutativity collapses in the sense that $\Eone$-algebras are ordinary algebras, while $\En$-algebras for $n\geq 2$ are already ordinary commutative algebras.
+    In a general $n$-category, the collapse happens at step $n+1$, i.e. $\Eone,\Etwo,\dots \En$-algebra structures are all diffent, while from $\mathbb{E}_{n+1}$ on they are already the same data as an $\Einf$-structure. For exmaple in the 2-category of all ordinary categories, we therefore have $\Eone,\Etwo$ and $\Einf$-algebras, which are given by (ordinary) monoidal, braided monoidal and symmetric monoidal categories respectively. In a general $\infty$-category as opposed to $n$-categories for finite $n$, the notions all differ.} with the (nerves of the) ordinary categories of not-necessarily commutative and commutative rings respectively. Thus every ordinary ring $R$ gives rise to an ring spectrum, which has an $\Einf$-structure if $R$ is commutative.
     \item $\En$-algebras in the symmetric monoidal $\infty$-category of $\mathbb{E}_m$-algebras are $\mathbb{E}_{n+m}$-algebras, i.e. $\Alg_{\En}(\Alg_{\mathbb{E}_m}(\cC))=\Alg_{\mathbb{E}_{n+m}}(\cC)$ for any symmetric monoidal $\infty$-category $\cC$. In particular we can interprete an $\En$-structure as $n$ commuting associative structures. This equivalence goes under the name of Dunn additivity, see \cite[Theorem~5.1.2.2]{lurie2017higher}.
-    \item $\En$-algebras in the category of spaces equipped with th cartesian tensor product are called $\En$-spaces. The suspension spectrum functor is strong symmetric monoidal and hence suspension spectra of $\En$-spaces are $\En$-ring spectra. An $n$-fold space i.e. a space of the form $\Omega^n X$ for some space $X$ is an $\En$-space. In fact a space is an $n$-fold loop space if and only if it is an $\En$-space and $\pi_0$ is a group under the monoid structure induced by the $\Eone$-structure (see e.g. \cite[Section~5.2.6]{lurie2017higher}).
+    \item $\En$-algebras in the category of spaces equipped with the cartesian tensor product are called $\En$-spaces. The suspension spectrum functor is strong symmetric monoidal and hence suspension spectra of $\En$-spaces are $\En$-ring spectra. An $n$-fold space i.e. a space of the form $\Omega^n X$ for some space $X$ is an $\En$-space. In fact a space is an $n$-fold loop space if and only if it is an $\En$-space and $\pi_0$ is a group under the monoid structure induced by the $\Eone$-structure (see e.g. \cite[Section~5.2.6]{lurie2017higher}).
     \item Provided that $\cC$ is bicomplete and the tensor product commutes with colimits in both variables separatedly\footnote{This is satisfied in all of our cases of interest.} we have two further statements. The category $\Alg_{\En}(\cC)$ also has all limits and colimits by \cite[Section~3.2]{lurie2017higher}. Limits and sifted colimits are computed underlying. Without any restictions finite coproducts in $\CAlg(\cC)$ are given by the tensor product of the underlying objects in $\cC$. 
     We also get another supply of algebras called \textbf{free algebras}. The forgetful functor $\Alg_{\En}(\cC)\to \cC$ has a left adjoint \cite[Corollary~3.1.3.5]{lurie2017higher}. In particular, this provides us with several free spectra generated by spaces. 
     \item Given an algebra $A\in \Alg(\cC)$, we also able to talk about its $\infty$-category of left and right \textbf{modules }$\LMod_A, \RMod_A$ \cite[Definition~4.2.1.13]{lurie2017higher}. In the case, that $A$ is commutative, they are equivalent (\cite[Section~4.3.2]{lurie2017higher}) and we will simply denote it by $\Mod_A$. Given two algebras $R,S\in \Alg(\cC)$ there is the notion of a $R$-$S$-bimodule. Giving a $R$-$S$-bimodule structure is equivalent to giving a left module structure over $R\otimes_\cC S^{\op}$. The categories $\LMod_A$ and $\RMod_A$ have all limits and colimits, provided that $\cC$ does (\cite[Section~4.2.3]{lurie2017higher}). For $\S\in\Sp$ we have $\Mod_\S=\Sp$ and for an ordinary ring $R$, we get its derived $\infty$-category $\LMod_{HR}\simeq D(R)$ (see \cite[Proposition~7.1.1.15]{lurie2017higher} and the Remark following the Proposition).
@@ -71,7 +76,9 @@ What is essential to us are the following facts:
     For a commutative ring spectrum $R$ every element in its category of modules $\Mod_R$ has an $R$-$R$-bimodule structure. In particular the tensor product of two of these still carries an $R$-$R$-bimodule structure. Through this $\Mod_R$ obtains a symmetric monoidal structure (\cite[Theorem~4.5.2.1]{lurie2017higher}). Thus we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}.
     \item For a map $R\to S$ of ring spectra, we have the forgetful functor $\LMod_S\to \LMod_R$. This functor has both adjoints, in particular it preserves all limits and colimits. The left adjoint is given by a relative tensor product $M\mapsto M\otimes_R S$. For the tensor product we use the left $R$-module structure on $M$ and the right $R$-module structure on $S$. Because $S$ is an $S$-$S$-bimodule, there remains a left $S$-module structure. If $R$ and $S$ are commutative, this left adjoint is symmetric monoidal \cite[Section~4.5.3]{lurie2017higher}
     \item For a connective ring spectrum $R$ we have \textbf{Postnikov towers} in $\Mod_R$ as well as truncations/covers $\tau_{\geq n},\tau_{\leq n}:\Mod_R\to \Mod_R$ (\cite[Proposition~7.1.1.13]{lurie2017higher}). In particular they exist for spectra.
-    \item \textbf{Filtered objects} (i.e. objects of $\Fun((N\Z)^{\op},\cC)$ in stable $\infty$-categories like the ones above provide \textbf{spectral sequences} with values in the abelian category of $\pi_0(R)$-modules (\cite[Section~1.2.2]{lurie2017higher}). For a classical reference on spectral sequence, the reader can confer \cite[Chapter~5]{weibel1994introduction}.
+    \item \textbf{Filtered objects} (i.e. objects of $\Fun((N\Z)^{\op},\cC)$ in stable $\infty$-categories like the ones above provide \textbf{spectral sequences} with values in the abelian category of $\pi_0(R)$-modules (\cite[Section~1.2.2]{lurie2017higher}). 
+    We will use these spectral sequences repeatedly.
+    For a classical reference on spectral sequence, the reader can confer \cite[Chapter~5]{weibel1994introduction}.
     \item Homotopy groups commute with arbitrary products and filtered colimits. There is no general formula for the homotopy groups of tensor products\footnote{But there is a spectral sequence of which we will make use of later.} $\pi_*(X\otimes_\S Y)$. 
     But in the case, that both $X$ and $Y$ are bounded below we can at least say something. Let $\pi_n(X)$ and $\pi_m(X)$ be the lowest non-zero homotopy groups of $X,Y$ then $X\otimes_S Y$ is also bounded below with lowest homotopy group $\pi_{n+m}(X\otimes_\S Y)=\pi_n(X)\otimes_\Z\pi_m(Y)$. 
     For connective (left and right) module spectra $M,N$ over a connective ring spectrum $R$ we similarly get that $M\otimes_R N$ is connective with $\pi_0(M\otimes_R N)=\pi_0(M)\otimes_{\pi_0(R)}\pi_0(N)$ (\cite[Corollary~7.2.1.23]{lurie2017higher}). Another fact about homotopy groups, that will often help us compute them is that fiber/cofiber sequences of spectra give us long exact sequences on the level of homotopy groups.
@@ -89,18 +96,26 @@ Let us directly start with the definition, which is notationally identical to or
 \end{defn}
 Let us be precise about the terms in the definition. For a spectrum $X$ we of course always have the identity map $X\xrightarrow{1}X$. Since we can add maps between spectra, we can consider the $n$-fold addition of this map to itself to obtain $X\xrightarrow{n}X$. We denote the cofiber of this map as $X/n\coloneqq \cofib(X\xrightarrow{n}X)$. The natural maps $X/p^n\ra X/p^{n-1}$ are induced from taking horizontal cofibers in the relevant commutative diagram.
 An immediate observation is that $p$-completion commutes with arbitrary limits and finite colimits. From this we can also see, that $X/p\rai (X_p^{\wedge}/p)$ is an equivalence. The crucial Lemma about $p$-complete spectra and the main reason why we have introduced the concept, is the following.
-\begin{lem}
-    Let $f:X\ra Y$ be a map of spectra. Then $f$ is a $p$-adic equivalence if and only if $f/p:X/p\ra Y/p$ is an equivalence. In particular we can test whether a map of $p$-complete spectra is an equivalence by checking it mod $p$. 
+\begin{lem} \label{modpreduction}
+    Let $f:X\ra Y$ be a map of spectra. Then $f$ is a $p$-adic equivalence if and only if $f/p:X/p\ra Y/p$ is an equivalence. In particular\footnote{Here we use that $p$-completion is idempotent, i.e. $(X^\wedge_p)^\wedge_p\simeq X^\wedge_p $.} we can test whether a map of $p$-complete spectra is an equivalence by checking it mod $p$. \\
+    If furthermore $X$ and $Y$ are connective, the map $f$ is already a $p$-adic equivalence provided that $X\otimes_\S H\F_p\to Y\otimes_\S H\F_p$ is an equivalence (i.e. we can check it on $\F_p$-homology).
 \end{lem}
 Let us now collect a few further facts about $p$-completion, that we will need.
 \begin{itemize}
     \item The Eilenberg-Maclane spectrum of a $p$-complete abelian group is a $p$-complete spectrum. More precisely $HA$ is $p$-complete if and only $A$ is \textbf{derived $p$-complete} in the sense of \href{https://stacks.math.columbia.edu/tag/091S}{Tag 091S}.
     \item A spectrum is $p$-complete if and only if all of its homotopy groups are derived $p$-complete.
-    \item $p$-completion is symmetric monoidal, in particular the $p$-completion of an $\En$-ring $R$ spectrum is an $\En$-ring spectrum. Furthermore the map $R\ra R_p^{\wedge}$ equips the $p$-completion with an $\En$-$R$-algebra structure.
-    \item $p$-completion of tensor product, different ways to write it (use Lemma).
+    \item For every spectrum $X$, the spectrum $X/p$ is $p$-complete.
+    \item $p$-completion $(\phantom{X})^{\wedge}_p:\Sp\to\Sp$ is a lax symmetric monoidal functor (but of course not strongly).
+    In particular we have, that the $p$-completion of an $\En$-ring $R$ spectrum is an $\En$-ring spectrum again. Furthermore the map $R\ra R_p^{\wedge}$ equips the $p$-completion with an $\En$-$R$-algebra structure.
+    \item Let $X,Y$ be module spectra over a ring spectrum $R$. Then we can write the $p$-completion of their tensor product in several different (but equivalent) ways:
+    \begin{equation*}
+        \left( X\otimes_R Y \right)_p^{\wedge}\simeq\left( X_p^{\wedge}\otimes_R Y \right)_p^{\wedge} \simeq\left( X_p^{\wedge}\otimes_R Y_p^{\wedge} \right)_p^{\wedge} 
+    \end{equation*}
+    These equivalences hold, because they hold after mod $p$-reduction and we can use Lemma \ref{modpreduction}.
+    \item In the case that all $R$, $X$ and $Y$ are all connective and one of the factors is of finite type and the other one is $p$-complete, then $X\otimes_R Y$ is also $p$-complete. %We then do not need to complete on the outside again.
 \end{itemize}
-\todo{Finish p-completion}
-Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can still talk about the $z$-completion of module spectra over $R$, which is defined completely analogously. The previous discussion was the case $R=\S$, $z=p\in\pi_0(\S)=\Z$ and $\Mod_\S=\Sp$. More or less everything goes through in this general setting aswell. For everything that we need (and much, much more) we refer to \cite[Section~7.3]{SAG}.
+%\todo{Finish p-completion}
+Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can still talk about the $z$-completion of module spectra over $R$, which is defined completely analogously. The previous discussion was the case $R=\S$, $z=p\in\pi_0(\S)=\Z$ and $\Mod_\S=\Sp$. What we discussed so far goes through in this general setting aswell. For everything that we need (and much, much more) we refer to \cite[Section~7.3]{SAG}.
 
 % %From higher algebra, we need:
 % %\begin{itemize}
@@ -157,29 +172,51 @@ Using the bar construction for the relative tensor product (\cite[Section~4.4.2]
     \THH(R/S)=\colim_{\Delta^{\op}}\left(\dots \rightthreearrow R\otimes_S R\rightrightarrows R\right)
 \end{equation*}
 \\
-Let us record a few basic facts, that we will need, in the following Lemma.\todo{Prove Lemma and Proposition}
-\begin{lem}
+Let us record a few basic facts, that we will need, in the following Lemma.\todo{Prove Lemma Part 4}
+
+\begin{lem}  \label{PropertiesTHH}
     1.) $\THH(\S)=\S$ \\
-    2.) $\THH(R)$ is connective, if $R$ is connective. \\
-    %3.) If $R$ is a $p$-complete spectrum and of finite type\footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.} over $S$, then $\THH(R/S)$ is also $p$-complete.\\
-    3.) Let $A\to B$ be a map of connective commutative ring spectra and $R$ an $\Eone$-$B$-algebra. Assume that $A\to B$ is $i$-connective, then $\THH(R/A)\to \THH(R/B)$ is $i+1$-connective. \todo{Check}\\
-    Brauchen wir später für $\S\to \Z$ und $\S_{W(k)}\to W(k)$.
+    2.) $\THH(R)$ is connective, if $R$ is connective.\\
+    3.) For any ordinary ring $R$, the natural map $\THH(R)\to \HH(R)$ induces an isomorphism on $\pi_0,\pi_1,\pi_2$ and a surjection on $\pi_3$. More generally, for a commutative, connective ring spectrum $S$ and an ordinary $\pi_0(S)$-algebra $R$, the same hold for the map $\THH(R/S)\to \HH(R/\pi_0(S))$. \\
+    4.) If $R$ is a connective, $p$-complete spectrum and of finite type \footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.} over a connective $\Einf$-ring spectrum $S$, then $\THH(R/S)$ is also $p$-complete.\\   
 \end{lem}
+
 \begin{proof}
     1.) This is clear, because $\S$ is the unit of the tensor product on $\Sp$. \\
     2.) By induction, we see that $R\otimes_\S\dots\otimes_\S R$ is connective, because the tensor product of two connective spectra is again connective. Any colimit of connective spectra is again connective and thus $\THH(R)$ is connective because of the cyclic bar construction. \\
-    %3.) By assumption $R$ is a filtered colimit of perfect $A$-module spectra $X_i$ along maps $X_i\ra X_{i+1}$ that are $i$-connective. 
-
+    3.) We show that statement for the map $\THH(R)\to \HH(R)$, the general statement goes analogously.
+    For this, we need to show that the fiber $F\coloneqq \fib(\THH(R)\to \HH(R)$ is 3-connective, i.e. $\pi_0(F)=\pi_1(F)=\pi_2(F)=0$. Because fibers and colimits commute, we can use the cyclic bar construction model to write $F$ as the geometric realization of the levelwise fibers, i.e.
+    \begin{equation*}
+        F=\colim_{\Delta^{\op}} \left( \dots\rightthreearrow \fib(R\otimes_\S R\to R\otimes_\Z R) \rightrightarrows \fib(R\to R) \right)
+    \end{equation*}
+    $F$ is filtered by its skeletal filtration with associated graded given by $\gr^n=\Sigma^n F_n$. The spectral sequence for this filtered spectrum has its first page given by $E^1_{p,q}=\pi_q(F_p)$. Because every $F_n$ is connective and $\fib(R\to R)=0$, it remains to show, that $\pi_0(F_1)=\pi_1(F_1)=\pi_0(F_2)=0$. We can write every abelian group as a colimit of copies of $\Z$ and colimits only increase connectivity, so it suffices to show the statement in the case $R=\Z$. Let us thus consider the map $\Z\otimes_\S \Z\to \Z$. This map admits a retraction 
+    \begin{equation*}
+        \tau_{\leq 0}\S\otimes_\S\Z\simeq \Z\to \Z\otimes_\S \Z\to \Z.
+    \end{equation*}.
+    The retraction exhibits $\Z\otimes_\S\Z$ as a direct sum of $\Z$ and the cofiber of the map $\tau_{\leq 0}\S\otimes_\S\Z\to \Z\otimes_\S\Z$. The fiber is given by $\tau_{\geq 1}\S\otimes_\S\Z$, thus the cofiber is $\Sigma\left( \tau_{\geq 1}\S\otimes_\S\Z \right)$. By the direct sum decomposition this is then also the fiber, which we are after, i.e. $F_1=\Sigma\left( \tau_{\geq 1}\S\otimes_\S\Z \right)$. Because $\tau_{\geq 1}\S$ is by definition 1-connective and we tensor it with a connective spectrum, the resulting spectrum is also 1-connective. Shifting this gives that $F_1$ is 2-connective. \\
+    The case of $F_2$ is easier. The long exact sequence for the fiber sequence $F_2\to \Z\otimes_\S\Z\otimes_S\Z\to \Z$ looks like 
+    \begin{equation*}
+        0=\pi_1(\Z)\to \pi_0(F_2)\to \pi_0(\Z\otimes_\S\Z\otimes_S\Z)\rai \pi_0(\Z).
+    \end{equation*}
+    Because $\pi_1(\Z)=0$ and the last map is an isomorphism, we necessarily have $\pi_0(F_2)=0$. \qedhere
+    %4.) By assumption $R$ is a filtered colimit of perfect $A$-module spectra $X_i$ along maps $X_i\ra X_{i+1}$ that are $i$-connective. 
 \end{proof}
-
-%Note for the next proposition, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$.
-The next proposition will only be used in the next section, where it is a crucial ingredient in the cyclotomic structure on $\THH$.
+Part 3.) is especially useful when combined with the fact that $ \Omega^1_{R/S} \cong \HH_1(R/S)$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universality of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
+In the case that $R/S$ is smooth, this map is an isomorphism due to the \textbf{Hochschild-Kostant-Rosenberg} (HKR) theorem (see \cite[Section~3.4]{loday2013cyclic}). 
+This result is also useful for the study of non-smooth algebras. Using the machinery of non-abelian derived functors it provides us, for \textit{any} ring, with a natural filtration on its Hochschild complex. This filtration is called the \textbf{HKR-filtration} and we will crucially make use of it in Section \ref{HHfunctoriality}.
+%Note for the next proposition, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$. 
+\\
+The next proposition will only be used in the next section, where it is an important ingredient in the cyclotomic structure on $\THH$.
 \begin{prop}\cite{mcclureschwaenzlvogt}
 \label{McClureSchwaenzlVogt}
 Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a non-equivariant map of $\Einf$-ring spectra from $R$ to an $\Einf$-ring spectrum with $S^1$-action (i.e. an object in $\Fun(BS^1,\CAlg)$). In other words $\THH$ of a commutative ring spectrum is the colimit over the constant diagram $S^1\ra \CAlg$ with value $R$.
 \end{prop}
 %\todo{finish}
 \begin{proof}
+    %We use that we can write the circel as a pushout $S^1=*\sqcup_{S^0}*$. Thus 
+    %\begin{equation*}
+    %    \colim_{S^1}R=\colim_{*}R \sqcup_{\colim_{S^0}R}\colim_{*}R=
+    %\end{equation*}
     We will use the simplicial model of the circle $S^1$ whose set of $n$-vertices $S_n^1$ has exactly $n+1$ elements. This gives the presentation $S^1=\colim_{\Delta^{\op}}S_n^1$ and thus allows us to decompose the colimit over $S^1$.
     \begin{equation*}
         \colim_{S^1}R=\colim_{\Delta^{\op}}(\colim_{S_n^1}R)=\colim_{\Delta^{\op}}R^{\otimes(n+1)}
@@ -188,9 +225,9 @@ Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a n
 \end{proof}
 The same is also true for relative $\THH$. We have that $\THH(R/S)$ is the colimit of the functor $S^1\ra \CAlg_S$ with constant value $R$.
 \\
-We also need to adress the monoidality properties of $\THH$, which is slightly more complicated.
+We also need to adress the monoidality $\THH$.
 \begin{prop}
-    For any commutative ring spectrum $S$, the functor $\THH: \Alg_S\ra \Mod_S$ is symmetric monoidal. In particular, $\THH:\Alg\to \Sp$ is symmetric monoidal and thus $\THH$ of an $\En$-ring spectrum is $\mathbb{E}_{n-1}$. Most importantly $\THH$ of a commutative ring spectrum is again a commutative ring spectrum.
+    For any commutative ring spectrum $S$, the functor \\ $\THH(-/S): \Alg_S\ra \Mod_S$ is symmetric monoidal. In particular, $\THH:\Alg\to \Sp$ is symmetric monoidal and thus $\THH$ of an $\En$-ring spectrum is $\mathbb{E}_{n-1}$. Most importantly $\THH$ of a commutative ring spectrum is again a commutative ring spectrum.
 \end{prop}
 For the case of commutative ring spectra this is clear by Proposition \ref{McClureSchwaenzlVogt}, because colimits commute with colimits and $\THH$ as well as the tensor product are given by colimits in the case of commutative ring spectra. The general case is more complicated.
 

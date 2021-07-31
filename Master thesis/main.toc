@@ -9,22 +9,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Spectra and higher algebra}{7}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Topological Hochschild homology}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Topological Hochschild homology}{13}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Topological cyclic homology and the cyclotomic trace}{14}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Topological cyclic homology and the cyclotomic trace}{16}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Topological Hochschild Homology of CDVRs}{18}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Topological Hochschild Homology of CDVRs}{19}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Base change formulas}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Base change formulas}{19}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$- algebras}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$- algebras}{21}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for complete discrete valuation rings}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for complete discrete valuation rings}{23}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Absolute THH of CDVRs}{27}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Absolute THH of CDVRs}{28}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Functoriality for THH of CDVRs}{32}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Functoriality for THH of CDVRs}{34}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{34}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}K-Theory}{34}{appendix.A}%
+\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{37}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}(Partial) Functoriality of $\THH $ via the descent spectral sequence}{38}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}K-Theory}{40}{appendix.A}%

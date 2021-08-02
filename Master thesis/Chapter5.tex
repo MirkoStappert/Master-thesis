@@ -215,16 +215,13 @@ Hence the choice of $x$ already suffices and gives us an isomorphism of graded r
 If $R$ is of equal characteristic, we have already remarked that necessarily $R=k[[z]]$ for $k$ perfect of positive characteristic.
 We proceed similarly to the proof of Theorem \ref{Bökstedt for perfect rings}. 
 Defining $\S_{W(k)}[[z]]$ as the $z$-adic completion of $\S_{W(k)}\otimes_\S \S[z]$, gives us the following base change
-\begin{equation}
+\begin{equation*}
     \S_{W(k)}[[z]]\otimes_\S \F_p=k[[z]].  
-\end{equation} 
-Refer to Lemma \ref{PropertiesTHH} \todo{do that}\\
-To see this,
-\todo{In anderem Lemma?}
-note that the right hand side is the $z$-completion of the left hand side, as in general we have $(X\otimes_\S Y)^\wedge_z=(X^\wedge_z\otimes_\S Y^\wedge_z)^\wedge_z$. To establish that the map to the completion is an isomorphism we thus have to show that the left hand side is already $z$-complete. 
-Since $\F_p$ is finite type over the sphere, we can write it as a filtered colimit of finite spectra along strictly increasingly connective maps, i.e. $\F_p=\colim_i X_i$ with $X_i$ finite and $X_i\rightarrow X_{i+1}$ is $i$-connective. Hence $\pi_n(\F_p\otimes_\S \S_{W(k)}[[z]])=\pi_n(X_n\otimes_\S \S_{W(k)}[[z]])$.
-As $X_n$ is finite and completion is preserved under \textit{finite} colimits, $X_n\otimes_\S \S_{W(k)}[[z]]$ is $z$-complete, which implies that its homotopy groups are derived $z$-complete. Thus all homotopy groups of $\S_{W(k)}[[z]]\otimes_\S \F_p$ are derived $z$-complete, meaning that $\S_{W(k)}[[z]]\otimes_\S \F_p$ is $z$-complete\footnote{\label{sequential p completion}Note that this shows in general that although being complete is normally not closed under infinite colimits it is indeed preserved if we are taking a sequential colimit along strictly increasingly connective maps. We will use this again later.}.
-\\
+\end{equation*} 
+%Refer to Lemma \ref{PropertiesTHH} \todo{do that}\\
+To see this, note that the right hand side is the $z$-adic completion of the left hand side, as in general we have $(X\otimes_\S Y)^\wedge_z=(X^\wedge_z\otimes_\S Y^\wedge_z)^\wedge_z$. To establish that the map to the completion is an isomorphism we thus have to see that the left hand side is already $z$-complete. This holds because $\F_p$ is finite type over the sphere and $ \S_{W(k)}[[z]]$ is $z$-complete. \\
+% , we can write it as a filtered colimit of finite spectra along strictly increasingly connective maps, i.e. $\F_p=\colim_i X_i$ with $X_i$ finite and $X_i\rightarrow X_{i+1}$ is $i$-connective. Hence $\pi_n(\F_p\otimes_\S \S_{W(k)}[[z]])=\pi_n(X_n\otimes_\S \S_{W(k)}[[z]])$.
+% As $X_n$ is finite and completion is preserved under \textit{finite} colimits, $X_n\otimes_\S \S_{W(k)}[[z]]$ is $z$-complete, which implies that its homotopy groups are derived $z$-complete. Thus all homotopy groups of $\S_{W(k)}[[z]]\otimes_\S \F_p$ are derived $z$-complete, meaning that $\S_{W(k)}[[z]]\otimes_\S \F_p$ is $z$-complete\footnote{\label{sequential p completion}Note that this shows in general that although being complete is normally not closed under infinite colimits it is indeed preserved if we are taking a sequential colimit along strictly increasingly connective maps. We will use this again later.}.
 After establishing this base change, we can use  \ref{base change THH} again :
 \begin{align*}
     \THH(k[[z]]/\S[z])&=\THH(\S_{W(k)}[[z]]\otimes_\S \F_p) \\
@@ -331,7 +328,7 @@ This finally enables us to compute the  homotopy groups
 
 \[ \THH_*(R'/\S[z])=R'[x]\langle y\rangle, \ |x|=|y|=2.
 \]
-
+\qedhere
 \end{proof}
 
 
@@ -347,8 +344,8 @@ Observe that $\HH(\Z[z])\stackrel{\ref{base change THH}}{=}\THH(\S[z])\otimes_\S
 \[ 0 \ra  \tau_{\geq1} \HH(\Z[z])\otimes_{\HH(\Z[z])} \THH(R)
 \ra \HH(\Z[z])\otimes _{\HH(\Z[z])} \THH(R)=\THH(R)
 \]
-Similar to filtered chain complex, filtered spectra also give rise to spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
-To state the spectral sequence, we thus have to identify the associated graded. 
+This filtered spectrum gives rise to a spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
+To compute the $E^2$-page, we thus have to identify the associated graded. 
 \newline
 Since tensor products preserve cofiber sequences, the associated graded of the filtration on $\THH(R)$ can simply be obtained by tensoring the associated graded of the filtration on $\HH(\Z[z])$ with $\THH(R)$. The associated graded of the filtration on $\HH(\Z[z])$ is given by $\HH_i(\Z[z])=\Omega_{\Z[z]/\Z}^i$.
 Using our base change formulas, we can relate this back to relative $\THH$:
@@ -415,8 +412,7 @@ In the proof of Theorem \ref{Bökstedt for perfect rings} we already saw that $\
 \[
 \THH(R/\S_{W(k)};\Z_p)=\THH(R;\Z_p).
 \]
-As $R$ is $p$-complete and finite type over $\S_{W(k)}$, we can even drop the $p$-completion, i.e. 
-$\THH(R/\S_{W(k)})=\THH(R/\S_{W(k)};\Z_p)$. This holds because we can write $\THH(R/\S_{W(k)})$ as a colimit along the skeletal filtration of its cyclic Bar construction. These maps get increasingly connective and all terms are by induction $p$-complete, which allows us to apply the observation from footnote \ref{sequential p completion} and conclude that $\THH(R/\S_{W(k)})$ is already $p$-complete.   \\
+As $R$ is $p$-complete and finite type over $\S_{W(k)}$, we can even drop the $p$-completion by part 4 of Proposition \ref{PropertiesTHH}. 
 We can now identify the differential using that Hochschild homology and topological Hochschild homology agree in low degrees (Lemma \ref{PropertiesTHH}.part 3):
 \[
 \THH_1(R;\Z_p)=\THH_1(R/\S_{W(k)})=\HH_1(R/W(k)).

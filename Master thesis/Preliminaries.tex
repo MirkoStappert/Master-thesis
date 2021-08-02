@@ -112,10 +112,16 @@ Let us now collect a few further facts about $p$-completion, that we will need.
         \left( X\otimes_R Y \right)_p^{\wedge}\simeq\left( X_p^{\wedge}\otimes_R Y \right)_p^{\wedge} \simeq\left( X_p^{\wedge}\otimes_R Y_p^{\wedge} \right)_p^{\wedge} 
     \end{equation*}
     These equivalences hold, because they hold after mod $p$-reduction and we can use Lemma \ref{modpreduction}.
-    \item In the case that all $R$, $X$ and $Y$ are all connective and one of the factors is of finite type and the other one is $p$-complete, then $X\otimes_R Y$ is also $p$-complete. %We then do not need to complete on the outside again.
+    \item In the case that all $R$, $X$, $Y$ are all connective $X$ is of finite type\footnote{This means, that $X$ can be written as a sequential colimit of finite $R$-module spectra along increasingly connective maps, i.e. $X=\colim_i X_i$ with $X_i$ finite and $X_i\to X_{i+1}$ is $i$-connective.} and $Y$ is $p$-complete, then $X\otimes_R Y$ is also $p$-complete. \\
+    This can be seen as follows: Write $X=\colim X_i$ with $X_i$ finite. Tensoring with a finite spectrum preserves $p$-completeness, so all homotopy groups of $X_i\otimes_R Y$ are derived $p$-complete. But because the colimit is filtered and along increasingly connective maps we have
+    \begin{equation*}
+        \pi_n(X\otimes_R Y)=\colim_i \pi_n(X_i\otimes_R Y)=\pi_n(X_i\otimes_R Y).
+    \end{equation*}
+    Therefore all these groups are derived $p$-complete and hence by the second point in this list, $X\otimes_R Y$ is $p$-complete.
+     %We then do not need to complete on the outside again.
 \end{itemize}
 %\todo{Finish p-completion}
-Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can still talk about the $z$-completion of module spectra over $R$, which is defined completely analogously. The previous discussion was the case $R=\S$, $z=p\in\pi_0(\S)=\Z$ and $\Mod_\S=\Sp$. What we discussed so far goes through in this general setting aswell. For everything that we need (and much, much more) we refer to \cite[Section~7.3]{SAG}.
+Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can still talk about the $z$-adic completion of module spectra over $R$, which is defined completely analogously. The previous discussion was the case $R=\S$, $z=p\in\pi_0(\S)=\Z$ and $\Mod_\S=\Sp$. What we discussed so far goes through in this more general setting aswell. For everything that we need (and much, much more) we refer to \cite[Section~7.3]{SAG}.
 
 % %From higher algebra, we need:
 % %\begin{itemize}
@@ -132,13 +138,15 @@ Given a commutative ring spectrum $R$ and any element $z\in\pi_0(R)$, we can sti
 %     \item Postnikov towers?
 %     \item Spectral sequences, \cite[Section~1.2.2]{lurie2017higher}, Weibel \cite[Chapter~5]{weibel1994introduction}
 % %\end{itemize}
-Further things to cite:
-\begin{itemize}
-    \item Nikolaus-Krause lecture notes \cite{krausenikolausTCnotes} 
-    \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
-    \cite[148]{DundasGoodwillieMccarthyLocalstructure}
-    \item Check \cite[Chapter~2]{HMlocalfields}
-\end{itemize}
+
+
+% Further things to cite:
+% \begin{itemize}
+%     \item Nikolaus-Krause lecture notes \cite{krausenikolausTCnotes} 
+%     \item Dundas-Goodwillie-McCarthy (functoriality of THH for number rings is open problem, page 148, beginning of chapter 4)
+%     \cite[148]{DundasGoodwillieMccarthyLocalstructure}
+%     \item Check \cite[Chapter~2]{HMlocalfields}
+% \end{itemize}
 
 
 
@@ -172,8 +180,7 @@ Using the bar construction for the relative tensor product (\cite[Section~4.4.2]
     \THH(R/S)=\colim_{\Delta^{\op}}\left(\dots \rightthreearrow R\otimes_S R\rightrightarrows R\right)
 \end{equation*}
 \\
-Let us record a few basic facts, that we will need, in the following Lemma.\todo{Prove Lemma Part 4}
-
+Let us record a few facts, that we will need, in the following Lemma.
 \begin{lem}  \label{PropertiesTHH}
     1.) $\THH(\S)=\S$ \\
     2.) $\THH(R)$ is connective, if $R$ is connective.\\
@@ -198,10 +205,10 @@ Let us record a few basic facts, that we will need, in the following Lemma.\todo
     \begin{equation*}
         0=\pi_1(\Z)\to \pi_0(F_2)\to \pi_0(\Z\otimes_\S\Z\otimes_S\Z)\rai \pi_0(\Z).
     \end{equation*}
-    Because $\pi_1(\Z)=0$ and the last map is an isomorphism, we necessarily have $\pi_0(F_2)=0$. \qedhere
-    %4.) By assumption $R$ is a filtered colimit of perfect $A$-module spectra $X_i$ along maps $X_i\ra X_{i+1}$ that are $i$-connective. 
+    Because $\pi_1(\Z)=0$ and the last map is an isomorphism, we necessarily have $\pi_0(F_2)=0$. \\
+    4.) Recall from last section, that the tensor product of two connective modules over a connective base ring is $p$-complete provided one is of finite type over the base ring and the other module is $p$-complete. By our assumption we can see, that $R\otimes_S R$ is $p$-complete and by induction that all the term of the form $R\otimes_S \dots \otimes_S R$ are $p$-complete. Now we want to argue, that by the bar construction $\THH(R/S)$ is also $p$-complete. This does not work directly, because infinite colimits do not preserve $p$-completeness in general. But since finite colimits preserve $p$-completeness, we know that the colimit over $\Delta^{\op}_{\leq n}$ is $p$-complete. The full colimit over $\Delta^{\op}$ is then given by a filtered colimit of these finite stage colimits along increasingly connective maps. This then implies that $\THH(R/S)$ is $p$-complete.
 \end{proof}
-Part 3.) is especially useful when combined with the fact that $ \Omega^1_{R/S} \cong \HH_1(R/S)$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universality of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
+Part 3.) is especially useful when combined with the fact that the explicit map $\Omega^1_{R/S} \cong \HH_1(R/S), adb\mapsto a\otimes b$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universal property of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
 In the case that $R/S$ is smooth, this map is an isomorphism due to the \textbf{Hochschild-Kostant-Rosenberg} (HKR) theorem (see \cite[Section~3.4]{loday2013cyclic}). 
 This result is also useful for the study of non-smooth algebras. Using the machinery of non-abelian derived functors it provides us, for \textit{any} ring, with a natural filtration on its Hochschild complex. This filtration is called the \textbf{HKR-filtration} and we will crucially make use of it in Section \ref{HHfunctoriality}.
 %Note for the next proposition, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$. 

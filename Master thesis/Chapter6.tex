@@ -67,7 +67,15 @@ Section 2.1 of the thesis \cite{OnderiveddeRhamcohomoology} contains this exampl
     \end{equation*} 
 \end{prop}
 \begin{proof}
-    Use HKR filtration to obtain SS, this degenerates. Cotangent complex is just given by Kähler differentials. 
+    We will use the HKR filtration on $\HH(R/\Z_p)$, in particular the spectral sequence that this filtration induces. The associated graded of the HKR filtration is given by $\gr^i=L\Lambda^i_R\bL_{R/\Z_p}[i]$. By the previous Lemma, we have $\bL_{R/\Z_p}=\Omega^1_{R/\Z_p}$.
+    The associated spectral sequence thus takes the form
+    \begin{equation*}
+        E^1_{i,j}=\pi_i(L\Lambda^j_R(\Omega^1_{R/\Z_p}))\Rightarrow \HH_{i+j}(R/\Z_p)
+    \end{equation*}
+    Because we have a two term resolution of $\Omega^1_{R/\Z_p}$, the simplicial $R$-module $L\Lambda^j_R(\Omega^1_{R/\Z_p})$ has only degenerate simplices in dimension $j$ and higher. Therefore $H_i(L\Lambda^j_R(\Omega^1_{R/\Z_p}))=0$ for $j\geq i$\todo{or is it i-1?}
+    But also all the lower homology groups necessarily vanish, because $\Lambda_R^i(R^j)=0$ for $j<i$. \\
+    Hence we can see, that the $E^1$-page of the spectral sequence is (besides an $R$ in degree $(0,0)$) concentrated on the line $(n+1,n)$, where it is given by $H_{n-1}(L\Lambda^{n}_R \Omega^1_{R/\Z_p})$.
+    All differentials are necessarily 0 and the spectral sequence degenerates on the $E^1$-page with no room for extension problems.
 \end{proof}
 Using this and computing the nonabelian derived functor of the Kähler differentials.
 
@@ -75,7 +83,7 @@ Using this and computing the nonabelian derived functor of the Kähler different
 \begin{lem}
     For the rings in consideration we have
     \begin{equation*}
-        \HH_{2n-1}(R;\Z_p)=R/E'(\pi).
+        \HH_{2n-1}(R;\Z_p)=\Omega^1_{R/\Z_p}\simeq R/E'(\pi).
     \end{equation*}
 \end{lem}
 \begin{proof}
@@ -141,25 +149,51 @@ We will crucially use Lemma \ref{description mixed char CDVR} to write all our r
         &\simeq\THH(R)\otimes_\Z (\THH(\Z\otimes \S[z]/\Z))\\
         &\simeq 
          \THH(R)\otimes_\Z \HH(\Z[x])
-    \end{align*}
+    \end{align*}\qedhere
 \end{proof}
 In particular we have a natural isomorphism $\THH(\Z_p[z])\simeq \THH(\Z_p)\otimes_\Z \HH(\Z[z])$. Taking the $p$-completion yields 
 \begin{equation*}
-    \THH(\Z_p[z];\Z_p)\simeq \THH(\Z_p;\Z_p)\otimes_{\Z_p} \HH(\Z_p[z]/Z_p).
+    \THH(\Z_p[z];\Z_p)\simeq \THH(\Z_p;\Z_p)\otimes_{\Z_p} \HH(\Z_p[z]/\Z_p).
 \end{equation*} 
 We do not need to $p$-complete on the outside of the tensor product, because ...\todo{Write reason}.\\
 Let us now apply this result. For this and for the rest of the section let $R$ be a mixed-characteristic complete discrete discrete valuation ring with perfect residue field of characteristic $p$. By Lemma \ref{description mixed char CDVR} we can thus find an Eisenstein polynomial $E(z)$ such that
 \begin{equation*}
     R=\Z_p[z]/E(z)=\Z_p[z]\otimes_{\Z_p[z]}\Z_p,
 \end{equation*}
-with actions prescribed by the map $\Z_p[z]\ra \Z_p[z], z\mapsto E(z)$ and $\Z_p[z]\to \Z_p, z\mapsto 0$. \\
+with actions prescribed by the maps $\Z_p[z]\ra \Z_p[z], z\mapsto E(z)$ and $\Z_p[z]\to \Z_p, z\mapsto 0$. \\
 Using the monoidality of $\THH$ (Proposition 2.6) we therefore get 
 \begin{equation*}
     \THH(R)=\THH(\Z_p[z])\otimes_{\THH(\Z_p[z])}\THH(\Z_p).
 \end{equation*}
-To $p$-complete the left hand side, we again only have to $p$-complete all the involved terms and not on the outside because ...\todo{Write reason}. We then know all the homotopy groups of the terms involved on the right side, because we know $\THH(\Z_p[z];\Z_p) $ and $\THH(\Z_p;\Z_p)$. But we of course want to know the homotopy groups of $\THH(R;\Z_p)$ and for this we can use the Tor-spectral sequence. \textbf{The $E^2$-page only contains terms we functorially know}. This will allow us to compute the effect of $\THH$ on maps $R\to S$.
+To $p$-complete the left hand side, we again only have to $p$-complete all the involved terms and not on the outside because ...\todo{Write reason}. We then know all the homotopy groups of the terms involved on the right side, because we know $\THH(\Z_p[z];\Z_p) $ and $\THH(\Z_p;\Z_p)$. But we of course want to know the homotopy groups of $\THH(R;\Z_p)$ and for this we can use the Tor-spectral sequence. 
+It takes the form
+\begin{equation*}
+    E^2_{i,j}=\Tor_{\THH_*(\Z_p[z];\Z_p)}^i\left( \THH_*(\Z_p[z];\Z_p),\THH_*(\Z_p;\Z_p)\right)_{(j)}\Rightarrow \THH_{i+j}(R;\Z_p)
+\end{equation*}
+\textbf{The $E^2$-page only contains terms we functorially know}.
+
+%This will allow us to compute the effect of $\THH$ on maps $R\to S$.
+Since the action of $\THH_*(\Z_p[z];\Z_p)$ on $\THH_*(\Z_p;\Z_p)$ factors through the action of $\HH(\Z_p[z];\Z_p)=\Omega^*_{\Z_p[z]/\Z_p}$ on $\Z_p$, it suffices to resolve $\Z_p$ as a $\Omega^*_{\Z_p[z]/\Z_p}$-module. A resolution can be provided by a free divided power algebra on an exterior algebra over $\Omega^*_{\Z_p[z]/\Z_p}$, i.e. we have a quasi-isomorphism of graded $\Omega^*_{\Z_p[z]/\Z_p}$-modules
+\begin{equation*}
+    \Z_p \lai \Gamma_{\Lambda_{\Omega^*_{\Z_p[z]/\Z_p}}(b)}\{a\}, \ |a|=(1,0), \ |b|=(1,1), \ \partial(a)=dz, \ \partial(b)=z.
+\end{equation*}
+Explicitely this looks as follows:
+\begin{align*}
+    \Z_p\la \Omega^*_{\Z_p[z]/\Z_p}\la \Omega^*_{\Z_p[z]/\Z_p}\{a,b\}\la \Omega^*_{\Z_p[z]/\Z_p}\{a^{[2]}, ba\}\la \dots 
+\end{align*}
+with the maps (from left to right) given by  $[0\mapsfrom z, dz]$, $[z\mapsfrom b, dz\mapsfrom a]$ and $[az-bdz \mapsfrom ba, adz \mapsfrom a^{[2]}]$.
+Let us abbreviate $\Gamma\coloneqq \Gamma_{\Lambda_{\Omega^*_{\Z_p[z]/\Z_p}}(b)}\{a\}$. The $E^2$-page is then the homology of
+\begin{equation*}
+    \THH(\Z_p;\Z_p)\otimes 
+        \left(   
+        \Omega^*_{\Z_p[z]/\Z_p} \otimes_{\Omega^*_{\Z_p[z]/\Z_p}} \Gamma   
+        \right).
+\end{equation*} 
+The tensor product $\Omega^*_{\Z_p[z]/\Z_p} \otimes_{\Omega^*_{\Z_p[z]/\Z_p}}-$ has only the effect, that it changes the differential to $\partial(a)=E'(z)dz, \ \partial(b)=E(z)$. Hence to fully compute the $E^2$-page, we must identify the homology of $\Gamma$ with the modified differential and then stack infinitely many copies of the homology and the derived mod $p^n$ reduction on top of each other.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{(Partial) Functoriality of $\THH$ via the descent spectral sequence}
-Have functoriality in monomial maps, i.e. $\S[z]\to \S[z],\  z\mapsto z^n$, that provide squares. This applies for example in the cases that of the inclusions $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}]$ or $\Z_p[\sqrt[k]{p}]\hookrightarrow \Z_p[\sqrt[kn]{p}]$. \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Have functoriality in monomial maps, i.e. $\S[z]\to \S[z],\  z\mapsto z^n$, induced by the maps $\N\xrightarrow{\cdot n} \N$, that provide squares. This applies for example in the cases of the inclusions $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}]$ or $\Z_p[\sqrt[k]{p}]\hookrightarrow \Z_p[\sqrt[kn]{p}]$. \\
 Using the base change formula 
 \begin{equation*}
     \THH(R/\S[z])=\THH(R)\otimes_{\THH(\S{z]})}\S[z]

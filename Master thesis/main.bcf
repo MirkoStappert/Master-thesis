@@ -2435,16 +2435,14 @@
     <bcf:citekey order="83">LMTHHofnumberrings</bcf:citekey>
     <bcf:citekey order="84">SerreLocal</bcf:citekey>
     <bcf:citekey order="85">KNBokstedt</bcf:citekey>
-    <bcf:citekey order="86">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="87">stacks-project</bcf:citekey>
-    <bcf:citekey order="88">DoldPuppeHomologie</bcf:citekey>
-    <bcf:citekey order="89">HigherToposTheory</bcf:citekey>
-    <bcf:citekey order="90">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="91">OnderiveddeRhamcohomoology</bcf:citekey>
-    <bcf:citekey order="92">GGNuniversalityloop</bcf:citekey>
-    <bcf:citekey order="93">barwickK-theory</bcf:citekey>
-    <bcf:citekey order="94">barwick2013multiplicative</bcf:citekey>
-    <bcf:citekey order="95" nocite="1">krausenikolausTCnotes</bcf:citekey>
+    <bcf:citekey order="86">DoldPuppeHomologie</bcf:citekey>
+    <bcf:citekey order="87">HigherToposTheory</bcf:citekey>
+    <bcf:citekey order="88">OnderiveddeRhamcohomoology</bcf:citekey>
+    <bcf:citekey order="89">lurie2017higher</bcf:citekey>
+    <bcf:citekey order="90">GGNuniversalityloop</bcf:citekey>
+    <bcf:citekey order="91">barwickK-theory</bcf:citekey>
+    <bcf:citekey order="92">barwick2013multiplicative</bcf:citekey>
+    <bcf:citekey order="93" nocite="1">krausenikolausTCnotes</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

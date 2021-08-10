@@ -391,6 +391,34 @@
       \field{pages}{15\bibrangedash 61}
       \range{pages}{47}
     \endentry
+    \entry{CSpurityanimation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6711de78a9d32ca8ba2a6c9cd4fdbd8c}{%
+           family={Cesnavicius},
+           familyi={C\bibinitperiod},
+           given={Kestutis},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bc840c61eeaaa9ae992e6d23e75c4a8a}{%
+           family={Scholze},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{604fca8bf58e0eb2685cebf448fe650c}
+      \strng{fullhash}{604fca8bf58e0eb2685cebf448fe650c}
+      \strng{bibnamehash}{604fca8bf58e0eb2685cebf448fe650c}
+      \strng{authorbibnamehash}{604fca8bf58e0eb2685cebf448fe650c}
+      \strng{authornamehash}{604fca8bf58e0eb2685cebf448fe650c}
+      \strng{authorfullhash}{604fca8bf58e0eb2685cebf448fe650c}
+      \field{labelalpha}{CS19}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1912.10932}
+      \field{title}{Purity for flat cohomology}
+      \field{year}{2019}
+    \endentry
     \entry{cisinski2019higher}{book}{}
       \name{author}{1}{}{%
         {{hash=7dd2ed2fa26fc7e09189bfc17e41911a}{%
@@ -552,6 +580,37 @@
       \field{pages}{325\bibrangedash 337}
       \range{pages}{13}
     \endentry
+    \entry{GRastudyindag}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0da990b8e12de8e4bcdbaff207c15484}{%
+           family={Gaitsgory},
+           familyi={G\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6d0c23454f5609cf340fad037188d86e}{%
+           family={Rozenblyum},
+           familyi={R\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{077d2f6629c91d6c6950517feeb03e59}
+      \strng{fullhash}{077d2f6629c91d6c6950517feeb03e59}
+      \strng{bibnamehash}{077d2f6629c91d6c6950517feeb03e59}
+      \strng{authorbibnamehash}{077d2f6629c91d6c6950517feeb03e59}
+      \strng{authornamehash}{077d2f6629c91d6c6950517feeb03e59}
+      \strng{authorfullhash}{077d2f6629c91d6c6950517feeb03e59}
+      \field{labelalpha}{GR19}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A study in derived algebraic geometry: Volume I: correspondences and duality}
+      \field{volume}{221}
+      \field{year}{2019}
+    \endentry
     \entry{Gepnerintroductionhigher}{article}{}
       \name{author}{1}{}{%
         {{hash=a7d7b23f07c3b62e38dc6f2f4dd245b4}{%
@@ -690,6 +749,32 @@
       \verb{url}
       \verb https://doi.org/10.1016/0040-9383(96)00003-1
       \endverb
+    \endentry
+    \entry{illusie2006complexe}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f560424c5d8b060f8a187618b42603ef}{%
+           family={Illusie},
+           familyi={I\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f560424c5d8b060f8a187618b42603ef}
+      \strng{fullhash}{f560424c5d8b060f8a187618b42603ef}
+      \strng{bibnamehash}{f560424c5d8b060f8a187618b42603ef}
+      \strng{authorbibnamehash}{f560424c5d8b060f8a187618b42603ef}
+      \strng{authornamehash}{f560424c5d8b060f8a187618b42603ef}
+      \strng{authorfullhash}{f560424c5d8b060f8a187618b42603ef}
+      \field{labelalpha}{Ill06}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Complexe cotangent et déformations I}
+      \field{volume}{239}
+      \field{year}{2006}
     \endentry
     \entry{krausenikolausTCnotes}{misc}{}
       \name{author}{2}{}{%
@@ -965,32 +1050,6 @@
       \verb{url}
       \verb https://www.math.ias.edu/~lurie/papers/SAG-rootfile.pdf
       \endverb
-    \endentry
-    \entry{OnderiveddeRhamcohomoology}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=7b66794a77c118527d7eaa67f5fb82dd}{%
-           family={Marangoni},
-           familyi={M\bibinitperiod},
-           given={Davide},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Université de Bordeaux; Università degli studi (Milan, Italie)}%
-      }
-      \strng{namehash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \strng{fullhash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \strng{bibnamehash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \strng{authorbibnamehash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \strng{authornamehash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \strng{authorfullhash}{7b66794a77c118527d7eaa67f5fb82dd}
-      \field{labelalpha}{Mar20}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{On Derived de Rham cohomology}
-      \field{type}{phdthesis}
-      \field{year}{2020}
     \endentry
     \entry{may2006geometryloop}{book}{}
       \name{author}{1}{}{%

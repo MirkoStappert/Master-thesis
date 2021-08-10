@@ -3,13 +3,14 @@ We are going to use the language of higher category theory and higher algebra, m
 The online textbook project \cite{kerodon} by the same author contains a revised version of roughly the same content. For slightly different perspectives on higher category theory, we also recommend \cite{RiehlVerityElements} and \cite{cisinski2019higher}.
 Shorter summaries of most of the material we need can be found in \cite{Grothshortcourse}, \cite{camarena2013whirlwind} and \cite{Gepnerintroductionhigher}.
 \section{Higher Category theory}\label{highercats}
-\todo{Rewrite again later}
-Higher category theory is an extension of ordinary category theory, that is tailored to the needs of homotopy theory. In particular it follows the paradigm, that no equality should be taken literally and we should rather provide a specified homotopy, implemented as higher morphisms. 
+%\todo{Rewrite again later}
+Higher category theory is an extension of ordinary category theory, that is tailored to the needs of homotopy theory. In particular it follows the paradigm, that no equality should be taken literally and we should rather provide a specified homotopy, implemented as \textit{higher morphisms}. 
 The $\infty$ in $\infty$-category is supposed to signal, that we not only have objects and morphisms but also 2-morphisms between morphisms, 3-morphisms between 2-morphisms and so on. All diagrams should not commute strictly but only up to homotopy/2-morphism. 
 A consequence of this is, that composition in $\infty$-categories is not strictly commutative and the notion of isomorphism of objects gets replaced by equivalence, which means that we have two maps that are inverse up to homotopy.
 Often times when we have more then one of these homotopies, they should in some sense be compatible, which is recorded via higher and higher homotopies. This train of thought goes under the name of  \textbf{homotopy coherence}.
-We recommend \cite{riehl2018homotopy} and \cite[Section~1.2.6]{HigherToposTheory} to the unaquainted reader, who wants  to become familiar with it. The benefit of this approach is that all concepts defined in this framework are naturally homtopy invariant, which is not the case for (co)limits in the category of topological spaces. 
-A further advantage is that we can now consider spaces as $\infty$-categories themselves. Informally we do this by taking points as objects, paths as 1-morphisms, homotopies of paths as 2-morphism, homotopies between homotopies as 3-morphisms and so on. Note that this would not be possible in the realm of 1-categories, because the composition (concatenation) of paths is not strictly associative but only up to homotopy. The 1-categorical shadow of this is the fundamental groupoid. The reader can informally think about $\infty$-categories as some kind of a ``greatest common'' divisor of ordinary categories and topological spaces (or rather homotopy types).\\
+We recommend \cite{riehl2018homotopy} and \cite[Section~1.2.6]{HigherToposTheory} to the unaquainted reader, who wants  to become familiar with it. The benefit of this approach is that all concepts defined in this framework are naturally homotopy invariant.
+%, which is not the case for (co)limits in the category of topological spaces. 
+A further advantage is that we can now consider spaces as $\infty$-categories themselves. Informally we do this by taking points as objects, paths as 1-morphisms, homotopies of paths as 2-morphism, homotopies between homotopies as 3-morphisms and so on. Note that this would not be possible in the realm of 1-categories, because the composition (concatenation) of paths is not strictly associative but only up to homotopy. The 1-categorical shadow of this is the fundamental groupoid. The reader can informally think about $\infty$-categories as some kind of a ``least common multiple'' of ordinary categories and topological spaces (or rather homotopy types).\\
 The main thing to take away from this section is that most if not all concepts/constructions from ordinary category theory also exist in the world of $\infty$-categories.
 Precisely we will need the following higher categorical concepts:
 
@@ -27,7 +28,8 @@ Precisely we will need the following higher categorical concepts:
     Stable $\infty$-categories provide a natural place to do homological - or rather higher algebra. In particular they have a notion of exact sequences also called fiber sequences. We can add maps and thus also take kernels/cokernels of maps because we have a zero object. 
     They are called (homotopy) \textbf{fiber/cofibers} and naturally fit into exact sequences $\fib(f)\ra X\xrightarrow{f} Y$ and $X\xrightarrow{f} Y\ra \cofib(f)$. Furthermore, the homotopy category of a stable $\infty$-category has the structure of a triangulated category (see e.g. \cite[Theorem~1.1.2.14]{lurie2017higher}). Stable $\infty$-category are in some aspects preferable to triangulated categories.
     First of all a triangulation is extra structure, that has to be provided, while stability is a property. Secondly cones (or rather cofibers) are functorial in stable $\infty$-categories. 
-    They also ``glue'' together more naturally, which is relevant for descent questions in algebraic geometry. For example the functor, that sends a scheme to its derived $\infty$-category of quasi coherent sheaves is a sheaf of $\infty$-categories, which is false on the level of triangulated categories.\todo{check details/reference}
+    They also ``glue'' together more naturally, which is relevant for descent questions in algebraic geometry. For example the functor, that sends a scheme to its derived $\infty$-category of quasi coherent sheaves is a sheaf of $\infty$-categories, which is false on the level of triangulated categories (see \cite[Chapter~3]{GRastudyindag}).
+    %\todo{check details/reference}
     
 \end{itemize}
 \section{Spectra and higher algebra}\label{higheralg}
@@ -58,7 +60,7 @@ Furthermore there is now a whole \textit{hierarchy of commutativity}, starting w
 The proper way to precisely treat all this is via the theory of operads, pioneered by Boardman-Vogt (\cite{BV2006homotopyalgstructures},\cite{BV1968homotopyHspaces}) and May (\cite{may2006geometryloop}).
 Lurie transported the theory into the world of $\infty$-categories, where he developed an extensive theory in \cite[Chapter~2,3,4]{lurie2017higher}. The definition of the $\En$-operads is given in \cite[Definition~5.1.0.2]{lurie2017higher}, but we will not need any details. \\
 What is essential to us are the following facts:
-\todo{Should cite Lurie DAG3:Commutative algebra v3, not the most uptodate version}
+%\todo{Should cite Lurie DAG3:Commutative algebra v3, not the most uptodate version}
 
 \begin{itemize}
     \item For every $n\in\N\cup\{\infty\}$ and every symmetric monoidal $\infty$-category $\cC$ there is a notion of an \textbf{$\En$-algebra} in $\cC$. 
@@ -73,7 +75,7 @@ What is essential to us are the following facts:
     We also get another supply of algebras called \textbf{free algebras}. The forgetful functor $\Alg_{\En}(\cC)\to \cC$ has a left adjoint \cite[Corollary~3.1.3.5]{lurie2017higher}. In particular, this provides us with several free spectra generated by spaces. 
     \item Given an algebra $A\in \Alg(\cC)$, we also able to talk about its $\infty$-category of left and right \textbf{modules }$\LMod_A, \RMod_A$ \cite[Definition~4.2.1.13]{lurie2017higher}. In the case, that $A$ is commutative, they are equivalent (\cite[Section~4.3.2]{lurie2017higher}) and we will simply denote it by $\Mod_A$. Given two algebras $R,S\in \Alg(\cC)$ there is the notion of a $R$-$S$-bimodule. Giving a $R$-$S$-bimodule structure is equivalent to giving a left module structure over $R\otimes_\cC S^{\op}$. The categories $\LMod_A$ and $\RMod_A$ have all limits and colimits, provided that $\cC$ does (\cite[Section~4.2.3]{lurie2017higher}). For $\S\in\Sp$ we have $\Mod_\S=\Sp$ and for an ordinary ring $R$, we get its derived $\infty$-category $\LMod_{HR}\simeq D(R)$ (see \cite[Proposition~7.1.1.15]{lurie2017higher} and the Remark following the Proposition).
     \item Given a right $M$ and a left module $N$ over a ring spectrum $R$, we can tensor them together and obtain a spectrum $M\otimes_R N$ 3. More generally for $R,S,T\in \Alg$, $M$ an $R$-$S$-bimodule and $N$ an $S$-$T$-bimodule, then $M\otimes_S N$ carries the structure of an $R$-$T$-bimodule (\cite[Section~4.4.2]{lurie2017higher}). 
-    For a commutative ring spectrum $R$ every element in its category of modules $\Mod_R$ has an $R$-$R$-bimodule structure. In particular the tensor product of two of these still carries an $R$-$R$-bimodule structure. Through this $\Mod_R$ obtains a symmetric monoidal structure (\cite[Theorem~4.5.2.1]{lurie2017higher}). Thus we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}.
+    For a commutative ring spectrum $R$ every element in its category of modules $\Mod_R$ has an $R$-$R$-bimodule structure. The tensor product of two of these thus carries an $R$-$R$-bimodule structure, in particular it determines a left $R$-module, i.e. an element of $\LMod_R= \Mod_R$. Through this $\Mod_R$ obtains a symmetric monoidal structure (\cite[Theorem~4.5.2.1]{lurie2017higher}). Thus we can talk about $\En$-algebras in there, which we will call \textbf{$\En$-$R$-algebras}.
     \item For a map $R\to S$ of ring spectra, we have the forgetful functor $\LMod_S\to \LMod_R$. This functor has both adjoints, in particular it preserves all limits and colimits. The left adjoint is given by a relative tensor product $M\mapsto M\otimes_R S$. For the tensor product we use the left $R$-module structure on $M$ and the right $R$-module structure on $S$. Because $S$ is an $S$-$S$-bimodule, there remains a left $S$-module structure. If $R$ and $S$ are commutative, this left adjoint is symmetric monoidal \cite[Section~4.5.3]{lurie2017higher}
     \item For a connective ring spectrum $R$ we have \textbf{Postnikov towers} in $\Mod_R$ as well as truncations/covers $\tau_{\geq n},\tau_{\leq n}:\Mod_R\to \Mod_R$ (\cite[Proposition~7.1.1.13]{lurie2017higher}). In particular they exist for spectra.
     \item \textbf{Filtered objects} (i.e. objects of $\Fun((N\Z)^{\op},\cC)$ in stable $\infty$-categories like the ones above provide \textbf{spectral sequences} with values in the abelian category of $\pi_0(R)$-modules (\cite[Section~1.2.2]{lurie2017higher}). 
@@ -107,12 +109,12 @@ Let us now collect a few further facts about $p$-completion, that we will need.
     \item For every spectrum $X$, the spectrum $X/p$ is $p$-complete.
     \item $p$-completion $(\phantom{X})^{\wedge}_p:\Sp\to\Sp$ is a lax symmetric monoidal functor (but of course not strongly).
     In particular we have, that the $p$-completion of an $\En$-ring $R$ spectrum is an $\En$-ring spectrum again. Furthermore the map $R\ra R_p^{\wedge}$ equips the $p$-completion with an $\En$-$R$-algebra structure.
-    \item Let $X,Y$ be module spectra over a ring spectrum $R$. Then we can write the $p$-completion of their tensor product in several different (but equivalent) ways:
+    \item Let $X,Y$ be module spectra over a connective ring spectrum $R$. Then we can write the $p$-completion of their tensor product in several different (but equivalent) ways:
     \begin{equation*}
-        \left( X\otimes_R Y \right)_p^{\wedge}\simeq\left( X_p^{\wedge}\otimes_R Y \right)_p^{\wedge} \simeq\left( X_p^{\wedge}\otimes_R Y_p^{\wedge} \right)_p^{\wedge} 
+        \left( X\otimes_R Y \right)_p^{\wedge}\simeq\left( X_p^{\wedge}\otimes_R Y \right)_p^{\wedge} \simeq\left( X_p^{\wedge}\otimes_R Y_p^{\wedge} \right)_p^{\wedge} \simeq\left( X_p^{\wedge}\otimes_{R_p^{\wedge}} Y_p^{\wedge} \right)_p^{\wedge} 
     \end{equation*}
     These equivalences hold, because they hold after mod $p$-reduction and we can use Lemma \ref{modpreduction}.
-    \item In the case that all $R$, $X$, $Y$ are all connective, $X$ is of finite type\footnote{This means, that $X$ can be written as a sequential colimit of finite $R$-module spectra along increasingly connective maps, i.e. $X=\colim_i X_i$ with $X_i$ finite and $X_i\to X_{i+1}$ is $i$-connective.} and $Y$ is $p$-complete, then $X\otimes_R Y$ is also $p$-complete. \\
+    \item In the case that all $R$, $X$, $Y$ are all connective, $X$ is of finite type\footnote{This means, that $X$ can be written as a sequential colimit of finite $R$-module spectra along increasingly connective maps, i.e. $X=\colim_i X_i$ with $X_i$ finite and $X_i\to X_{i+1}$ is $i$-connective.} over $R$ and $Y$ is $p$-complete, then $X\otimes_R Y$ is also $p$-complete. \\
     This can be seen as follows: Write $X=\colim X_i$ with $X_i$ finite. Tensoring with a finite spectrum preserves $p$-completeness, so $X_i\otimes_R Y$ is $p$-complete and hence all homotopy groups of $X_i\otimes_R Y$ are derived $p$-complete. But because the colimit is filtered and along increasingly connective maps we have
     \begin{equation*}
         \pi_n(X\otimes_R Y)=\colim_i \pi_n(X_i\otimes_R Y)=\pi_n(X_n\otimes_R Y).
@@ -184,15 +186,16 @@ Let us record a few facts, that we will need, in the following Lemma.
 \begin{lem}  \label{PropertiesTHH}
     1.) $\THH(\S)=\S$ \\
     2.) $\THH(R)$ is connective, if $R$ is connective.\\
-    3.) For any ordinary ring $R$, the natural map $\THH(R)\to \HH(R)$ induces an isomorphism on $\pi_0,\pi_1,\pi_2$ and a surjection on $\pi_3$. More generally, for a commutative, connective ring spectrum $S$ and an ordinary $\pi_0(S)$-algebra $R$, the same hold for the map $\THH(R/S)\to \HH(R/\pi_0(S))$. \\
-    4.) If $R$ is a connective, $p$-complete spectrum and of finite type \footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.} over a connective $\Einf$-ring spectrum $S$, then $\THH(R/S)$ is also $p$-complete.\\   
+    3.) For any ordinary ring $R$, the natural map $\THH(R)\to \HH(R)$ induces an isomorphism on $\pi_0,\pi_1,\pi_2$ and a surjection on $\pi_3$. More generally\todo{Check whether this is true}, for a commutative, connective ring spectrum $S$ and an ordinary $\pi_0(S)$-algebra $R$, the same hold for the map $\THH(R/S)\to \HH(R/\pi_0(S))$. \\
+    4.) If $R$ is a connective, $p$-complete spectrum and of finite type %\footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.}
+    over a connective $\Einf$-ring spectrum $S$, then $\THH(R/S)$ is also $p$-complete.\\   
 \end{lem}
 
 \begin{proof}
     1.) This is clear, because $\S$ is the unit of the tensor product on $\Sp$. \\
     2.) By induction, we see that $R\otimes_\S\dots\otimes_\S R$ is connective, because the tensor product of two connective spectra is again connective. Any colimit of connective spectra is again connective and thus $\THH(R)$ is connective because of the cyclic bar construction. \\
     3.) We show that statement for the map $\THH(R)\to \HH(R)$, the general statement goes analogously.
-    For this, we need to show that the fiber $F\coloneqq \fib(\THH(R)\to \HH(R)$ is 3-connective, i.e. $\pi_0(F)=\pi_1(F)=\pi_2(F)=0$. Because fibers and colimits commute, we can use the cyclic bar construction model to write $F$ as the geometric realization of the levelwise fibers, i.e.
+    For this, we need to show that the fiber $F\coloneqq \fib(\THH(R)\to \HH(R))$ is 3-connective, i.e. $\pi_0(F)=\pi_1(F)=\pi_2(F)=0$. Because fibers and colimits commute, we can use the cyclic bar construction model to write $F$ as the geometric realization of the levelwise fibers, i.e.
     \begin{equation*}
         F=\colim_{\Delta^{\op}} \left( \dots\rightthreearrow \fib(R\otimes_\S R\to R\otimes_\Z R) \rightrightarrows \fib(R\to R) \right)
     \end{equation*}
@@ -210,7 +213,7 @@ Let us record a few facts, that we will need, in the following Lemma.
 \end{proof}
 Part 3.) is especially useful when combined with the fact that the explicit map $\Omega^1_{R/S} \cong \HH_1(R/S), adb\mapsto a\otimes b$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universal property of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
 In the case that $R/S$ is smooth, this map is an isomorphism due to the \textbf{Hochschild-Kostant-Rosenberg} (HKR) theorem (see \cite[Section~3.4]{loday2013cyclic}). 
-This result is also useful for the study of non-smooth algebras. Using the machinery of non-abelian derived functors it provides us, for \textit{any} ring, with a natural filtration on its Hochschild complex. This filtration is called the \textbf{HKR-filtration} and we will crucially make use of it in Section \ref{HHfunctoriality}.
+This result is also useful for the study of non-smooth algebras. Using the machinery of non-abelian derived functors it provides us, for \textit{any} ring, with a natural filtration on its Hochschild complex. For a precise statement see \cite[Proposition~IV.4.1]{NS}. This filtration is called the \textbf{HKR-filtration} and we will crucially make use of it in Section \ref{HHfunctoriality}. 
 %Note for the next proposition, that by definition $\THH(R)$ is an $R$-module and hence we have a map $R\ra\THH(R)$. 
 \\
 The next proposition will only be used in the next section, where it is an important ingredient in the cyclotomic structure on $\THH$.
@@ -239,7 +242,7 @@ We also need to adress the monoidality $\THH$.
 For the case of commutative ring spectra this is clear by Proposition \ref{McClureSchwaenzlVogt}, because colimits commute with colimits and $\THH$ as well as the tensor product are given by colimits in the case of commutative ring spectra. The general case is more complicated.
 
 \section{Topological cyclic homology and the cyclotomic trace} \label{TC}
-The content of this section is not necessary for understanding the rest of the thesis. Nevertheless we want to include it, because it gives the main motivation, why one should be interested in $\THH$ in the first place. We can construct $\TC$ out of it which is extremely useful in calculations in K-theory. 
+The content of this section is not necessary for understanding the rest of the thesis. Nevertheless we want to include it, because it gives an important motivation for being interest in $\THH$ in the first place. We can construct $\TC$ out of it which is extremely useful in calculations in K-theory\footnote{See the appendix for a recollection on the definition of K-theory.}. 
 %The appendix provides a short recollection on the definition of K-theory.\\ 
 A cyclotomic structure on a spectrum is certain additional equivariant data, that are exactly what is necessary to define $\TC$.
 To define it, we first need to discuss our equivariant setup. Let us stress that it is vastly different to genuine equivariant homotopy theory. In particular it is technically much simpler.
@@ -333,7 +336,8 @@ Another interesting application of a more geometric flavour is the following: Th
 	\arrow[from=1-1, to=2-1]
 	\arrow[from=2-1, to=2-2]
 \end{tikzcd}\]
-This gives us significant insight into $A(X)$, because we know a lot about the three other constituents.
+This gives us significant insight into $A(X)$, because we know a lot about the other constituents.
 ${\text{TC}(\Sigma^\infty_+(\Omega X))}$ is to a large part understood by work of Bökstedt-Hsiang-Madsen \cite{BHMtrace} (for a modern presentation see \cite[Section~IV.3]{NS}). 
-$K(\mathbb{Z}[\pi_1(X)])$ can often be computed if the the Farrell-Jones conjecture for $\pi_1(X)$ is confirmed (see e.g. \cite{BartelsLückReich-FJC}). \todo{What is with $\mathrm{TC}(\mathbb{Z}[\pi_1(X)])$ }
+$K(\mathbb{Z}[\pi_1(X)])$ can often be computed if the the Farrell-Jones conjecture for $\pi_1(X)$ is confirmed (see e.g. \cite{BartelsLückReich-FJC}). 
+%\todo{What is with $\mathrm{TC}(\mathbb{Z}[\pi_1(X)])$ }
 Calculations of $A(X)$ are highly sought after because they contain a lot of geometric information about $X$ due to the celebrated stable parametrized h-cobordism theorem by Waldhausen-Jahren-Rognes (\cite{WJR2013spaces}). If $X$ is a smooth manifold this allows us in particular to compute $\pi_*(\mathrm{Diff}(X))$ in a certain range of degrees. This connection (predating the invention of topological cyclic homology) was used by Farrell-Hsiang to compute $\Q\otimes\pi_*(\text{Diff}(D^n))$ in \cite{farrellhsiang1978rational} using a theorem of Waldhausen (\cite[Corollary~2.3.8]{waldhausen1985algebraic}) and Borel's work on the rational homotopy groups of $K(\Z)$ (\cite[Chapter~12]{borel1974stable}).

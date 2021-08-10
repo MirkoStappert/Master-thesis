@@ -27,8 +27,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{35}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{39}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}(Partial) Functoriality of $\THH $ via the descent spectral sequence}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.3}(Partial) Functoriality of $\THH $ via the descent spectral sequence}{42}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}K-Theory}{43}{appendix.A}%
+\contentsline {chapter}{\numberline {A}K-Theory}{44}{appendix.A}%

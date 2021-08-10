@@ -83,9 +83,8 @@ Applying this cofinality (under the equivalent characterization of cofinality pr
   (\dots  k\otimes_{k'} k \rightrightarrows k)
   }
   \colim_{\Delta^{\op}}(\dots \rightthreearrow k \rightrightarrows k) \\
-  &=\THH(R/k)\otimes_{\THH(k/k')}k
+  &=\THH(R/k)\otimes_{\THH(k/k')}k \qedhere
 \end{align*}
-This 
 \end{proof}
 \noindent
 Again there is the important special case of $k'=\S$, which gives us $\THH(R/k)=\THH(R)\otimes_{\THH(k)} k$. \newline
@@ -141,8 +140,8 @@ By Proposition \ref{base change THH} the term in brackets can be identified as \
 Furthermore since $\F_p$ is an ordinary ring $\THH(k/\F_p)=\HH(k/\F_p)$. 
 To prove the desired result, it remains to show that $\HH(k/\F_p)$ is $k$ concentrated in degree 0. 
 Because $k$ is commutative $\HH_0(k/\F_p)=k$, so we need to prove the vanishing of the higher homology groups. \newline
-We claim that for a perfect $\F_p$-algebra $R$ the cotangent complex vanishes $L_{R/\F_p}=0$.
-Together with the Hochschild-Kostant-Rosenberg filtration on Hochschild homology, this gives that $\HH_i(k/\F_p)=0$ for $i>0$, which then finishes the proof. For the vanishing of the cotangent complex, note that for any $\F_p$ algebra the Frobenius induces multiplication by $p$ on the cotangent complex\footnote{To see this, recall that the cotangent complex is by definition the non-abelian derived functor of Kähler differentials. To compute $L_{R/\F_p}$ we thus have to simplicially resolve $R$ by polynomial rings over $\F_p$ and then apply Kähler differentials level-wise. The Frobenius then acts via $\mathrm{d}x\mapsto \mathrm{d}(x^p)=p\mathrm{d}x$.}, i.e. the zero map. But since $R$ is perfect, the Frobenius $\varphi:R\ra R$ is an isomorphism and by functoriality still an isomorphism on the cotangent complex. The only way for the zero map to be an isomorphism is if already $L_{R/\F_p}=0$.
+We claim that for a perfect $\F_p$-algebra $R$ the cotangent complex vanishes $\bL_{R/\F_p}=0$.
+Together with the Hochschild-Kostant-Rosenberg filtration on Hochschild homology, this gives that $\HH_i(k/\F_p)=0$ for $i>0$, which then finishes the proof. For the vanishing of the cotangent complex, note that for any $\F_p$ algebra the Frobenius induces multiplication by $p$ on the cotangent complex\footnote{To see this, recall that the cotangent complex is by definition the non-abelian derived functor of Kähler differentials. To compute $\bL_{R/\F_p}$ we thus have to simplicially resolve $R$ by polynomial rings over $\F_p$ and then apply Kähler differentials level-wise. The Frobenius then acts via $\mathrm{d}x\mapsto \mathrm{d}(x^p)=p\mathrm{d}x$.}, i.e. the zero map. But since $R$ is perfect, the Frobenius $\varphi:R\ra R$ is an isomorphism and by functoriality still an isomorphism on the cotangent complex. The only way for the zero map to be an isomorphism is if already $\bL_{R/\F_p}=0$.
 \end{proof}
 
 
@@ -157,14 +156,14 @@ In the equal characteristic setting, it is known that $R=\nolinebreak k[[x]]$ fo
 In the mixed characteristic case there are more examples: We again get an example for every perfect field of characteristic $p$, namely $W(k)$. 
 But there are also ramified examples like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]$. We can fully characterize them, as certain extensions of the unramified examples. This will be extremely useful later on.
 \begin{prop} \label{description mixed char CDVR}   
-    Let $R$ be a complete discrete valuation ring of mixed characteristic with perfect residue field $k$. Then $R$ is of the form $R\cong W(k)[z]/E(z)$ for an Eisenstein polynomial $E(z)\in W(k)[z]$. Under the map $W(k)[z]\ra R$, the element $z$ goes to a uniformizer in $R$ and $E$ is a minimal polynomial of $\pi$.
+    Let $R$ be a complete discrete valuation ring of mixed characteristic with perfect residue field $k$. Then $R$ is of the form $R\cong W(k)[z]/E(z)$ for an Eisenstein polynomial\footnote{A polynomial is called Eisenstein if it is of the form $z^n+a_{n-1}z^{n-1}+\dots a_1z+a_0$ such that all $a_i$ are divisible by $p$ and $a_0$ is not divisible by $p^2$.} $E(z)\in W(k)[z]$. Under the map $W(k)[z]\ra R$, the element $z$ goes to a uniformizer in $R$ and $E$ is a minimal polynomial of $\pi$.
 \end{prop}
 \begin{proof}
-    See \cite{SerreLocal} Part one, Section 2.5.
+    See \cite[Section 2.5]{SerreLocal}.
 \end{proof}
 
 To calculate $\THH(R)$ we first work relative to the maximal ideal which will allow us to use the result from the last section because the residue field is by assumption perfect. In the next section, we will then obtain the non-relative result using a descent spectral sequence. \newline
-We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the \textit{spherical monoid ring} of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-algebra in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
+We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the \textbf{spherical monoid ring} of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-algebra in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
 To work relative to $\S[z]$, we need an $\Eone$-map $\S[z]\ra HR$, which informally is just given by $z\mapsto \pi$ for $\pi$ a uniformizer in $R$. 
 To make this map precise, note that the ($\sip, \Omega^\infty$)-adjunction is compatible with the symmetric monoidal structures\footnote{i.e. $\sip$ is (strong) symmetric monoidal and $\Omega^\infty$ is (lax) symmetric monoidal with respect to the cartesian product on $\Spc$ and the tensor product on $\Sp$.} on $\Spc$ and $\Sp$, so we get an induced
 %\todo{reference: Vielleicht GGN 3.6}
@@ -334,7 +333,7 @@ This finally enables us to compute the  homotopy groups:
 
 
 
-\section{Absolute THH of CDVRs}
+\section{Absolute THH of CDVRs}\label{AbsoluteTHHofCDVRs}
 In this section, we will calculate the absolute $\THH$ of (quotients of) complete discrete valuation rings with perfect residue field of positive characteristic. We have already computed it relative to $\S[z]$. To get from there to the absolute case we will use a descent spectral sequence that we construct now. 
 \begin{constr} \label{descentSS}
 Let $R$ be an ordinary commutative ring equiped with a map of rings $\Z[z]\ra R$ (i.e. the choice of an element of $R$). This also gives $R$ the structure of an $\Einf$-$\S[z]$-algebra, via $\S[z]\ra \Z[z]$. We can filter $\HH(\Z[z]$ by its (very short) Whitehead tower:
@@ -345,7 +344,7 @@ Observe that $\HH(\Z[z])\stackrel{\ref{base change THH}}{=}\THH(\S[z])\otimes_\S
 \[ 0 \ra  \tau_{\geq1} \HH(\Z[z])\otimes_{\HH(\Z[z])} \THH(R)
 \ra \HH(\Z[z])\otimes _{\HH(\Z[z])} \THH(R)=\THH(R)
 \]
-This filtered spectrum gives rise to a spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
+This filtered spectrum gives rise to a spectral sequence\todo{Should rather be the E1-page, but d1 differential is trivial for degree reasons?}, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
 To compute the $E^2$-page, we thus have to identify the associated graded. 
 \newline
 Since tensor products preserve cofiber sequences, the associated graded of the filtration on $\THH(R)$ can simply be obtained by tensoring the associated graded of the filtration on $\HH(\Z[z])$ with $\THH(R)$. The associated graded of the filtration on $\HH(\Z[z])$ is given by $\HH_i(\Z[z])=\Omega_{\Z[z]/\Z}^i$.
@@ -367,7 +366,8 @@ Therefore we get a homological (Serre graded) spectral sequence
 \[
 E_{i,j}^2=\THH_i(R/\S[z])\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j \Rightarrow \THH_{i+j}(R).
 \]
-The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the filtration is multiplicative\footnote{i.e. it is an algebra in the category of filtered spectra $\Fun((N\Z)^{\op},\Sp)$ equipped with the Day convolution tensor product}.
+The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the filtration is multiplicative
+\footnote{i.e. it is an algebra in the $\infty$-category of filtered spectra $\Fun((N\Z)^{\op},\Sp)$ equipped with the Day convolution tensor product}
 \newline
 By $p$-completing everywhere and using that $p$-completion is exact we also get the following spectral sequence with the same formal properties:
 \[
@@ -397,11 +397,10 @@ d^2: R\{x\}\ra R\{dz\}.
 If $R$ has equal characteristic, this differential actually has to vanish. The reason for this is that by the construction of the spectral sequence, we know that the edge homomorphism is given by $\THH_*(R;\Z_p)\ra \THH_*(R/\S[z];\Z_p)$ and everything that lies in the image of this map, has to be a permanent cycle. Because $R$ has equal characteristic, we can precompose the map by $\THH(k)\ra \THH(R;\Z_p)$ and choose $x\in \THH_2(R/\S[z];\Z_p)$ to be the image of the Bökstedt element under the composition of the two maps. Thus $x$ has to be a permanent cycle and $d^2$ vanishes. We hence get that $\THH_*(R;\Z_p)=R[x]\otimes_\Z \Lambda_\Z(dz)$, in particular $\THH_i(R;\Z_p)=R$ for all $i\geq 0$.
 \\
 For mixed characteristic $R$ we will identify it in the following Lemma.
-Recall from Proposition \ref{description mixed char CDVR} that every mixed characteristic CDVR $R$ with perfect residue field $k$ has the form $R=W(k)[\pi]$, where $\pi$ satisfies $E(\pi)=0$ for an Eisenstein polynomial $E\in W(k)[z]$.\footnote{In this case $\pi$ is a uniformizer of $R$. For example 
-$\Z_p[\sqrt[n]{p}]=W(\F_p)[\pi]$, $ E(z)=z^n-p.$}
+Recall from Proposition \ref{description mixed char CDVR} that every mixed characteristic CDVR $R$ with perfect residue field $k$ has the form $R=W(k)[z]/E(z)$, where $E(z)\in W(k)[z]$ is an Eisenstein polynomial.
+%\footnote{In this case $\pi$ is a uniformizer of $R$. For example $\Z_p[\sqrt[n]{p}]=W(\F_p)[\pi]$, $ E(z)=z^n-p.$}
 \begin{lem} \label{differential}
-For a mixed characteristic CDVR $R$, there is a generator \\ 
-$x\in \THH_2(R;\Z_p)$ with differential $d^2(x)=E'(\pi)dz$.
+For a mixed characteristic CDVR of the form $R=W(k)[z]/E(z)$, there is a generator $x\in \THH_2(R;\Z_p)$ with differential $d^2(x)=E'(\pi)dz$.
 \end{lem}
 \begin{proof}
 We want to work relative to $\S_{W(k)}$ because this will enable us to make use of the description $R=W(k)[z]/E(z)$. To do this we again employ the base change for relative $\THH$:

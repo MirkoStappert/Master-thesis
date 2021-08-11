@@ -4,11 +4,6 @@ In the first section we will give a fully functorial description of the Hochschi
 %We can relate a certain part of this spectral sequence with a similar spectral sequence for $\HH$. 
 \\ In the third and last section we will discuss a 'partial' functoriality of the descent spectral sequence from section 3.4, which allows us to compute $\THH$ for certain maps.
 %We will then compare these computations to the ones of section two.
-\\
-
-
-
-
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Functoriality of $\HH$ for CDVRs}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,7 +93,12 @@ In the first section we will give a fully functorial description of the Hochschi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Functoriality of $\HH$ for CDVRs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this section we will deal with the functoriality of Hochschild homology for CDVRs. To precisely formulate in which input data our constructions are functorial, we need to set up some categories. For ease of notation, we first only deal with CDVRs with residue field $\F_p$, i.e. purely ramified extensions of $\Z_p$. We discuss the general case in ...\todo{Add ref later}\\
+\label{HHFunctoriality}
+In this section we will deal with the functoriality of Hochschild homology for CDVRs.
+In the same vein as Chapter 3, the computation of absolute Hochschild homology will first pass through an auxiliary relative result. While archieving this, we also need to be attentive to the functoriality. So what is the correct domain category for $\HH(-;\Z_p[z])$?
+The first answer one might come up with is probably the category of $\Z_p[z]$-algebras. But as we have previously seen, this is not suitable for our purposes, because the morphism sets are too restrictive. Given two CDVRs, we want to talk about arbitrary maps between them, but only maps that preserve choices of uniformizers (which give the $\Z_p[z]$-algebra structures) are $\Z_p[z]$-algebra homomorphisms. We will therefore now introduce a more refined category, which allows us to also consider these maps. \\
+For ease of notation, we first only deal with CDVRs with residue field $\F_p$, i.e. purely ramified extensions of $\Z_p$. We discuss the general case in Remark \ref{generalresiduefield}
+\\
 Let $\CDVRL$ be the category, whose \textit{objects} are 
 given by pairs $(R,\pi)$, where $R$ is a complete discrete valuation rings of mixed characteristic with residue field $\F_p$ and $\pi$ is a uniformizer of $R$. The element $\pi$ determines a surjective map $ev_\pi:\Z_p[z]\to R, \ z\mapsto \pi$. A \textit{morphism} between to objects $(R,\pi)$ and $(S,\epsilon)$ is now given by a pair $(\phi,f)$, where $\phi:R\to S$ and $f:\Z_p[z]\to \Z_p[w]$ are $\Z_p$-algebra homomorphisms, that make the following diagram commutes.
 % https://q.uiver.app/?q=WzAsNCxbMCwxLCJSIl0sWzEsMCwiXFxaX3Bbd10iXSxbMCwwLCJcXFpfcFt6XSJdLFsxLDEsIlMiXSxbMiwwLCJldl9cXHBpIl0sWzEsMywiZXZfXFxlcHNpbG9uIl0sWzAsMywiXFxwaGkiXSxbMiwxLCJmIl1d
@@ -112,7 +112,8 @@ given by pairs $(R,\pi)$, where $R$ is a complete discrete valuation rings of mi
 \end{tikzcd}\]
 The commutativity expresses, that $f$ is a \textit{lift} of $\phi$, hence the name for the category.
 Giving the map $f:\Z_p[z]\to \Z_p[w]$ is equivalent to providing a polynomial in $\Z_p[w]$, which we abusively also call $f$. The map is then given by $g(z)\mapsto g(f(w))$, i.e. by substitution. \\
-Several constructions/computations, that we will now make will only be functorial in this input category. 
+Abstractly, this category is the full subcategory of the category of $\Z_p$-algebras on objects of the form $\Z_p[z]\to R$, where $R$ is a mixed characteristic CDVR with residue field $\F_p$ and the map sends $z$ to a uniformizer of $R$. 
+Several constructions/computations, that we will now make will only be functorial in this input category. In particular $\HH_*(-;\Z_p[z])$ canonically provides a functor from $\CDVRL$ to graded $\Z_p$-algebras.
 We also have the category $\CDVRu$, with the same objects as $\CDVRL$. Morphisms between objects $(R,\pi)$ and $(S,\epsilon)$ are given by a $\Z_p$-algebra homomorphisms $R\to S$ without a choice of lift and without any compatibility of the uniformizers, in particular it need not send one uniformizer on the other. There is an evident forgetful functor $U:\CDVRL\to \CDVRu$, which is the identity on objects and forgets the lift on morphisms, i.e. it sends $(\phi,f)$ to just $\phi$. ($p$-completed) Hochschild homology can be considered as a functor $\HH_*(-;\Z_p):\CDVRu\to \gr \Z_p$-$\Mod$ with values in the category of graded $\Z_p$-modules. Via precomposition with $U$ we obtain a functor with domain $\CDVRL$. Our main result is a natural computation of $U\circ \HH_*(-;\Z_p)$, i.e. we give a natural isomorphism from $\HH_*(R;\Z_p)$ to the homology of a very easy dga. 
 This natural isomorphism is an equivalence of functors $\CDVRL\to \gr \Z_p$-$\Alg$. Since Hochschild homology is independent of the choice of lift, the homology of the dga is necessarily also indepent and hence descends to a functor $\CDVRu\to \gr \Z_p$-$\Alg$.
 The upshot is, that our dga description can be used to functorially compute ($p$-completed) Hochschild homology by choosing a lift, but the such computed map does not depend of the choice of lift.
@@ -123,7 +124,7 @@ The proof of the main result consists of the following steps:
     \item Establish that the full relative Hochschild homology is given by the divided power of the degree 2 part: $\HH_*(R/\Z[z];\Z_p)=\Gamma_R(\HH_2(R/\Z[z];\Z_p))$.
     \item Use a descent spectral sequence as in Section 3.4 to obtain the absolute Hochschild homology from the relative term. 
 \end{itemize}
-For the first two steps in the program, we will use the HKR-filtration, which is expressed in terms of \textbf{nonabelian derived functors}. They are a generalization of ordinary derived functors, which have the advantage that they also work in non-additive settings, i.e. for non-additive categories or non-additive functors. This originally goes back to \cite{DoldPuppeHomologie}, for a modern formulation see \cite[Section~5.5.8]{HigherToposTheory} or \cite{CSpurityanimation}, where the terminology \textit{animation} is used.
+For the first two steps in the program, we will use the HKR-filtration, which is expressed in terms of \textbf{nonabelian derived functors}. They are a generalization of ordinary derived functors, which have the advantage that they also work in non-additive settings, i.e. for non-additive categories or non-additive functors. This originally goes back to \cite{DoldPuppeHomologie}, for a modern formulation see \cite[Section~5.5.8]{HigherToposTheory} or \cite[Section~5.1.4]{CSpurityanimation}, where the terminology \textit{animation} is used.
 The main idea is to use simplicial resolutions, which make sense in every category, instead of resolutions by chain complexes, which are only sensible in an additive setting\footnote{In the case of non-additive functors between additive categories, we can obtain a simplicial resolution by applying the Dold-Kan correspondence to a projective resolution.}. \\
 Two functors that we want to derive are the non-additive functor $\Lambda_R^n:\Mod_R\to \Mod_R$ (here we really mean an ordinary ring and the 1-category of ordinary modules over it) and Kähler differentials $\Omega^1_{-}:\CRing\to \Ab$ (note that $\Omega^1_R$ has a $R$-module structure). Deriving these provides ($\infty$-) functors $L\Lambda_R^n:D(R)_{\geq 0}\to D(R)_{\geq 0}$ and $\bL_{-}:s\CRing\to D(\Z)_{\geq 0}$. \\
 Now recall that the HKR-filtration is a natural, multiplicative filtration on relative Hochschild homology $\HH(R/S)$, with associated graded given by $\gr^n_{\rm HKR}=( L\Lambda_R^n\bL_{R/S})[n]$ (see eg. \cite[Theorem~IV.4.1]{NS}).
@@ -133,26 +134,29 @@ Now recall that the HKR-filtration is a natural, multiplicative filtration on re
         \HH_*(R/\Z[z];\Z_p)=\HH_*(R/\Z_p[z])=\Gamma_R(I/I^2).
     \end{equation*}
 \end{prop}
+Let us prepare this result, by first establishing the computation in the second degree.
 \begin{lem}
-    Again let $(R,\pi)\in \CDVRL$ and $I=\ker(\Z_p[z]\to R)$. For the second Hochschild homology, we have the following natural identification of functors from $\CDVRL$ to $\Z_p$-$\Mod$.
+    Let $(R,\pi)\in \CDVRL$ and $I=\ker(\Z_p[z]\to R)$. For the second Hochschild homology, we have the following natural identification of functors from $\CDVRL$ to $\Z_p$-$\Mod$.
     \begin{equation*}
         \HH_2(R/\Z_p[z])=I/I^2
     \end{equation*}
 \end{lem}
 \begin{proof}
-    Because $R=\Z_p[z]/I$, we naturally have $\bL_{R/\Z_p[z]}=I/I^2[1]$ (see e.g. \cite[\href{https://stacks.math.columbia.edu/tag/08SJ}{Tag 08SJ}]{stacks-project}). Furthermore the HKR-filtration provides us with a natural isomorphism $\HH_2(R/\Z_p[z])=\bL_{R/\Z_p[z]}$, thus yielding the result. 
+    Because of the presentation $R=\Z_p[z]/I$, we naturally have $\bL_{R/\Z_p[z]}=I/I^2[1]$ (see e.g. \cite[\href{https://stacks.math.columbia.edu/tag/08SJ}{Tag 08SJ}]{stacks-project}). Furthermore the HKR-filtration provides us with a natural isomorphism $\HH_2(R/\Z_p[z])=\bL_{R/\Z_p[z]}$, thus yielding the result. 
 \end{proof}
 The module $I/I^2$ is isomorphic to $R$. To describe the isomorphism, let $E\in \Z_p[z]$ be the minimal polynomial of $\pi$. Then $E$ generates the ideal $I=(E)$, so we also have $\HH_2(R/\Z_p[z])=(E)/(E^2)$. The isomorphism is now given by $R\rai I/I^2, 1\mapsto [E]$, with inverse $I/I^2\rai R, [g]\mapsto (g/E)(\pi)$. \\
-Let us also be completely explicit about the functoriality statement. Assume $(\phi,f):(R,\pi)\to (S,\epsilon)$ is a morphism in $\CDVRL$. Let $E\in \Z_p[z]$ and $F\in \Z_p[w]$ be minimal polynomials of $\pi$ and $\epsilon$ respectively. Under the identifications $R\simeq (E)/(E^2)$ and $S\simeq (F)/(F)^2$, the induced map on the relative second Hochschild homology 
+The reason, that we write $I/I^2$ instead of $R$, is to indicate the correct functoriality.
+Let us be completely explicit about this: Assume $(\phi,f):(R,\pi)\to (S,\epsilon)$ is a morphism in $\CDVRL$. Let $E\in \Z_p[z]$ and $F\in \Z_p[w]$ be minimal polynomials of $\pi$ and $\epsilon$ respectively. Under the identifications $R\simeq (E)/(E^2)$ and $S\simeq (F)/(F)^2$, the induced map on the relative second Hochschild homology 
 \begin{equation*}
     R\rai (E)/(E)^2 \simeq\HH_2(R/\Z_p[z]) \to \HH_2(S/\Z_p[w]) \simeq (F)/(F)^2 \rai S
 \end{equation*}
-is given by sending $1\mapsto [E(z)]\mapsto [E(f(w))]\mapsto \frac{E(f(w))}{F(w)}(w=\pi)$. This uniquely determines the map by requiring, that it is $\phi$-semilinear\footnote{Recall: Let $R$, $S$ be rings, $M$ a module over $R$, $N$ a module over $S$ and $\varphi:R\to S$ a map of rings. Then an additive map $f:M\to N$ is called $\varphi$-semilinear if $f(rm)=\phi(r)f(m)$ for all $m\in M,\ r\in R$}, i.e. we send $R\ni r\to \phi(r)\frac{E(f(w))}{F(w)}(w=\pi)$.
+is given by sending $1\mapsto [E(z)]\mapsto [E(f(w))]\mapsto \frac{E(f(w))}{F(w)}|_{w=\epsilon}$. This uniquely determines the map by requiring, that it is $\phi$-semilinear\footnote{Recall: Let $R$, $S$ be rings, $M$ a module over $R$, $N$ a module over $S$ and $\varphi:R\to S$ a map of rings. Then an additive map $f:M\to N$ is called $\varphi$-semilinear if $f(rm)=\phi(r)f(m)$ for all $m\in M,$ and $\ r\in R$.}, i.e. we send $R\ni r\to \phi(r)\frac{E(f(w))}{F(w)}|_{w=\epsilon}$.
 
 
 \begin{proof}[Proof of Proposition \ref{FunctorialrelativeHH}]
-    For the first isomorphism \dots \todo{todo}
-    By \cite[§5.4.3]{illusie2006complexe}, we have a natural isomorphism $L\Lambda_R^n(M[1])=\Gamma_R^n(M)[n]$. Thus the spectral sequence induced from the HKR-filtration looks as follows
+    The first isomorphism follows from Lemma \ref{PropertiesTHH}.5) since $R$ is $p$-complete and of finite type over $\Z_p[z]$.  \\
+    For the secon isomorphism:
+    By \cite[§5.4.3]{illusie2006complexe}, we have a natural isomorphism $L\Lambda_R^n(I/I^2[1])=\Gamma_R^n(I/I^2)[n]$. Thus the spectral sequence induced from the HKR-filtration looks as follows
     % https://q.uiver.app/?q=WzAsMzIsWzEsNSwiUiJdLFsyLDUsIjAiXSxbMiw0LCJJL0leMiJdLFszLDUsIjAiXSxbMSw0LCIwIl0sWzMsNCwiMCJdLFs0LDQsIjAiXSxbNCw1LCIwIl0sWzUsNCwiXFxkb3RzIl0sWzAsNl0sWzAsNV0sWzYsNl0sWzAsMl0sWzAsM10sWzEsMywiMCJdLFsyLDMsIjAiXSxbMywzLCJcXEdhbW1hX1IoSS9JXjIpIl0sWzQsMywiMCJdLFswLDFdLFsxLDIsIjAiXSxbMiwyLCIwIl0sWzMsMiwiMCJdLFs0LDIsIlxcR2FtbWFeMl9SKEkvSV4yKSJdLFs1LDEsIlxcZG90cyJdLFsyLDEsIlxcZG90cyJdLFswLDBdLFs1LDMsIlxcZG90cyJdLFs1LDIsIlxcZG90cyJdLFs1LDUsIlxcZG90cyJdLFszLDEsIlxcZG90cyJdLFs0LDEsIlxcZG90cyJdLFsxLDEsIlxcZG90cyJdLFs5LDExLCIiLDAseyJvZmZzZXQiOi00fV0sWzksMjUsIiIsMix7Im9mZnNldCI6NCwic2hvcnRlbiI6eyJ0YXJnZXQiOjEwfX1dXQ==
 \[\begin{tikzcd}
 	{} \\
@@ -165,12 +169,17 @@ is given by sending $1\mapsto [E(z)]\mapsto [E(f(w))]\mapsto \frac{E(f(w))}{F(w)
 	\arrow[shift left=4, from=7-1, to=7-7]
 	\arrow[shift right=4, shorten >=12pt, from=7-1, to=1-1]
 \end{tikzcd}\]
-    There is no room for differentials and it degenerates on the $E^1$-page. We also do not have extension problems. The isomorphisms $L\Lambda_R^n(M[1])=\Gamma_R^n(M)[n]$ for varying $n$ are naturally multiplicatively compatible, i.e. we have 
-    $L\Lambda_R^*(I/I^2[1])=\Gamma_R(I/I^2)$. This determines the multiplicative structure on the $E^1=E^\infty$-page and hence gives us the result.
+    There is no room for differentials and it degenerates on the $E^1$-page. We also do not have extension problems. The isomorphisms $L\Lambda_R^n(I/I^2[1])=\Gamma_R^n(I/I^2)[n]$ for varying $n$ are multiplicatively compatible, i.e. we have 
+    $L\Lambda_R^*(I/I^2[1])=\Gamma_R(I/I^2)$. This determines the multiplicative structure on the $E^1=E^\infty$-page and hence gives the result.
 \end{proof}
-Let us again unravel, what this means concretely. \\
-
-Now we want to obtain the absolute Hochschild homology from the relative term. For this we proceed in the same way as in Section \ref{AbsoluteTHHofCDVRs}. 
+Let us again unravel, what this means concretely. The $R$-module $I/I^2$ is free of rank 1 with generator provided by the class of $E$, the minimal polynomial of the uniformizer. 
+Let us instead denote $x\coloneqq [E]\in (E)/(E)^2$. We can then identify Hochschild homology with the free divided power algebra on a generator in degree two $\HH_*(R/\Z_p[z])\simeq \Gamma_R\{x\}$. Let now $(\phi,f):(R,\pi)\to (S,\epsilon)$ be a morphism in $\CDVRL$ and $E\in\Z_p[z],F\in\Z_p[w]$ minimal polynomials of $\pi,\epsilon$. The induced map on relative Hochschild homology 
+\begin{align*}
+    \Gamma_R\{x\}\simeq \HH_*(R/\Z_p[z])\to \HH_*(S/\Z_p[w])\simeq \Gamma_S\{y\}
+\end{align*} 
+is then uniquely determined by sending $x^{[n]}$, the $n$-the divided power of $x$, to $\left(\frac{E(f(w))}{F(w)}|_{w=\epsilon} \right)^n y^{[n]}$ and being $\phi$-semilinear.
+\\
+\indent Now we want to obtain the absolute Hochschild homology from the relative term. For this we proceed in the same way as in Section \ref{AbsoluteTHHofCDVRs}. 
 Again, we have a descent spectral sequence for obtaining $\HH(R;\Z_p)$ out of $\HH(R/\Z_p[z])$.
 This works out as follows: 
 We use the trivial isomorphism $\HH(R;\Z_p)=\HH(R;\Z_p)\otimes_{\HH(\Z_p[z]/\Z_p)}\HH(\Z_p[z]/\Z_p)$. Then we filter $\HH(\Z_p[z]/\Z_p)$ by its Whitehead tower $\tau_{\geq \bullet}\HH(\Z_p[z]/\Z_p)$ and tensor this up to obtain the filtration $\HH(R;\Z_p)\otimes_{\HH(\Z_p[z]/\Z_p)} \tau_{\geq \bullet}\HH(\Z_p[z]/\Z_p)$ on $\HH(R;\Z_p)$.
@@ -182,22 +191,81 @@ The associated graded of this, is given by:
     &\stackrel{\ref{relative THH formula}}{=}
     \HH(R/\Z_p[z])\otimes_{\Z_p[z]}\Omega^j_{\Z_p[z]/\Z_p}
 \end{align*}
-The spectral sequence associated to this filtration thus takes the form\footnote{We start at the $E^2$-page, because the $d^1$-differential is trivial for degree reasons.}
+The descent spectral sequence associated to this filtration thus takes the form\footnote{We start at the $E^2$-page, because the $d^1$-differential is trivial for degree reasons.}
 \begin{equation*}
     E^2=\HH_i(R/\Z_p[z])\otimes_{\Z_p[z]}\Omega^j_{\Z_p[z]/\Z_p}\Rightarrow \HH_{i+j}(R;\Z_p)
 \end{equation*}
 % This is constructed in the same way as the other spectral sequence:
 % We have $\HH(R)=\HH(R)\otimes_{\HH(\Z_[z])}\HH(\Z[z])$ and then filter $\HH(\Z[z])$ by its Whitehead tower. Associated graded given by Kähler differentials. Then spectral sequence of filtered chain complex.
-\\
 Due to degree reasons, the spectral sequence degenerates at the $E^3$-page. Thus we can identify the absolute ($p$-completed) Hochschild homology with the homology of the dga given by the $E^2$-page of the spectral sequence equipped with the $d^2$-differential. I.e. we get a natural isomorphism of functors $\CDVRL\to \gr \Z_p$-$\Alg$
 \begin{equation*}
     \HH_*(R/\Z_p)=H_*(\Gamma_R(I/I^2)\otimes_{\Z_p[z]}\Omega^*_{\Z_p[z]/\Z_p},\partial=d^2)
 \end{equation*}
 Because the right hand side is even a functor on $\CDVRu$, the left hand side also descends to one. Since the forgetful functor $\CDVRL\to \CDVRu$ is full\footnote{This holds because, $\Z_p[z]\to R$ is surjective, so we can lift every map $\phi:R\to S$ to a map $\Z_p[z]\to \Z_p[w]$} this allows us to compute the effect of Hochschild homology by choosing an arbitrary lift and then compute the functoriality via the homology of the dga. \\
-The final thing, that remains to be done, is identifying the homology of the dga, which we archieve in the next theorem.
+The final thing, that remains to be done, is identifying the homology of the dga.
 \begin{thm}
-    
+    Let $(R,\pi)\in \CDVRL$, $E\in \Z_p[z]$ a minimal polynomial of $\pi$ and let $x\coloneqq [E]\in (E)/(E)^2=\HH_2(R;\Z_p[z])$.
+    %Under the identifications $HH_2n(R/\Z_p[z]\simeq R$ and 
+    The differential of the descent spectral sequence $d^2:R\{x^{[n+1]}\}\to R\{x^{[n]}dz\}$ is injective and has image given by the principal ideal generated by $E'(\pi)x^{[n-1]}dz$. The nonzero Hochschild homology groups are therefore $\HH_0(R;\Z_p)=R$ and $\HH_{2n+1}\simeq R/(E'(\pi))$\\
+    %\begin{equation*}
+    %    d^2(x^{[n]})=E'(\pi)x^{[n-1]}dz
+    %\end{equation*}
+    Regarding the functoriality: Given another $(S,\epsilon)\in \CDVRL$, a map $(\phi,f):(R,\pi)\to (S,\epsilon) $,  $F\in \Z_p[w]$ the minimal polynomial of $\epsilon$ and denote $y\coloneqq [F]\in \HH_2(S;\Z_p[w])$. The functoriality is the completely encoded in the commutative diagram
+    % https://q.uiver.app/?q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIlJcXHt4XntbbisxXX1cXH0iXSxbMiwwLCJSXFx7eF57W25dfWR6XFx9Il0sWzMsMCwiXFxUSEhfezJuKzF9KFI7XFxaX3ApIl0sWzQsMCwiMCJdLFswLDEsIjAiXSxbMSwxLCJTXFx7eV57W24rMV19XFx9Il0sWzIsMSwiU1xce3lee1tuXX1kd1xcfSJdLFszLDEsIlxcSEhfezJuKzF9KFM7XFxaX3ApIl0sWzQsMSwiMCJdLFswLDFdLFsxLDIsImReMiJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDRdLFs1LDZdLFs2LDcsImReMiJdLFs3LDgsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDldLFsxLDYsIlxcdmFycGhpIl0sWzIsNywiXFx2YXJwaGlcXG90aW1lcyBkZiJdLFszLDgsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\[\begin{tikzcd}
+	0 & {R\{x^{[n+1]}\}} & {R\{x^{[n]}dz\}} & {\HH_{2n+1}(R;\Z_p)} & 0 \\
+	0 & {S\{y^{[n+1]}\}} & {S\{y^{[n]}dw\}} & {\HH_{2n+1}(S;\Z_p)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{d^2}", from=1-2, to=1-3]
+	\arrow[two heads, from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{d^2}", from=2-2, to=2-3]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[dashed, from=1-4, to=2-4]
+\end{tikzcd}\]
+The map $R\{x^{[n]}dz\}\to S\{y^{[n]}dw\}$ is given as the unique $\phi$-semilinear map, that acts on $ x^{[n]}dz$ as 
+\begin{equation*}
+    x^{[n]}dz\mapsto \left(\frac{E(f(w))}{F(w)}|_{w=\epsilon} \right)^n f'(\epsilon)y^{[n]}dw.
+\end{equation*}
+
 \end{thm}
+\begin{proof}
+    Let us start with a picture of the spectral sequence.
+    % https://q.uiver.app/?q=WzAsMjgsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiUlxce3hcXH0iXSxbMSwyLCJSXFx7IGR6XFx9Il0sWzMsMiwiUlxce3hkelxcfSJdLFs0LDIsIjAiXSxbNCwzLCIwIl0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDMsIlJcXHt4XntbMl19XFx9Il0sWzUsMiwiUlxce3hee1syXX1kelxcfSJdLFs1LDEsIjAiXSxbNiwzLCJcXGRvdHMiXSxbNiwyLCJcXGRvdHMiXSxbNiwxLCJcXGRvdHMiXSxbMSwwLCJcXGRvdHMiXSxbMiwwLCJcXGRvdHMiXSxbMywwLCJcXGRvdHMiXSxbNCwwLCJcXGRvdHMiXSxbNSwwLCJcXGRvdHMiXSxbNiwwLCJcXGRvdHMiXSxbMCw0XSxbMCwzXSxbNiw0XSxbMCwwXSxbMyw0LCJkXjIiLDJdLFsxMiw1LCJkXjIiLDJdLFsyNCwyNiwiIiwwLHsib2Zmc2V0IjotNH1dLFsyNCwyNywiIiwyLHsib2Zmc2V0Ijo0fV1d
+\[\begin{tikzcd}
+	{} & \dots & \dots & \dots & \dots & \dots & \dots \\
+	& 0 & 0 & 0 & 0 & 0 & \dots \\
+	& {R\{ dz\}} & 0 & {R\{xdz\}} & 0 & {R\{x^{[2]}dz\}} & \dots \\
+	{} & R & 0 & {R\{x\}} & 0 & {R\{x^{[2]}\}} & \dots \\
+	{} &&&&&& {}
+	\arrow["{d^2}"', from=4-4, to=3-2]
+	\arrow["{d^2}"', from=4-6, to=3-4]
+	\arrow[shift left=4, from=5-1, to=5-7]
+	\arrow[shift right=4, from=5-1, to=1-1]
+\end{tikzcd}\]
+We see that it suffices to understand the effect of $d^2$ on $x,x^{[2]},x^{[3]},\dots$. Knowing that $\HH_1(R;\Z_p)\simeq R/E'(\pi)$, we obtain that $d^2$ must send $x$ to a generator of the ideal generated by $E'(\pi)$, i.e. $d^2(x)=uE'(\pi)$ for some $u\in R^{\times}$. By the Leibniz rule, we then also get $d^2(x^n)= n d^2(x)x^{n-1}$. But we need the differential on divided powers of $x$ and not of the actual powers. We claim, that $d^2$ is a PD-derivation, i.e. $d^2(x^{[n]})=x^{[n-1]}d^2(x)$. In fact, this follows from multiplicativity:
+\begin{align*}
+    0&=d^2(x^{[n]})-x^{[n-1]}d^2(x) \\
+    \Longleftrightarrow 0&=n!(d^2(x^{[n]})-x^{[n-1]}d^2(x))\\
+    &=d^2(n!x^{[n]})-n((n-1)!x^{[n-1]})d^2(x)\\
+    &=d^2(x^n)-nx^{n-1}d^2(x)
+\end{align*}
+The equivalence follows, because all involved modules are torsion free. This proves the first part of the theorem.\\
+For the functoriality: We get the map of short exact sequences from the functoriality of the descent spectral sequence. The map $R\{x^{[n]}dz\}\to S\{y^{[n]}dw\}$ is the tensor product of the map $\HH_{2n}(R;\Z_p[z])\to \HH_{2n}(S;\Z_p[w])$ and the map $\Omega^1_{\Z_p[z]}\xrightarrow{df}\Omega^1_{\Z_p[w]/\Z_p}$. We know the effect of the first map from Proposition \ref{FunctorialrelativeHH} and the map on Kähler differentials works as the formal derivative, i.e. $dz\mapsto d(f(w))=f'(w)dw$. 
+The tensor product of these two maps is exactly the map, we claimed in the theorem.
+
+\end{proof}
+\begin{rmk} \label{generalresiduefield}
+    Let us now indicate, which modification we need in the general case of an arbitrary perfect residue field of charactersitic $p$.
+    We redefine $\CDVRL$ to be the full subcategory of the arrow category of $\Z_p$-algebras on objects of the form $W(k)[z]\to R$, where $R$ is a mixed characteristic complete discrete valuation ring with perfect residue field $k$, and the map sends $z$ to a uniformizer of $R$. Again, this data is equivalent to the choice of an $R$ and a uniformizer. Maps are 
+\end{rmk}
+\begin{rmk}
+    In our discussion above, we actually nowhere used, that in the presentation $R=W(k)/E(z)$, the polynomial $E$ is Eisenstein. All results hold verbatim for arbitrary quotients of $W(k)[z]$ by principal ideals.
+\end{rmk}
 % \begin{prop}
 %     \todo{This is wrong! Correct}
 %     Let $R\xrightarrow{\varphi} S$ be a map of CDVRs. We get an induced map $\mathrm{d}\varphi:\Omega^1_{R/\Z_p}\to \Omega^1_{S/\Z_p}$. Choose uniformizers with respective Eisenstein polynomials $E,\tilde{E}$. These Eisenstein polynomials give a resolution of the Kähler differentials and by the fundamental theorem of homological algebra we can lift $\mathrm{d}\varphi$ to maps $f$ and $g$ on the terms of the resolutions
@@ -250,15 +318,20 @@ Let $R$ be a mixed characteristic complete discrete valuation ring with perfect 
     \item Do there exist lifts?
 \end{enumerate}
 \begin{lem}
-    For all $\Z_p$-algebras $R$, the map $\THH(R;\Z_p)\to \HH(R;\Z_p)$ induces an natural isomorphism on the first $2p-1$ homotopy groups
+    For all (ordinary) rings $R$, the map $\THH(R;\Z_p)\to \HH(R;\Z_p)$ induces an natural isomorphism on the first $2p-1$ homotopy groups
     \begin{equation*}
         \THH_i(R;\Z_p)\rai \HH_i(R;\Z_p), \text{ for } i=0,1,\dots 2p-2
     \end{equation*}
 \end{lem}
 \begin{proof}
-    Base change formula.
+    Proposition \ref{tpovertp} allows us to write the map as
+    \begin{equation*}
+        \THH(R;\Z_p)\otimes_{\THH(\Z_p;\Z_p)}\THH(\Z_p;\Z_p)\to \THH(R;\Z_p)\otimes_{\THH(\Z_p;\Z_p)}\Z_p\stackrel{\ref{tpovertp}}{=}\HH(R;\Z_p).
+    \end{equation*}
+    We know by Proposition \ref{LM}, that the map $\THH(\Z_p;\Z_p)\to \Z_p$ is an isomorphism on $\pi_i$ for $i=0,\dots 2p-2$ and hence also $\THH(R;\Z_p)\to \HH(R;\Z_p)$ is, because tensoring can only increase connectivity.
 \end{proof}
-Together with the content of the last section, this functorially identifies the first $2p-1$ homotopy groups of $\THH(R;\Z_p)$. For information on the remaining homotopy groups we proceed as follows.\\
+Together with the content of the last section, this functorially identifies the first $2p-1$ homotopy groups of $\THH(R;\Z_p)$. This is the best that we can hope for. In the next degree we only get a natural surjection but not an isomorphism, we e.g. have $\THH_{2p+1}(\Z_p;\Z_p)=\F_p$ but $\HH_{2p+1}(\Z_p;\Z_p)=0$. \\
+For information on the remaining homotopy groups we proceed as follows.\\
 We will crucially use Lemma \ref{description mixed char CDVR} to write all our rings as quotients of $\Z_p[z]$. This allows us to deduce our computations from the computation for $\THH(\Z_p[z])$ and to understand the functoriality of $\THH(\Z_p[z])$ under self maps of $\Z_p[z]$. We do not understand the functoriality of $\THH(\Z_p[z])$ on the level of spectra, but for homotopy groups we have a relative Hochschild-Kostant-Rosenberg style result.
 \begin{lem}
     Let $R$ be an ordinary ring. Then we have the following expression for the topological Hochschild homology of the polynomial ring over $R$.
@@ -335,7 +408,7 @@ We can then calculate the effects of maps $\varphi:R\to S$ on $\THH$ via this sp
 	\arrow["f", dashed, from=2-1, to=2-2]
 	\arrow["g", dashed, from=1-1, to=1-2]
 \end{tikzcd}\] 
-This is unfortunately not always possible\footnote{For example the interesting case $\Z_p[\zeta_p]\to \Z_p[\zeta_p],\ \zeta_p\to \zeta_p^2$ is not covered.}, but sometimes it is. The applicability is mostly disjoint \todo{Actually not, apparently the Tor spectral sequence covers morst cases, in which the descent SS can be used } from the method that we will outline in the next section. 
+The first lift can always be found, but the second one is unfortunately not always possible\footnote{For example the interesting case $\Z_p[\zeta_p]\to \Z_p[\zeta_p],\ \zeta_p\to \zeta_p^2$ is not covered.}, but sometimes it is. The applicability is mostly disjoint \todo{Actually not, apparently the Tor spectral sequence covers morst cases, in which the descent SS can be used } from the method that we will outline in the next section. 
 Some examples in which we can apply the method are:
 \begin{itemize}
     \item The inclusion $\Z_p\hookrightarrow \Z_p[\sqrt{p}]$ 
@@ -349,7 +422,20 @@ Some examples in which we can apply the method are:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{(Partial) Functoriality of $\THH$ via the descent spectral sequence}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-$\mathrm{CDVR}^{\S-\mathrm{Lift}}$.\\
+Let us try to mimick, the procedure of Section \ref{HHFunctoriality} for \textit{topological} Hochschild homology. We can define the category of \textbf{CDVRs with spherical lifts }
+$\CDVRSL$ as follows. Objects are again pairs $(R,\pi)$, where $R$ is a complete discrete valuation ring of mixed characteristic with residue field $\F_p$ and $\pi\in R$ is a uniformizer. The element $\pi$ determines a map $\S[z]\to R,\ z\to \pi$. A morphism from $(R,\pi)$ to $(S,\epsilon)$ consists of a pair $(\phi,f)$, where $\phi:R\to S$ is a $\Z_p$-algebra homomorphism, $f:\S[z]\to \S[w]$ a map of $\Einf$-ring spectra, such that the following square commutes:
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXFNbel0iXSxbMSwwLCJcXFNbd10iXSxbMCwxLCJSIl0sWzEsMSwiUyJdLFswLDEsImYiXSxbMiwzLCJcXHBoaSJdLFswLDJdLFsxLDNdXQ==
+\[\begin{tikzcd}
+	{\S[z]} & {\S[w]} \\
+	R & S
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["\phi", from=2-1, to=2-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}\]
+This category is the natural home for relative $\THH$ computations. We have forgetful functors $\CDVRSL\to \CDVRL\to \CDVRu$. The problem is, that the first functor is \textit{not} full. We cannot lift an arbitrary polynomial map $\Z_p[z]\to \Z_p[w]$ to a map of ring spectra $\S[z]\to \S[w]$. This is only\todo{check this} possible for \textbf{monomial maps}, i.e. maps of the form $\Z_p[z]\to \Z_p[w],\ z\to w^n$. In this specific case, we can define the lift $\S[z]\to \S[w]$ via applying $\sip$ to the map of monoids $\N\xrightarrow{\cdot n} \N$.
+\\
+%$\mathrm{CDVR}^{\S-\mathrm{Lift}}$.
 The descent spectral sequence of section 3.4 does have a partial functoriality. Let $R$ and $S$ be two CDVRs with chosen uniformizers $\pi_R$ and $\pi_S$, which provide them with respective module structures over $\S[z]$. We then have functoriality in maps $\varphi:R\to S$ that lifts to a monomial map of the spherical polynomial ring\footnote{induced by the map $\N\xrightarrow{\cdot n} \N$}, i.e. $\S[z]\to \S[w],\  z\mapsto w^n$, such that the following square commutes
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJSIl0sWzEsMCwiUyJdLFswLDEsIlxcU1t6XSJdLFsxLDEsIlxcU1t6XSJdLFswLDEsIlxcdmFycGhpIl0sWzIsMCwielxcbWFwc3RvIFxccGlfUiJdLFsyLDMsInpcXG1hcHN0byB6Xm4iLDJdLFszLDEsInpcXG1hcHN0byBcXHBpX1MiLDJdXQ==
 \[\begin{tikzcd}

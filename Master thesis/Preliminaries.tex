@@ -187,8 +187,12 @@ Let us record a few facts, that we will need, in the following Lemma.
     1.) $\THH(\S)=\S$ \\
     2.) $\THH(R)$ is connective, if $R$ is connective.\\
     3.) For any ordinary ring $R$, the natural map $\THH(R)\to \HH(R)$ induces an isomorphism on $\pi_0,\pi_1,\pi_2$ and a surjection on $\pi_3$. More generally\todo{Check whether this is true}, for a commutative, connective ring spectrum $S$ and an ordinary $\pi_0(S)$-algebra $R$, the same hold for the map $\THH(R/S)\to \HH(R/\pi_0(S))$. \\
-    4.) If $R$ is a connective, $p$-complete spectrum and of finite type %\footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.}
-    over a connective $\Einf$-ring spectrum $S$, then $\THH(R/S)$ is also $p$-complete.\\   
+    4.) If $S$ is a connective, $\Einf$-ring spectrum and %\footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.}
+    $R$ a connective, $p$-complete $S$-algebra spectrum, which is of finite type, then $\THH(R/S)$ is also $p$-complete.\\   
+    5.) If $S$ is a connective $\Einf$-ring spectrum, $R$ a connective, $p$-complete $S$-algebra spectrum such that $R$ is of finite type over $S_p^{\wedge}$, then 
+    \begin{equation*}
+        \THH(R/S;\Z_p)=\THH(R/S_p^{\wedge})
+    \end{equation*}
 \end{lem}
 
 \begin{proof}
@@ -209,7 +213,14 @@ Let us record a few facts, that we will need, in the following Lemma.
         0=\pi_1(\Z)\to \pi_0(F_2)\to \pi_0(\Z\otimes_\S\Z\otimes_S\Z)\rai \pi_0(\Z).
     \end{equation*}
     Because $\pi_1(\Z)=0$ and the last map is an isomorphism, we necessarily have $\pi_0(F_2)=0$. \\
-    4.) Recall from last section, that the tensor product of two connective modules over a connective base ring is $p$-complete provided one factor is of finite type over the base ring and the other module is $p$-complete. By our assumption we can see, that $R\otimes_S R$ is $p$-complete and by induction that all the term of the form $R\otimes_S \dots \otimes_S R$ are $p$-complete. Now we want to argue, that by the bar construction $\THH(R/S)$ is also $p$-complete. This does not work directly, because infinite colimits do not preserve $p$-completeness in general. But since finite colimits preserve $p$-completeness, we know that the colimit over $\Delta^{\op}_{\leq n}$ is $p$-complete. The full colimit over $\Delta^{\op}$ is then given by a filtered colimit of these finite stage colimits along increasingly connective maps. This then implies that $\THH(R/S)$ is $p$-complete.
+    4.) Recall from last section, that the tensor product of two connective modules over a connective base ring is $p$-complete provided one factor is of finite type over the base ring and the other module is $p$-complete. By our assumption we can see, that $R\otimes_S R$ is $p$-complete and by induction that all the term of the form $R\otimes_S \dots \otimes_S R$ are $p$-complete. Now we want to argue, that by the bar construction $\THH(R/S)$ is also $p$-complete. This does not work directly, because infinite colimits do not preserve $p$-completeness in general. But since finite colimits preserve $p$-completeness, we know that the colimit over $\Delta^{\op}_{\leq n}$ is $p$-complete. The full colimit over $\Delta^{\op}$ is then given by a filtered colimit of these finite stage colimits along increasingly connective maps. This then implies that $\THH(R/S)$ is $p$-complete. \\
+    5.) We have a map $\THH(R/S)\to \THH(R/S_p^{\wedge})$ and want to show that it is a $p$-adic equivalence. This suffices to show the statement, since the target is already $p$-complete by part 4.). 
+    By Lemma \ref{modpreduction} we thus need to show, that the map on mod $p$-reductions $\THH(R/S)/p\to \THH(R/S_p^{\wedge})/p$ is an equivalence. For this we can for example use Proposition \ref{base change THH}:
+    \begin{align*}
+        \THH(R/S)/p&=\THH(R/S)\otimes_S(S/p)\stackrel{\ref{base change THH}}{=}\THH((R/p)/(S/p))\\
+        \to \THH(R/S_p^{\wedge})/p&=\THH(R/S_p^{\wedge})\otimes_{\S_p^{\wedge}}(S_p^{\wedge}/p) \stackrel{\ref{base change THH}}{=}\THH((R/p)/(S^{\wedge}_p/p))
+    \end{align*}
+    And this map is an equivalence, because $S/p\to S_p^{\wedge}/p$ is.
 \end{proof}
 Part 3.) is especially useful when combined with the fact that the explicit map $\Omega^1_{R/S} \cong \HH_1(R/S), adb\mapsto a\otimes b$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universal property of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
 In the case that $R/S$ is smooth, this map is an isomorphism due to the \textbf{Hochschild-Kostant-Rosenberg} (HKR) theorem (see \cite[Section~3.4]{loday2013cyclic}). 

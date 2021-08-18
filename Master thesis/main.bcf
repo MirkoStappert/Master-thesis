@@ -2444,10 +2444,11 @@
     <bcf:citekey order="92">stacks-project</bcf:citekey>
     <bcf:citekey order="93">illusie2006complexe</bcf:citekey>
     <bcf:citekey order="94">lurie2017higher</bcf:citekey>
-    <bcf:citekey order="95">GGNuniversalityloop</bcf:citekey>
-    <bcf:citekey order="96">barwickK-theory</bcf:citekey>
-    <bcf:citekey order="97">barwick2013multiplicative</bcf:citekey>
-    <bcf:citekey order="98" nocite="1">krausenikolausTCnotes</bcf:citekey>
+    <bcf:citekey order="95">krausenikolausTCnotes</bcf:citekey>
+    <bcf:citekey order="96">NS</bcf:citekey>
+    <bcf:citekey order="97">GGNuniversalityloop</bcf:citekey>
+    <bcf:citekey order="98">barwickK-theory</bcf:citekey>
+    <bcf:citekey order="99">barwick2013multiplicative</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

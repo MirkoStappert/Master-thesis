@@ -17,18 +17,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Base change formulas}{20}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$- algebras}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$-algebras}{22}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for complete discrete valuation rings}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for CDVRs}{24}{section.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Absolute THH of CDVRs}{29}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Functoriality for THH of CDVRs}{35}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Functoriality of THH for CDVRs}{35}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{35}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{41}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{42}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}(Partial) Functoriality of $\THH $ via the descent spectral sequence}{44}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Functoriality of $\THH $ via the descent spectral sequence}{48}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}K-Theory}{46}{appendix.A}%
+\contentsline {chapter}{\numberline {A}K-Theory}{51}{appendix.A}%

@@ -59,12 +59,12 @@ Then $k$ is a $\THH(k/k')$-module and we have
     \THH(R/k)=\THH(R/k')\otimes_{\THH(k/k')} k
 \end{equation*}
 \end{prop}
-\begin{proof}[Proof Sketch]
+\begin{proof}
 Let us start by writing the left hand side in terms of its cyclic bar construction and applying the previous Lemma in the case where all $k$-modules are given by $R$.
 %Observation: $R\otimes_k R\simeq (R\otimes_\S R)\otimes_{k\otimes_\S k}k$ and also \\ $R\otimes_k\dots \otimes_k R\simeq (R\otimes_\S\dots\otimes_\S R)\otimes_{k\otimes_\S\dots \otimes_\S k}k$ \\ This allows us to rewrite:
 \begin{align*}
   \THH(R/k)&=\colim_{\Delta^{\op}}\left(\dots \rightthreearrow R\otimes_k R\rightrightarrows R\right) \\
-  &\stackrel{\ref{tpovertp}}{=}\colim_{\Delta^{\op}}\left(\dots \rightthreearrow (R\otimes_{k'} R)\otimes_{k\otimes_{k'} k}k\rightrightarrows R\right) \\
+  &\stackrel{\ref{relative THH formula}}{=}\colim_{\Delta^{\op}}\left(\dots \rightthreearrow (R\otimes_{k'} R)\otimes_{k\otimes_{k'} k}k\rightrightarrows R\right) \\
   &=\colim_{\Delta^{\op}}\left(
   (\dots  \rightthreearrow R\otimes_{k'} R\rightrightarrows R)
   \otimes_{(\dots  k\otimes_{k'} k \rightrightarrows k)} (\dots \rightthreearrow k \rightrightarrows k)\right)
@@ -83,8 +83,8 @@ Applying this cofinality (under the equivalent characterization of cofinality pr
   (\dots  k\otimes_{k'} k \rightrightarrows k)
   }
   \colim_{\Delta^{\op}}(\dots \rightthreearrow k \rightrightarrows k) \\
-  &=\THH(R/k)\otimes_{\THH(k/k')}k \qedhere
-\end{align*}
+  &=\THH(R/k)\otimes_{\THH(k/k')}k 
+\end{align*} \qedhere
 \end{proof}
 \noindent
 Again there is the important special case of $k'=\S$, which gives us $\THH(R/k)=\THH(R)\otimes_{\THH(k)} k$. \newline
@@ -99,8 +99,9 @@ Indeed
 
 
 
-
-\section{Bökstedt periodicity for perfect $\F_p$- algebras}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bökstedt periodicity for perfect $\F_p$-algebras}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In this section we will prove Bökstedt periodicity for perfect\footnote{For every $\F_p$-algebra $R$ we have that the Frobenius $\varphi:R\ra R, \ x\mapsto x^p$ is a ring homomorphism. We call $R$ perfect if $\varphi$ is an isomorphism.} $\F_p$-algebras.
 Examples include perfect fields, in particular finite fields $\F_{p^n}$, as well as non-Noetherian examples like $\F_p[x^{1/p^\infty}]$.
 For the proof, we will rely on  the following construction that establishes that we can not only deform perfect $\F_p$-algebras to characteristic zero via Witt vectors, but even to the sphere spectrum using a spherical analogue of the Witt vectors.
@@ -146,9 +147,9 @@ Together with the Hochschild-Kostant-Rosenberg filtration on Hochschild homology
 
 
 
-\section{Relative Bökstedt periodicity for complete discrete valuation rings}
+\section{Relative Bökstedt periodicity for CDVRs}
 Let $R$ be a discrete valuation ring, i.e. a local principal ideal domain that is not a field. Denote its unique maximal ideal by $\m$ and the residue field by $k=R/\m$.
-In this section we assume that $R$ is complete with respect to the ideal $\m$, i.e. $R\rai \lim (R/\m\la R/\m^2 \la \dots)$ and that the residue field $k$ is perfect of characteristic $p>0$. We will abreviate the term complete discrete valuation ring to CDVR.
+In this section we assume that $R$ is complete with respect to the ideal $\m$, i.e. $R\rai \lim (R/\m\la R/\m^2 \la \dots)$ and that the residue field $k$ is perfect of characteristic $p>0$. We will abbreviate the term complete discrete valuation ring to CDVR.
 Any generator $\pi\in R$ of the maximal ideal will be called a \textit{uniformizer}. Completeness with respect to the ideal $\m$ is then equivalent to completeness with respect to the element $\pi$.
 \newline
 Either $R$ and $k$ are both of characteristic $p$ (then we say that $R$ is of \textit{equal characteristic}) or $R$ is of characteristic 0 and $k$ is of characteristic $p$ (the \textit{mixed characteristic} case).
@@ -162,13 +163,13 @@ But there are also ramified examples like $\Z_p[\sqrt[n]{p}]$. or $\Z_p[\zeta_p]
     See \cite[Section 2.5]{SerreLocal}.
 \end{proof}
 
-To calculate $\THH(R)$ we first work relative to the maximal ideal which will allow us to use the result from the last section because the residue field is by assumption perfect. In the next section, we will then obtain the non-relative result using a descent spectral sequence. \newline
+To calculate $\THH(R)$ we first work relative to the maximal ideal which allows us to use the result from the previous section because the residue field is by assumption perfect. In the next section, we will then obtain the non-relative result using a descent spectral sequence. \newline
 We will work relative to the spectrum $\S[z]\coloneqq \sip (\N_0)$, the \textbf{spherical monoid ring} of $\N_0$. Since $\N_0$ is a commutative monoid, hence an $\Einf$-algebra in spaces and $\sip:\Spc\ra \Sp$ has a strong symmetric monoidal structure, we get that $\S[z]$ is an $\Einf$-ring spectrum.
 To work relative to $\S[z]$, we need an $\Eone$-map $\S[z]\ra HR$, which informally is just given by $z\mapsto \pi$ for $\pi$ a uniformizer in $R$. 
 To make this map precise, note that the ($\sip, \Omega^\infty$)-adjunction is compatible with the symmetric monoidal structures\footnote{i.e. $\sip$ is (strong) symmetric monoidal and $\Omega^\infty$ is (lax) symmetric monoidal with respect to the cartesian product on $\Spc$ and the tensor product on $\Sp$.} on $\Spc$ and $\Sp$, so we get an induced
 %\todo{reference: Vielleicht GGN 3.6}
 adjunction between $\CAlg(\Spc)$ and $\CAlg(\Sp)$. 
-Thus giving a map $\S[z]\ra   HR$  of $\Einf$-ring spectra is equivalent to giving an map $\N_0\ra R$ of $\Einf$-monoids in spaces.
+Thus giving a map $\S[z]\ra   HR$  of $\Einf$-ring spectra is equivalent to giving a map $\N_0\ra R$ of $\Einf$-monoids in spaces.
 This is just a morphism of ordinary commutative monoids and since $\N_0$ is the free monoid (in sets) on one generator, we get such a map for each element of $R$. In particular we have a map corresponding to $\pi\in R$ and this is what we mean by $\S[z]\ra R,\ z\mapsto \pi$.
 We are now ready to state and prove a relative variant of Bökstedt's theorem for CDVRs.
 \begin{thm} \label{Relative Bökstedt for CDVR}
@@ -242,12 +243,12 @@ So we have to show that $\HH_i(k[[z]]/\F_p[z])$ vanishes for $i>0$. For perfect 
 	\arrow["\varphi"', from=1-2, to=2-2]
 	\arrow["\ulcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
 \end{tikzcd}\]
-To see this, we first observe that the vertical maps in the diagram are on the level of ordinary rings simply the inclusions $\F_p[z^p]\hookrightarrow\F_p[z]$ and $k[[z^p]]\hookrightarrow k[[z]]$ (where we implicitely identify $k$ with itself under the action of Frobenius using that $k$ is perfect). Thus both maps exhibit the target as a free module over the domain on the basis $\{1,z,z^2,\dots, z^p\}$. Because equivalences in $\CAlg$ are detected on the underlying spectra, this also means that
+To see this, we first observe that the vertical maps in the diagram are on the level of ordinary rings simply the inclusions $\F_p[z^p]\hookrightarrow\F_p[z]$ and $k[[z^p]]\hookrightarrow k[[z]]$ (where we implicitly identify $k$ with itself under the action of Frobenius using that $k$ is perfect). Thus both maps exhibit the target as a free module over the domain on the basis $\{1,z,z^2,\dots, z^p\}$. Because equivalences in $\CAlg$ are detected on the underlying spectra, this also means that
 \begin{equation*}
     \F_p[z]\otimes_{\F_p[z^p]}k[[z^p]]\cong k[[z]]
 \end{equation*}
 which implies that the square is a pushout.
-Using this isomorphism, we obtain an isomorphism in Hochschild homology aswell:
+Using this isomorphism, we obtain an isomorphism in Hochschild homology as well:
 \begin{align*}
     \HH(k[[z]]/\F_p[z])
     &\lai
@@ -334,9 +335,9 @@ This finally enables us to compute the  homotopy groups:
 
 
 \section{Absolute THH of CDVRs}\label{AbsoluteTHHofCDVRs}
-In this section, we will calculate the absolute $\THH$ of (quotients of) complete discrete valuation rings with perfect residue field of positive characteristic. We have already computed it relative to $\S[z]$. To get from there to the absolute case we will use a descent spectral sequence that we construct now. 
+In this section, we calculate the absolute $\THH$ of (quotients of) complete discrete valuation rings with perfect residue field of positive characteristic. We have already computed it relative to $\S[z]$. To get from there to the absolute case we use a descent spectral sequence that we construct now. 
 \begin{constr} \label{descentSS}
-Let $R$ be an ordinary commutative ring equiped with a map of rings $\Z[z]\ra R$ (i.e. the choice of an element of $R$). This also gives $R$ the structure of an $\Einf$-$\S[z]$-algebra, via $\S[z]\ra \Z[z]$. We can filter $\HH(\Z[z]$ by its (very short) Whitehead tower:
+Let $R$ be an ordinary commutative ring equipped with a map of rings $\Z[z]\ra R$ (i.e. the choice of an element of $R$). This also gives $R$ the structure of an $\Einf$-$\S[z]$-algebra, via $\S[z]\ra \Z[z]$. We can filter $\HH(\Z[z]$ by its (very short) Whitehead tower:
 
 \[ 0=\tau_{\geq2} \HH(\Z[z])\ra  \tau_{\geq1} \HH(\Z[z])\ra \tau_{\geq0} \HH(\Z[z])=\HH(\Z[z])
 \]
@@ -344,30 +345,29 @@ Observe that $\HH(\Z[z])\stackrel{\ref{base change THH}}{=}\THH(\S[z])\otimes_\S
 \[ 0 \ra  \tau_{\geq1} \HH(\Z[z])\otimes_{\HH(\Z[z])} \THH(R)
 \ra \HH(\Z[z])\otimes _{\HH(\Z[z])} \THH(R)=\THH(R)
 \]
-This filtered spectrum gives rise to a spectral sequence\todo{Should rather be the E1-page, but d1 differential is trivial for degree reasons?}, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_i \gr^j$, see e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
+This filtered spectrum gives rise to a spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_{i+j} \gr^j$, see\footnote{Note, that Lurie works with accending filtrations, while the Whitehead filtration is descending. The differentials and indexing therefore work differently, which is why we reindex to be consistent in our usage of homological Serre grading. As a result of this reindexing, the differentials work in such a way, that we start with the $E^2$-page instead of an $E^1$-page.} e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
 To compute the $E^2$-page, we thus have to identify the associated graded. 
 \newline
 Since tensor products preserve cofiber sequences, the associated graded of the filtration on $\THH(R)$ can simply be obtained by tensoring the associated graded of the filtration on $\HH(\Z[z])$ with $\THH(R)$. The associated graded of the filtration on $\HH(\Z[z])$ is given by $\HH_i(\Z[z])=\Omega_{\Z[z]/\Z}^i$.
-Using our base change formulas, we can relate this back to relative $\THH$:
+Using our base change formulas, we can relate this to relative $\THH$:
 \begin{align*}
-    \gr^j&=\THH(R)\otimes_{\HH(\Z[z])}\Omega_{\Z[z]/\Z}^j
+    \gr^j&=\THH(R)\otimes_{\HH(\Z[z])}\Omega_{\Z[z]/\Z}^j[j]
     \\
-    &=\THH(R)\otimes_{\HH(\Z[z])}\Z[z]\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j
+    &=\THH(R)\otimes_{\HH(\Z[z])}\Z[z]\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j[j]
     \\
-    &\stackrel{\ref{base change THH}}{=}\left(\THH(R)\otimes_{\THH(\S[z])\otimes_\S \Z} (\S[z]\otimes_\S \Z)\right)\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j 
+    &\stackrel{\ref{base change THH}}{=}\left(\THH(R)\otimes_{\THH(\S[z])\otimes_\S \Z} (\S[z]\otimes_\S \Z)\right)\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j [j]
     \\
     &=\left(\THH(R)\otimes_{\THH(\S[z])}\S[z]\right) 
-    \otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j  
+    \otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j[j] 
     \\
     &\stackrel{\ref{relative THH formula}}{=}
-    \THH(R/\S[z])\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j
+    \THH(R/\S[z])\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j[j]
 \end{align*}
 Therefore we get a homological (Serre graded) spectral sequence
 \[
 E_{i,j}^2=\THH_i(R/\S[z])\otimes_{\Z[z]}\Omega_{\Z[z]/\Z}^j \Rightarrow \THH_{i+j}(R).
 \]
-The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the filtration is multiplicative
-\footnote{i.e. it is an algebra in the $\infty$-category of filtered spectra $\Fun((N\Z)^{\op},\Sp)$ equipped with the Day convolution tensor product}
+The spectral sequence is concentrated in degrees $(i,j)\in [0,\infty)\times [0,1]$, in particular it is first quadrant and converges. Furthermore the spectral sequence is multiplicative since the Whitehead filtration is multiplicative\footnote{i.e. it is an algebra in the $\infty$-category of filtered spectra $\Fun((N\Z)^{\op},\Sp)$ equipped with the Day convolution tensor product}.
 \newline
 By $p$-completing everywhere and using that $p$-completion is exact we also get the following spectral sequence with the same formal properties:
 \[
@@ -432,14 +432,14 @@ This only pinpoints the generator of this submodule up to a unit, which we can c
 \end{proof}
 This result will easily allow us to compute $\THH_*(R;\Z_p)$, which we will do momentarily. But let us first issue the following warning.
 \begin{warn}
-The result of the Lemma implicitely depends on the choice of a uniformizer.
+The result of the Lemma implicitly depends on the choice of a uniformizer.
 While this is not a problem if we are only interested in $\THH_*$ of one particular CDVR, it is a problem if we are dealing with a map $R\to S$ of two of those.
-We are only able to determine the effect on $\THH_*$ of those maps, which preserve the chosen uniformizers. 
+We can only determine the effect on $\THH_*$ of those maps, which preserve the chosen uniformizers. 
 Only in this case is the map $R\to S$ actually a map of $\S[z]$-modules with respect to the module structures induced by the choices of the respective uniformizers.
 Consider for example the inclusion $\Z_p\hookrightarrow \Z_p[\sqrt{p}]$. 
 Any uniformizer in $\Z_p$ has the form $up$ for $u\in \Z_p^\times$, but of course none of them generate the maximal ideal of $\Z_p[\sqrt{p}]$. 
 There is therefore no choice of uniformizers that is compatible with this map and our method is not able to calculate the induced map $\THH(\Z_p;\Z_p)\ra \THH(\Z_p[\sqrt{p}];\Z_p)$.
-Exactly the same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\geq 2$. \\
+The same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\geq 2$. \\
 But even if we can choose the uniformizers such that one maps onto the other as for example in the case $\Z_p[\sqrt{p}]\to \Z_p[\sqrt{p}], \ \sqrt{p}\mapsto -\sqrt{p}$, this is of not much use. For a meaningful calculation, we would need to choose the same uniformizer in domain and target. Compare this to the analogous situation for vector spaces. If we want to find a matrix representation of a vector space endomorphism, we should of course choose the same basis in domain and target. Otherwise every automorphism can be represented by the identity matrix when taking any basis in the domain and the image of this basis in the target.
 
 \end{warn}
@@ -473,7 +473,7 @@ There is no room for extensions and we can directly read of the result.
 \end{proof}
 
 \begin{rmk}
-    The above result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun. They give a description in terms of the \textbf{inverse different} 
+    The above result was first obtained in \cite[Theorem 5.1]{LMTHHofnumberrings} using an entirely different spectral sequence due to Brun. They describe it in terms of the \textbf{inverse different} 
     \begin{equation*}
         \THH_{2n-1}(R;\Z_p)=\cD_R^{-1}/n.
     \end{equation*}
@@ -494,7 +494,7 @@ There is no room for extensions and we can directly read of the result.
     \end{equation*}
 \end{rmk}
 
-For the case $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref{descentSS} gives us a spectral sequence which by Proposition \ref{relative Bökstedt for quotients} takes the form 
+For the case of quotients$R'=R/\pi^n$, we can initially proceed similarly: Construction \ref{descentSS} gives us a spectral sequence which by Proposition \ref{relative Bökstedt for quotients} takes the form 
 \begin{equation*}
     E^2=R'[x]\langle y\rangle \otimes \Lambda_{\Z}(dz)\Rightarrow \THH_*(R').
 \end{equation*}
@@ -502,4 +502,4 @@ For the case $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref
 We can again identify the $d^2$ differential, which is the only one that can occur
 \[d^2(x)=E'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
 \]
-Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.
+Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed-form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.

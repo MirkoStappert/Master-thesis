@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.14)  11 AUG 2021 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.14)  18 AUG 2021 11:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -938,14 +938,16 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 57
 
  (c:/Users/mirko/Documents/code/html/Master thesis/Introduction.tex
 Chapter 1.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 37.
 [2
 
 
 
 
-] [3]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 44.
-) [4]
+]
+Underfull \vbox (badness 1215) has occurred while \output is active []
+
+ [3]) [4]
 \openout2 = `Preliminaries.aux'.
 
  (c:/Users/mirko/Documents/code/html/Master thesis/Preliminaries.tex
@@ -960,27 +962,23 @@ Overfull \hbox (3.96783pt too wide) in paragraph at lines 72--73
 []$\U/msb/m/n/12 E[]$\T1/cmr/m/n/12 -algebras in the sym-met-ric monoidal $\OMS/cmsy/m/n/12 1$\T1/cmr/m/n/12 -category of $\U/msb/m/n/12 E[]$\T1/cmr/m/n/12 -algebras are $\U/msb/m/n/12 E[]$\T1/cmr/m/n/12 -
  []
 
-[9] [10] [11]
+[9] [10] [11] [12]
 Overfull \hbox (21.74397pt too wide) in paragraph at lines 157--159
 \T1/cmr/m/n/12 Topological Hochschild ho-mol-ogy is the higher al-ge-bra ana-logue of clas-si-cal Hochschild
  []
 
-[12] [13] [14]
-
-LaTeX Warning: Reference `HHfunctoriality' on page 15 undefined on input line 227.
-
-[15]
-Overfull \hbox (9.16565pt too wide) in paragraph at lines 255--255
+[13] [14] [15]
+Overfull \hbox (9.16565pt too wide) in paragraph at lines 257--257
 []\T1/cmr/bx/n/17.28 Topological cyclic ho-mol-ogy and the cy-clo-tomic
  []
 
 [16]
-Overfull \hbox (4.00107pt too wide) in paragraph at lines 277--287
+Overfull \hbox (4.00107pt too wide) in paragraph at lines 279--289
 []\T1/cmr/m/n/12 Our main ex-am-ples of cy-clo-tomic spec-tra will come from topo-log-i-cal Hochschild
  []
 
 [17]
-Overfull \hbox (10.89128pt too wide) in paragraph at lines 329--332
+Overfull \hbox (10.89128pt too wide) in paragraph at lines 331--334
 \T1/cmr/m/n/12 The fol-low-ing re-sult of Hes-sel-holt and Mad-sen, proven us-ing the Dundas-Goodwillie-
  []
 
@@ -995,13 +993,6 @@ Chapter 3.
 
 
 ] [21]
-
-Package amsthm Warning: The \qedhere command may not work correctly here on input line 87.
-
-
-Package amsthm Warning: The \qedhere command may not work correctly here on input line 87.
-
-
 Overfull \hbox (29.18477pt too wide) detected at line 87
 []
  []
@@ -1019,315 +1010,347 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 103.
 
 [22]
-Overfull \hbox (5.49632pt too wide) in paragraph at lines 128--129
+Overfull \hbox (5.49632pt too wide) in paragraph at lines 129--130
 [][]\T1/cmr/bx/n/12 Theorem 3.6. []\T1/cmr/m/it/12 For a per-fect $\U/msb/m/n/12 F[]$\T1/cmr/m/it/12 -algebra $\OML/cmm/m/it/12 k$ \T1/cmr/m/it/12 the above map $[]\OT1/cmr/m/n/12 (\U/msb/m/n/12 F[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
 [] \OML/cmm/m/it/12 k \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )$
  []
 
-
-Overfull \hbox (2.57869pt too wide) in paragraph at lines 149--149
-[]\T1/cmr/bx/n/17.28 Relative Bök-st-edt pe-ri-od-ic-ity for com-plete dis-
- []
-
-LaTeX Font Info:    Trying to load font information for U+euf on input line 150.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 151.
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [23] [24] [25] [26] [27]
 
-Package amsthm Warning: The \qedhere command may not work correctly here on input line 330.
+Package amsthm Warning: The \qedhere command may not work correctly here on input line 331.
 
-[28] [29] [30] [31] [32] [33]) [34]
+[28] [29] [30] [31]
+Underfull \vbox (badness 4634) has occurred while \output is active []
+
+ [32] [33]) [34]
 \openout2 = `Chapter6.aux'.
 
  (c:/Users/mirko/Documents/code/html/Master thesis/Chapter6.tex
 Chapter 4.
 
-Overfull \hbox (19.65562pt too wide) in paragraph at lines 2--14
+Overfull \hbox (19.65562pt too wide) in paragraph at lines 3--15
 \T1/cmr/m/n/12 In this chap-ter, we will in-ves-ti-gate func-to-rial com-pu-ta-tions of (topo-log-i-cal) Hochschild
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 94.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 94.
+(hyperref)                removing `\mathop' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathchardef' on input line 94.
+(hyperref)                removing `\mathchardef' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\std@minus' on input line 94.
+(hyperref)                removing `\std@minus' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 94.
+(hyperref)                removing `\mathcode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 94.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 2.61018pt
-(hyperref)                removed on input line 94.
+(hyperref)                removed on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 94.
+(hyperref)                removing `\mathgroup' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 94.
+(hyperref)                removing `\symoperators' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 94.
+(hyperref)                removing `\@ifnextchar' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 94.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Composite letter `\textacute+3'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textacute' on input line 94.
+(hyperref)                removing `\textacute' on input line 95.
 
 
 Package hyperref Warning: Composite letter `\textdotaccent+"'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textdotaccent' on input line 94.
-
-[35
+(hyperref)                removing `\textdotaccent' on input line 95.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35
 
 
-] [36] [37]
-Overfull \hbox (5.71979pt too wide) in paragraph at lines 179--187
+
+
+]
+Overfull \hbox (21.86592pt too wide) in paragraph at lines 124--125
+[]\T1/cmr/m/n/12 Functorially com-pute the sec-ond rel-a-tive Hochschild ho-mol-ogy $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R=\U/msb/m/n/12 Z\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ]; \U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . 
+ []
+
+[36] [37] [38]
+Overfull \hbox (5.71979pt too wide) in paragraph at lines 180--188
 \T1/cmr/m/n/12 out as fol-lows: We use the triv-ial iso-mor-phism $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ; \U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ; \U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
 []
  []
 
 
-Overfull \hbox (19.96223pt too wide) in paragraph at lines 179--187
+Overfull \hbox (19.96223pt too wide) in paragraph at lines 180--188
 []\OT1/cmr/m/n/12 (\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . Then we fil-ter $[]\OT1/cmr/m/n/12 (\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 by its White-head tower $\OML/cmm/m/it/12 ^^\[] []\OT1/cmr/m/n/12 (\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 )$
  []
 
-[38] [39]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathchardef' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\std@minus' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 2.61018pt
-(hyperref)                removed on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 302.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 302.
-
-
-Package hyperref Warning: Composite letter `\textacute+3'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textacute' on input line 302.
-
-
-Package hyperref Warning: Composite letter `\textdotaccent+"'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textdotaccent' on input line 302.
-
-[40] [41]
-
-Package amsthm Warning: The \qedhere command may not work correctly here on input line 351.
-
-
-Package amsthm Warning: The \qedhere command may not work correctly here on input line 351.
-
-[42] [43]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathchardef' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\std@minus' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathcode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 2.61018pt
-(hyperref)                removed on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 423.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 423.
-
-
-Package hyperref Warning: Composite letter `\textacute+3'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textacute' on input line 423.
-
-
-Package hyperref Warning: Composite letter `\textdotaccent+"'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textdotaccent' on input line 423.
-
-
-Overfull \hbox (1.11823pt too wide) in paragraph at lines 425--428
-\T1/cmr/m/n/12 mol-ogy. We can de-fine the cat-e-gory of \T1/cmr/bx/n/12 CD-VRs with spher-i-cal lifts  $[][]$
+[39] [40]
+Overfull \hbox (8.6248pt too wide) in paragraph at lines 280--283
+\T1/cmr/m/it/12 iso-mor-phic to $[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 =\U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ])$ \T1/cmr/m/it/12 but in-stead to the func-tor $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R; ^^Y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 7! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R=W\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R=^^Y\OT1/cmr/m/n/12 )[\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ])$\T1/cmr/m/it/12 .
  []
 
-[44]) [45]
+[41]
+Overfull \hbox (7.38579pt too wide) in paragraph at lines 291--295
+\T1/cmr/m/it/12 description. This again gives us that the pos-i-tive odd ho-mo-topy groups of $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ; \U/msb/m/n/12 Z[]\OT1/cmr/m/n/12 )$
+ []
+
+
+Overfull \hbox (16.885pt too wide) detected at line 304
+[]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathop' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathchardef' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\std@minus' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern 2.61018pt
+(hyperref)                removed on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathgroup' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\symoperators' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 344.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 344.
+
+
+Package hyperref Warning: Composite letter `\textacute+3'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textacute' on input line 344.
+
+
+Package hyperref Warning: Composite letter `\textdotaccent+"'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textdotaccent' on input line 344.
+
+[42] [43] [44]
+Overfull \hbox (56.54951pt too wide) detected at line 449
+[]
+ []
+
+
+Overfull \hbox (198.85396pt too wide) detected at line 485
+[]
+ []
+
+[45] [46] [47]
+Overfull \hbox (9.76894pt too wide) detected at line 548
+[]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathop' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathchardef' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\std@minus' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern 2.61018pt
+(hyperref)                removed on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathgroup' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\symoperators' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 551.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 551.
+
+
+Package hyperref Warning: Composite letter `\textacute+3'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textacute' on input line 551.
+
+
+Package hyperref Warning: Composite letter `\textdotaccent+"'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textdotaccent' on input line 551.
+
+[48]
+Overfull \hbox (14.08923pt too wide) in paragraph at lines 642--644
+\T1/cmr/m/it/12 Here, the map $\OML/cmm/m/it/12 R\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]dz\OMS/cmsy/m/n/12 g ! \OML/cmm/m/it/12 S\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 y[]dw\OMS/cmsy/m/n/12 g$ \T1/cmr/m/it/12 has the form $\OML/cmm/m/it/12 x[]dz \OMS/cmsy/m/n/12 7! [][] \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 "\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 y[]dw$\T1/cmr/m/it/12 ,
+ []
+
+[49]
+Overfull \hbox (8.086pt too wide) in paragraph at lines 651--652
+[][]\T1/cmr/bx/n/12 Remark 4.9. []\T1/cmr/m/it/12 We again want to stress that we have only proven this dga-description
+ []
+
+) [50]
 \openout2 = `Appendix.aux'.
 
  (c:/Users/mirko/Documents/code/html/Master thesis/Appendix.tex
 Appendix A.
-[46
+[51
 
 
 
 
-]) [47]
+]) [52]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 81.
  (c:/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [48
+) [53
 
 
 
@@ -1336,7 +1359,7 @@ Overfull \hbox (7.01244pt too wide) in paragraph at lines 83--83
 []\T1/cmr/m/n/12 Achim Krause and Thomas Niko-laus. \T1/cmr/m/it/12 Lec-tures on topo-log-i-cal Hochschild
  []
 
-[49]
+[54]
 Overfull \hbox (30.6029pt too wide) in paragraph at lines 83--83
 []\T1/cmr/m/n/12 Emily Riehl. ^^P  Ho-mo-topy co-her-ent struc-tures^^Q. In: \T1/cmr/m/it/12 arXiv preprint 1801.07404
  []
@@ -1346,30 +1369,26 @@ Overfull \hbox (13.83487pt too wide) in paragraph at lines 83--83
 []\T1/cmr/m/n/12 Jean Pierre Serre. \T1/cmr/m/it/12 Lo-cal Fields\T1/cmr/m/n/12 . Grad-u-ate Texts in Math-e-mat-ics. Springer
  []
 
-[50] [51] (c:/Users/mirko/Documents/code/html/Master thesis/main.aux (c:/Users/mirko/Documents/code/html/Master thesis/Thesispreamble.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Abstract.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Introduction.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Preliminaries.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Chapter5.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Chapter6.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Appendix.aux))
+[55] [56] (c:/Users/mirko/Documents/code/html/Master thesis/main.aux (c:/Users/mirko/Documents/code/html/Master thesis/Thesispreamble.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Abstract.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Introduction.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Preliminaries.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Chapter5.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Chapter6.aux) (c:/Users/mirko/Documents/code/html/Master thesis/Appendix.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 261ED1FB653CF828A0AEEED763A9E684;1302.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: E46EFF21BE2BABA1929D36AF4E6A36CC;1261.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30746 strings out of 479917
- 605035 string characters out of 5886664
- 1320658 words of memory out of 5000000
- 46541 multiletter control sequences out of 15000+600000
+ 31291 strings out of 479917
+ 619436 string characters out of 5886664
+ 1321219 words of memory out of 5000000
+ 47080 multiletter control sequences out of 15000+600000
  561405 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,19n,121p,1292b,1673s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 119i,19n,121p,1468b,1673s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on "c:/Users/mirko/Documents/code/html/Master thesis/main.pdf" (55 pages, 863284 bytes).
+Output written on "c:/Users/mirko/Documents/code/html/Master thesis/main.pdf" (60 pages, 881187 bytes).
 PDF statistics:
- 915 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
- 201 named destinations out of 1000 (max. 500000)
+ 958 PDF objects out of 1000 (max. 8388607)
+ 817 compressed objects within 9 object streams
+ 207 named destinations out of 1000 (max. 500000)
  242 words of extra memory for PDF output out of 10000 (max. 10000000)
 

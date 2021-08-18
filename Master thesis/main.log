@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.14)  18 AUG 2021 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.14)  18 AUG 2021 11:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1332,7 +1332,7 @@ Overfull \hbox (14.08923pt too wide) in paragraph at lines 642--644
  []
 
 [49]
-Overfull \hbox (8.086pt too wide) in paragraph at lines 651--652
+Overfull \hbox (8.086pt too wide) in paragraph at lines 651--653
 [][]\T1/cmr/bx/n/12 Remark 4.9. []\T1/cmr/m/it/12 We again want to stress that we have only proven this dga-description
  []
 

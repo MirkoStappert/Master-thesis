@@ -750,6 +750,46 @@
       \verb https://doi.org/10.1016/0040-9383(96)00003-1
       \endverb
     \endentry
+    \entry{HNTC}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=d0cae40bc225eab44451f642ba7b8d91}{%
+           family={{Hesselholt}},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c820b9264cb6f3c669b18cfe75c063b4}{%
+           family={{Nikolaus}},
+           familyi={N\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Boca Raton, FL: CRC Press}%
+      }
+      \strng{namehash}{20f8af6a41c08360f0fef4a95f99b660}
+      \strng{fullhash}{20f8af6a41c08360f0fef4a95f99b660}
+      \strng{bibnamehash}{20f8af6a41c08360f0fef4a95f99b660}
+      \strng{authorbibnamehash}{20f8af6a41c08360f0fef4a95f99b660}
+      \strng{authornamehash}{20f8af6a41c08360f0fef4a95f99b660}
+      \strng{authorfullhash}{20f8af6a41c08360f0fef4a95f99b660}
+      \field{labelalpha}{HN20}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of homotopy theory}
+      \field{isbn}{978-0-8153-6970-7; 978-1-351-25162-4}
+      \field{title}{{Topological cyclic homology}}
+      \field{year}{2020}
+      \field{pages}{619\bibrangedash 656}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1201/9781351251624-15
+      \endverb
+    \endentry
     \entry{illusie2006complexe}{book}{}
       \name{author}{1}{}{%
         {{hash=f560424c5d8b060f8a187618b42603ef}{%
@@ -803,6 +843,7 @@
       \field{labeltitlesource}{title}
       \field{title}{Lectures on topological Hochschild homology and cyclotomic spectra}
       \field{year}{2018}
+      \true{nocite}
       \verb{eprint}
       \verb https://www.uni-muenster.de/IVV5WS/WebHop/user/nikolaus/papers.html
       \endverb

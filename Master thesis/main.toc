@@ -1,34 +1,34 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Preliminaries}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Preliminaries}{4}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Higher Category theory}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Higher Category theory}{4}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Spectra and higher algebra}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Spectra and higher algebra}{6}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Topological Hochschild homology}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Topological Hochschild homology}{12}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Topological cyclic homology and the cyclotomic trace}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Topological cyclic homology and the cyclotomic trace}{15}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Topological Hochschild Homology of CDVRs}{20}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Topological Hochschild Homology of CDVRs}{19}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Base change formulas}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Base change formulas}{19}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$-algebras}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Bökstedt periodicity for perfect $\ensuremath {\mathbb {F}}_p$-algebras}{21}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for CDVRs}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Relative Bökstedt periodicity for CDVRs}{23}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Absolute THH of CDVRs}{29}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Absolute THH of CDVRs}{28}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Functoriality of THH for CDVRs}{35}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Functoriality of THH for CDVRs}{34}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Functoriality of $\HH $ for CDVRs}{34}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Functoriality of $\THH $ via the Tor spectral sequence}{41}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Functoriality of $\THH $ via the descent spectral sequence}{48}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Functoriality of $\THH $ via the descent spectral sequence}{47}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}K-Theory}{51}{appendix.A}%
+\contentsline {chapter}{\numberline {A}K-Theory}{50}{appendix.A}%

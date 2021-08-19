@@ -232,7 +232,7 @@ After establishing this base change, we can use  \ref{base change THH} again :
     \otimes_{\F_p}\THH(\F_p) \\
     &=\HH(k[[z]]/\F_p[z])\otimes_{\F_p}\THH(\F_p)
 \end{align*}
-So we have to show that $\HH_i(k[[z]]/\F_p[z])$ vanishes for $i>0$. For perfect $\F_p$-algebras we used perfectness to show this, which is not possible here, because $k[[z]]$ is clearly not perfect. But the map $\F_p[z]\ra k[[z]]$ is relatively perfect\footnote{The naming comes from the fact, that an $\F_p$-algebra $R$ is perfect if and only if $\F_p\rightarrow R$ is relatively perfect}, which by definition means, that the following square is a pushout in $\CAlg$.
+So we have to show that $\HH_i(k[[z]]/\F_p[z])$ vanishes for $i>0$. For perfect $\F_p$-algebras we used perfectness to show this, which is not possible here, because $k[[z]]$ is clearly not perfect. But the map $\F_p[z]\ra k[[z]]$ is relatively perfect\footnote{The naming comes from the fact that an $\F_p$-algebra $R$ is perfect if and only if $\F_p\rightarrow R$ is relatively perfect}, which by definition means that the following square is a pushout in $\CAlg$.
 % https://q.uiver.app/?q=WzAsNCxbMCwxLCJcXG1hdGhiYntGfV9wW3pdIl0sWzEsMSwia1tbel1dIl0sWzAsMCwiXFxtYXRoYmJ7Rn1fcFt6XSJdLFsxLDAsImtbW3pdXSJdLFsyLDAsIlxcdmFycGhpIiwyXSxbMCwxXSxbMiwzXSxbMywxLCJcXHZhcnBoaSIsMl0sWzIsMSwiIiwwLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lci1pbnZlcnNlIn19XV0=
 \[\begin{tikzcd}
 	{\mathbb{F}_p[z]} & {k[[z]]} \\
@@ -262,8 +262,8 @@ Using this isomorphism, we obtain an isomorphism in Hochschild homology as well:
     \HH(k[[z^p]]/
     \F_p[z])
 \end{align*}
-We now want to show, that this map induces the zero map on all $\pi_n, \ n>0$ which will then finish the proof as it is also an isomorphism.
-Let us first observe, that since $\F_p[z]$ is free as an $\F_p[z^p]$-module we can pull the tensor product out of the homotopy/homology group:
+We now want to show that this map induces the zero map on all $\pi_n, \ n>0$ which will then finish the proof as it is also an isomorphism.
+Let us first observe that since $\F_p[z]$ is free as an $\F_p[z^p]$-module we can pull the tensor product out of the homotopy/homology group:
 \[
 \pi_n(\F_p[z]\otimes_{\F_p[z^p]}
     \HH(k[[z^p]]/
@@ -283,7 +283,7 @@ As the Hochschild homology groups are the homotopy groups of a simplicial commut
 
 
 
-Using the same technique we can also compute relative $\THH$ of quotients of the CDVRs, that we have considered so far. In any discrete valuation ring all ideals are powers of the maximal ideal. So concretely we are dealing with rings of the form $R/\pi^n$, where $R$ is a complete discrete valuation ring with perfect residue field of positive characteristic and $\pi$ a uniformizer. For instance this covers the cases $\Z_p/p^n=\Z/p^n$ or truncated polynomial algebras $k[[x]]/x^n=k[x]/x^n$ for $k$ perfect of positive characteristic.
+Using the same technique we can also compute relative $\THH$ of quotients of the CDVRs that we have considered so far. In any discrete valuation ring all ideals are powers of the maximal ideal. So concretely we are dealing with rings of the form $R/\pi^n$, where $R$ is a complete discrete valuation ring with perfect residue field of positive characteristic and $\pi$ a uniformizer. For instance this covers the cases $\Z_p/p^n=\Z/p^n$ or truncated polynomial algebras $k[[x]]/x^n=k[x]/x^n$ for $k$ perfect of positive characteristic.
 \newline
 For these quotients we do not quite get polynomial homotopy groups as before but we need an additional divided power generator compensating for the quotient.
 
@@ -345,7 +345,7 @@ Observe that $\HH(\Z[z])\stackrel{\ref{base change THH}}{=}\THH(\S[z])\otimes_\S
 \[ 0 \ra  \tau_{\geq1} \HH(\Z[z])\otimes_{\HH(\Z[z])} \THH(R)
 \ra \HH(\Z[z])\otimes _{\HH(\Z[z])} \THH(R)=\THH(R)
 \]
-This filtered spectrum gives rise to a spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_{i+j} \gr^j$, see\footnote{Note, that Lurie works with accending filtrations, while the Whitehead filtration is descending. The differentials and indexing therefore work differently, which is why we reindex to be consistent in our usage of homological Serre grading. As a result of this reindexing, the differentials work in such a way, that we start with the $E^2$-page instead of an $E^1$-page.} e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
+This filtered spectrum gives rise to a spectral sequence, whose $E^2$-page is given by the homotopy groups of the associated graded $E^2_{i,j}=\pi_{i+j} \gr^j$, see\footnote{Note that Lurie works with accending filtrations, while the Whitehead filtration is descending. The differentials and indexing therefore work differently, which is why we reindex to be consistent in our usage of homological Serre grading. As a result of this reindexing, the differentials work in such a way that we start with the $E^2$-page instead of an $E^1$-page.} e.g. \cite[Chapter~1.2.2]{lurie2017higher}.
 To compute the $E^2$-page, we thus have to identify the associated graded. 
 \newline
 Since tensor products preserve cofiber sequences, the associated graded of the filtration on $\THH(R)$ can simply be obtained by tensoring the associated graded of the filtration on $\HH(\Z[z])$ with $\THH(R)$. The associated graded of the filtration on $\HH(\Z[z])$ is given by $\HH_i(\Z[z])=\Omega_{\Z[z]/\Z}^i$.
@@ -376,7 +376,7 @@ E_{i,j}^2=\THH_i(R/\S[z];\Z_p)\otimes_{\Z_p[z]}\Omega_{\Z_p[z]/\Z_p}^j \Rightarr
 
 \end{constr}
 In our case of interest $R$ is again a CDVR with perfect residue field of positive characteristic. We completely know the $E^2$-page which by Theorem \ref{Relative Bökstedt for CDVR} takes the form 
-$E^2=R[x]\otimes_\Z\Lambda_\Z(dz)$ for elements $|x|=(0,2)$ and $|dz|=(1,0)$ as pictured below.% https://q.uiver.app/?q=WzAsMjgsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiUlxce3hcXH0iXSxbMSwyLCJSXFx7IGR6XFx9Il0sWzMsMiwiUlxce3hkelxcfSJdLFs0LDIsIjAiXSxbNCwzLCIwIl0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDMsIlJcXHt4XjJcXH0iXSxbNSwyLCJSXFx7eF4yZHpcXH0iXSxbNSwxLCIwIl0sWzYsMywiXFxkb3RzIl0sWzYsMiwiXFxkb3RzIl0sWzYsMSwiXFxkb3RzIl0sWzEsMCwiXFxkb3RzIl0sWzIsMCwiXFxkb3RzIl0sWzMsMCwiXFxkb3RzIl0sWzQsMCwiXFxkb3RzIl0sWzUsMCwiXFxkb3RzIl0sWzYsMCwiXFxkb3RzIl0sWzAsNF0sWzAsM10sWzYsNF0sWzAsMF0sWzMsNF0sWzEyLDVdLFsyNCwyNiwiIiwwLHsib2Zmc2V0IjotNH1dLFsyNCwyNywiIiwyLHsib2Zmc2V0Ijo0fV1d
+$E^2=R[x]\otimes_{\Z_p}\Lambda_{\Z_p}(dz)$ for elements $|x|=(0,2)$ and $|dz|=(1,0)$ as pictured below.% https://q.uiver.app/?q=WzAsMjgsWzEsMywiUiJdLFsyLDMsIjAiXSxbMiwyLCIwIl0sWzMsMywiUlxce3hcXH0iXSxbMSwyLCJSXFx7IGR6XFx9Il0sWzMsMiwiUlxce3hkelxcfSJdLFs0LDIsIjAiXSxbNCwzLCIwIl0sWzEsMSwiMCJdLFsyLDEsIjAiXSxbMywxLCIwIl0sWzQsMSwiMCJdLFs1LDMsIlJcXHt4XjJcXH0iXSxbNSwyLCJSXFx7eF4yZHpcXH0iXSxbNSwxLCIwIl0sWzYsMywiXFxkb3RzIl0sWzYsMiwiXFxkb3RzIl0sWzYsMSwiXFxkb3RzIl0sWzEsMCwiXFxkb3RzIl0sWzIsMCwiXFxkb3RzIl0sWzMsMCwiXFxkb3RzIl0sWzQsMCwiXFxkb3RzIl0sWzUsMCwiXFxkb3RzIl0sWzYsMCwiXFxkb3RzIl0sWzAsNF0sWzAsM10sWzYsNF0sWzAsMF0sWzMsNF0sWzEyLDVdLFsyNCwyNiwiIiwwLHsib2Zmc2V0IjotNH1dLFsyNCwyNywiIiwyLHsib2Zmc2V0Ijo0fV1d
 \[\begin{tikzcd}
 	{} & \dots & \dots & \dots & \dots & \dots & \dots \\
 	& 0 & 0 & 0 & 0 & 0 & \dots \\
@@ -394,7 +394,7 @@ Furthermore because multiplicatively everything with potential for non-vanishing
 \[
 d^2: R\{x\}\ra R\{dz\}. 
 \]
-If $R$ has equal characteristic, this differential actually has to vanish. The reason for this is that by the construction of the spectral sequence, we know that the edge homomorphism is given by $\THH_*(R;\Z_p)\ra \THH_*(R/\S[z];\Z_p)$ and everything that lies in the image of this map, has to be a permanent cycle. Because $R$ has equal characteristic, we can precompose the map by $\THH(k)\ra \THH(R;\Z_p)$ and choose $x\in \THH_2(R/\S[z];\Z_p)$ to be the image of the Bökstedt element under the composition of the two maps. Thus $x$ has to be a permanent cycle and $d^2$ vanishes. We hence get that $\THH_*(R;\Z_p)=R[x]\otimes_\Z \Lambda_\Z(dz)$, in particular $\THH_i(R;\Z_p)=R$ for all $i\geq 0$.
+If $R$ has equal characteristic, this differential actually has to vanish. The reason for this is that by the construction of the spectral sequence, we know that the edge homomorphism is given by $\THH_*(R;\Z_p)\ra \THH_*(R/\S[z];\Z_p)$ and everything that lies in the image of this map, has to be a permanent cycle. Because $R$ has equal characteristic, we can precompose the map by $\THH(k)\ra \THH(R;\Z_p)$ and choose $x\in \THH_2(R/\S[z];\Z_p)$ to be the image of the Bökstedt element under the composition of the two maps. Thus $x$ has to be a permanent cycle and $d^2$ vanishes. We hence get that $\THH_*(R;\Z_p)=R[x]\otimes_{\Z_p} \Lambda_{\Z_p}(dz)$, in particular $\THH_i(R;\Z_p)=R$ for all $i\geq 0$.
 \\
 For mixed characteristic $R$ we will identify it in the following Lemma.
 Recall from Proposition \ref{description mixed char CDVR} that every mixed characteristic CDVR $R$ with perfect residue field $k$ has the form $R=W(k)[z]/E(z)$, where $E(z)\in W(k)[z]$ is an Eisenstein polynomial.
@@ -441,7 +441,6 @@ Any uniformizer in $\Z_p$ has the form $up$ for $u\in \Z_p^\times$, but of cours
 There is therefore no choice of uniformizers that is compatible with this map and our method is not able to calculate the induced map $\THH(\Z_p;\Z_p)\ra \THH(\Z_p[\sqrt{p}];\Z_p)$.
 The same problem occurs for $\Z_p\hookrightarrow \Z_p[\sqrt[n]{p}],\ n\geq 2$. \\
 But even if we can choose the uniformizers such that one maps onto the other as for example in the case $\Z_p[\sqrt{p}]\to \Z_p[\sqrt{p}], \ \sqrt{p}\mapsto -\sqrt{p}$, this is of not much use. For a meaningful calculation, we would need to choose the same uniformizer in domain and target. Compare this to the analogous situation for vector spaces. If we want to find a matrix representation of a vector space endomorphism, we should of course choose the same basis in domain and target. Otherwise every automorphism can be represented by the identity matrix when taking any basis in the domain and the image of this basis in the target.
-
 \end{warn}
 Let us now state the evaluation of the spectral sequence for mixed characteristic CDVRs. 
 \begin{prop} \label{LM}
@@ -494,12 +493,12 @@ There is no room for extensions and we can directly read of the result.
     \end{equation*}
 \end{rmk}
 
-For the case of quotients$R'=R/\pi^n$, we can initially proceed similarly: Construction \ref{descentSS} gives us a spectral sequence which by Proposition \ref{relative Bökstedt for quotients} takes the form 
+For the case of quotients $R'=R/\pi^n$, we can initially proceed similarly: Construction \ref{descentSS} gives us a spectral sequence which by Proposition \ref{relative Bökstedt for quotients} takes the form 
 \begin{equation*}
-    E^2=R'[x]\langle y\rangle \otimes \Lambda_{\Z}(dz)\Rightarrow \THH_*(R').
+    E^2=R'[x]\langle y\rangle \otimes_{\Z_p} \Lambda_{\Z_p}(dz)\Rightarrow \THH_*(R').
 \end{equation*}
     
 We can again identify the $d^2$ differential, which is the only one that can occur
 \[d^2(x)=E'(\pi)dz, \ d^2(y)=k\pi^{k-1}dz.
 \]
-Thus we get an explicit differential graded algebra, whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed-form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.
+Thus we get an explicit differential graded algebra whose homology computes $\THH_*(R')$. But depending on $n$ there is no longer a closed-form expression for its homology. For explicit examples see \cite[Chapter~6]{KNBokstedt}.

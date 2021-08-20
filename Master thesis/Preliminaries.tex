@@ -19,7 +19,7 @@ Precisely we will need the following higher categorical concepts:
     \item \textbf{$\infty$-categories}, \textbf{functors} between them and \textbf{natural transformations}, all of which can be found in \cite[Chapter~1]{HigherToposTheory}. Every ordinary category can be considered as an infinity category via the nerve construction. There is also a way to go back\footnote{This provides a (reflective) adjunction between the (2,1)-category of all categories and the $\infty$-category of all $\infty$-categories.} and to associate to every $\infty$-category $\cC$ a 1-category, called its homotopy category $\Ho(\cC)$.
     The most important example of an $\infty$-category that does not arise this way is the $\infty$-category of spaces $\Spc$ (\cite[Section~1.2.16]{HigherToposTheory}). Its role in higher category theory is analogous to the role that the category of sets plays in ordinary category theory. An example of this paradigm is that in an $\infty$-category we now no longer only have a set of maps between two objects but a whole mapping space. 
     
-    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}), opposite categories (\cite[Section~1.2.1]{HigherToposTheory}), slice categories (\cite[Section~1.2.9]{HigherToposTheory}), \dots. The only slice category that we will need is the $\infty$-category of pointed spaces which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$ whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. There are also notions of \textbf{filtered }and \textbf{sifted colimits }and the usual statements hold verbatim, i.e. filtered colimits commute with finite limits and sifted colimits commute with finite products.
+    \item Most of the constructions and concepts from ordinary category theory have analogues in higher category theory. This includes \textbf{limits and colimits} (\cite[Section~1.2.3, Chapter~4]{HigherToposTheory}), \textbf{adjunctions}(\cite[\href{https://kerodon.net/tag/02EJ}{Tag 02EJ}]{kerodon}), opposite categories (\cite[Section~1.2.1]{HigherToposTheory}), slice categories (\cite[Section~1.2.9]{HigherToposTheory}). The only slice category that we will need is the $\infty$-category of pointed spaces which is the slice category under the point $\Spc_*=\Spc_{*/}$. There is a free-forgetful adjunction $(-)_+:\Spc\leftrightarrows \Spc_*$ whose left adjoint adds a disjoint basepoint. As usual left adjoints preserve colimits and right adjoints preserve limits (\cite[Proposition~5.2.3.5]{HigherToposTheory}). $\Spc$ and $\Spc_*$ are bicomplete and (co)limits agree with the classical notions of homotopy (co)limits. There are also notions of \textbf{filtered }and \textbf{sifted colimits }and the usual statements hold verbatim, i.e. filtered colimits commute with finite limits and sifted colimits commute with finite products.
     \item We will also crucially need \textbf{symmetric monoidal structures} on $\infty$-categories (\cite[Definition~2.0.0.7]{lurie2017higher}) as well as \textbf{lax and strong symmetric monoidal functors}. The nerve of every ordinary symmetric monoidal category is a symmetric monoidal $\infty$-category.
     The $\infty$-category of spaces has all products, which equip $\Spc$ with a symmetric monoidal structure by \cite[Section~2.4.1]{lurie2017higher}.
     The $\infty$-category of pointed spaces is also symmetric monoidal with the well known smash product $\wedge$ and the above functors in the adjunction between $\Spc$ and $\Spc_*$ have lax symmetric monoidal structures (\cite[Theorem~2.2.2.4]{lurie2017higher}). Similarly if an $\infty$-category has all finite coproducts it also admits a symmetric monoidal structure by \cite[Section~2.4.3]{lurie2017higher}. 
@@ -38,13 +38,13 @@ The most important $\infty$-category for us will be the\textbf{ $\infty$-categor
 \begin{equation*}
     \Sp\coloneqq \lim\left( \dots\xrightarrow{\Omega}\Spc_* \xrightarrow{\Omega} \Spc_* \xrightarrow{\Omega}\Spc_* \right).
 \end{equation*}
-The existence of such a functor $N(\N)^{\op}\ra \Cat_\infty$ is not obvious. 
+The existence of such a functor $N(\Z_{\geq 0})^{\op}\ra \Cat_\infty$ is not obvious. 
 A priori we have to supply further coherence data. That we can avoid doing this is the content of \cite[Corollary~7.3.17]{cisinski2019higher}. A further consequence of this corollary is that we can actually describe the objects of the resulting limit:
 An object of $\Sp$ - a \textbf{spectrum} -  is a sequence of pointed spaces $\{X_n,\ n=0,1,2,\dots\}$ together with chosen equivalences $X_n\rai \Omega X_{n+1}$ for all $n=0,1,2,\dots$. To differentiate them to other classically defined notions of spectra, they are also called $\Omega$-spectra.
 Let us give the two main examples of interest. For an abelian group $A$, we can consider the sequence of Eilenberg-Maclane spaces $\left( K(A,0),\ K(A,1),\ K(A,2),\dots \right)$. With the usual equivalences $K(A,n)\rai \Omega K(A,n+1)$ this defines a spectrum called the \textbf{Eilenberg-Maclane spectrum }of $A$. 
-This construction assembles into a fully faithful functor $H:\Ab\ra \Sp$ (\cite[Example~1.3.3.5]{lurie2017higher}). Therefore, we will often abuse notation and denote the Eilenberg-Maclane spectrum of $R$ simply by $R$ itself unless we want to stress that we are talking about a discrete ring, in which case we will write $HR$. Spaces also give rise to spectra under the \textbf{suspension spectrum} functor $\Sigma^{\infty}:\Spc_*\ra \Sp$. 
+This construction refines into a fully faithful functor $H:\Ab\ra \Sp$ (\cite[Example~1.3.3.5]{lurie2017higher}). Therefore, we will often abuse notation and denote the Eilenberg-Maclane spectrum of $R$ simply by $R$ itself unless we want to stress that we are talking about a discrete ring, in which case we will write $HR$. Spaces also give rise to spectra under the \textbf{suspension spectrum} functor $\Sigma^{\infty}:\Spc_*\ra \Sp$. 
 This allows us to define the important \textbf{sphere spectrum} $\S\coloneqq \Sigma^{\infty}(S^0)$. The suspension spectrum functor has a right adjoint $\Omega^\infty:\Sp\to\Spc_*$ given by sending a spectrum to its zeroth space. We can also compose this adjunction with the $(\Spc,\Spc_*)$-adunction to obtain an adjunction with unbased spaces $\sip:\Spc\leftrightarrows\Sp:\Omega^\infty$.
-Similarly to spaces, spectra also have \textbf{homotopy groups}, which are defined via the ordinary homotopy groups of their spaces but now we can also define negative homotopy groups. For $X\in \Sp$ and $i\in\Z$ define $\pi_i(X)=\pi_{i+k}(X_k)$ as long as $i+k\geq 0$. This makes sense because $X_k\simeq \Omega X_{k+1}$. They are all abelian because we can always write them as higher homotopy groups of some space.
+Similarly to spaces, spectra also have \textbf{homotopy groups}, which are defined via the ordinary homotopy groups of their spaces but now we can also define negative homotopy groups. For $X\in \Sp$ and $i\in\Z$ define $\pi_i(X)=\pi_{i+k}(X_k)$ as long as $i+k\geq 0$. This is independet of the choice of $k$ because $X_k\simeq \Omega X_{k+1}$. They are all abelian because we can always write them as higher homotopy groups of some space.
 The homotopy groups of a suspension spectrum are the stable homotopy groups of the space. In particular $\pi_*(\S)$ are the stable homotopy groups of spheres. A spectrum is called \textbf{connective}, if all its negative homotopy groups vanish. It is called \textbf{bounded below}, if they vanish below some degree (which is not necessarily 0). Suspension spectra and Eilenberg-Maclane spectra are connective.
 \\
 Important structural properties of the $\infty$-category $\Sp$ are that it is a stable $\infty$-category with all limits and colimits. 
@@ -97,16 +97,16 @@ Let us directly start with the definition, which is notationally identical to or
     $X$ has a canonical map to $X^\wedge_p$ induced by the projections $X\ra X/p^n$. We call $X$ \textbf{$p$-complete} if this map is an equivalence. A map of spectra is called a \textbf{$p$-adic equivalence} if the induced map on $p$-completions is an equivalence.  
 \end{defn}
 Let us be precise about the terms in the definition. For a spectrum $X$ we always have the identity map $X\xrightarrow{1}X$. Since we can add maps between spectra, we can consider the $n$-fold addition of this map to itself to obtain $X\xrightarrow{n}X$. We denote the cofiber of this map as $X/n\coloneqq \cofib(X\xrightarrow{n}X)$. The natural maps $X/p^n\ra X/p^{n-1}$ are induced from taking horizontal cofibers in the relevant commutative diagram.
-An immediate observation is that $p$-completion commutes with arbitrary limits and finite colimits. From this we can also see that $X/p\rai (X_p^{\wedge}/p)$ is an equivalence. The crucial Lemma about $p$-complete spectra and the main reason why we have introduced the concept, is the following.
+An immediate observation is that $p$-completion commutes with arbitrary limits and finite colimits. The crucial Lemma about $p$-complete spectra and the main reason why we have introduced the concept, is the following.
 \begin{lem} \label{modpreduction}
     Let $f:X\ra Y$ be a map of spectra. Then $f$ is a $p$-adic equivalence if and only if $f/p:X/p\ra Y/p$ is an equivalence. In particular\footnote{Here we use that $p$-completion is idempotent, i.e. $(X^\wedge_p)^\wedge_p\simeq X^\wedge_p $.} we can test whether a map of $p$-complete spectra is an equivalence by checking it mod $p$. \\
-    If furthermore $X$ and $Y$ are connective, the map $f$ is already a $p$-adic equivalence provided that $X\otimes_\S H\F_p\to Y\otimes_\S H\F_p$ is an equivalence (i.e. we can check it on $\F_p$-homology).
+    If furthermore $X$ and $Y$ are bounded below, the map $f$ is already a $p$-adic equivalence provided that $X\otimes_\S H\F_p\to Y\otimes_\S H\F_p$ is an equivalence (i.e. we can check it on $\F_p$-homology).
 \end{lem}
 Let us now collect a few further facts about $p$-completion that we will need.
 \begin{itemize}
     \item The Eilenberg-Maclane spectrum of a $p$-complete abelian group is a $p$-complete spectrum. More precisely $HA$ is $p$-complete if and only $A$ is \textbf{derived $p$-complete} in the sense of \href{https://stacks.math.columbia.edu/tag/091S}{Tag 091S}.
     \item A spectrum is $p$-complete if and only if all of its homotopy groups are derived $p$-complete.
-    \item For every spectrum $X$, the spectrum $X/p$ is $p$-complete.
+    \item For every spectrum $X$, the spectrum $X/p$ is $p$-complete. This implies that $X/p\to X_p^{\wedge}/p$ is an equivalence, because $p$ completion commutes with finite colimits.
     \item $p$-completion $(\phantom{X})^{\wedge}_p:\Sp\to\Sp$ is a lax symmetric monoidal functor (but of course not strongly).
     In particular, we have that the $p$-completion of an $\En$-ring $R$ spectrum is an $\En$-ring spectrum again. Furthermore the map $R\ra R_p^{\wedge}$ equips the $p$-completion with an $\En$-$R$-algebra structure.
     \item Let $X,Y$ be module spectra over a connective ring spectrum $R$. Then we can write the $p$-completion of their tensor product in several different (but equivalent) ways:
@@ -190,11 +190,10 @@ Let us record a few facts, that that we will need, in the following Lemma.
     3.) For any ordinary ring $R$, the natural map $\THH(R)\to \HH(R)$ induces an isomorphism on $\pi_0,\pi_1,\pi_2$ and a surjection on $\pi_3$. More generally, for a commutative, connective ring spectrum $S$ and an ordinary $\pi_0(S)$-algebra $R$, the same hold for the map $\THH(R/S)\to \HH(R/\pi_0(S))$. \\
     4.) If $S$ is a connective $\Einf$-ring spectrum and %\footnote{This means, that $R$ is a filtered colimit of perfect $A$-module spectra along increasingly connective maps.}
     $R$ a connective, $p$-complete $S$-algebra spectrum, which is of finite type over $S$, then $\THH(R/S)$ is also $p$-complete.\\   
-    5.) If $S$ is a connective $\Einf$-ring spectrum and $R$ a connective, $p$-complete $S$-algebra spectrum, which is of finite type over $S_p^{\wedge}$, then 
+    5.) If $S$ is a connective $\Einf$-ring spectrum, $T$ a connective $\Einf$-$S$-algebra such that $S\to T$ is a $p$-adic equivalence and $R$ a connective, $p$-complete $T$-algebra , which is of finite type over $T$, then 
     \begin{equation*}
-        \THH(R/S;\Z_p)=\THH(R/S_p^{\wedge})
+        \THH(R/S;\Z_p)=\THH(R/T).
     \end{equation*}
-    In particular, it is $p$-complete by the part 4.).
 \end{lem}
 
 \begin{proof}
@@ -216,13 +215,13 @@ Let us record a few facts, that that we will need, in the following Lemma.
     \end{equation*}
     Because $\pi_1(\Z)=0$ and the last map is an isomorphism, we necessarily have $\pi_0(F_2)=0$. \\
     4.) Recall from the last section that the tensor product of two connective modules over a connective base ring is $p$-complete provided one factor is of finite type over the base ring and the other module is $p$-complete. By our assumption we can see that $R\otimes_S R$ is $p$-complete and by induction that all the term of the form $R\otimes_S \dots \otimes_S R$ are $p$-complete. Now we want to argue that by the bar construction $\THH(R/S)$ is also $p$-complete. This does not work directly because infinite colimits do not preserve $p$-completeness in general. But since finite colimits preserve $p$-completeness, we know that the colimit over $\Delta^{\op}_{\leq n}$ is $p$-complete. The full colimit over $\Delta^{\op}$ is then given by a filtered colimit of these finite stage colimits along increasingly connective maps. This then implies that $\THH(R/S)$ is $p$-complete. \\
-    5.) We have a map $\THH(R/S)\to \THH(R/S_p^{\wedge})$ and want to show that it is a $p$-adic equivalence. This suffices to show the statement, since the target is already $p$-complete by part 4.). 
-    By Lemma \ref{modpreduction} we thus need to show that the map on mod $p$-reductions $\THH(R/S)/p\to \THH(R/S_p^{\wedge})/p$ is an equivalence. For this we can for example use Proposition \ref{base change THH}:
+    5.) The map $S\to T$ induces a map $\THH(R/S)\to \THH(R/T)$ and want to show that it is a $p$-adic equivalence. This suffices to show the statement, since the target is already $p$-complete by part 4.). 
+    By Lemma \ref{modpreduction} we thus need to see that the map on mod $p$-reductions $\THH(R/S)/p\to \THH(R/T)/p$ is an equivalence. For this we can for example use Proposition \ref{base change THH}:
     \begin{align*}
         \THH(R/S)/p&=\THH(R/S)\otimes_S(S/p)\stackrel{\ref{base change THH}}{=}\THH((R/p)/(S/p))\\
-        \to \THH(R/S_p^{\wedge})/p&=\THH(R/S_p^{\wedge})\otimes_{\S_p^{\wedge}}(S_p^{\wedge}/p) \stackrel{\ref{base change THH}}{=}\THH((R/p)/(S^{\wedge}_p/p))
+        \to \THH(R/T)/p&=\THH(R/T)\otimes_{T}(T/p) \stackrel{\ref{base change THH}}{=}\THH((R/p)/(T/p))
     \end{align*}
-    And this map is an equivalence, because $S/p\to S_p^{\wedge}/p$ is.
+    And this map is an equivalence, because by Lemma \ref{modpreduction} $S/p\to T/p$ is an equivalence.
 \end{proof}
 Part 3.) is especially useful when combined with the fact that the explicit map $\Omega^1_{R/S} \cong \HH_1(R/S), adb\mapsto a\otimes b$ is also a natural isomorphism for all (ordinary) commutative rings $R$ and $S$. By the universal property of the de-Rham complex this induces a natural map from the (underlying graded-commutative algebra of the) de-Rham complex to the homology of the Hochschild complex $\Omega^{*}_{R/S} \cong \HH_*(R/S)$. 
 In the case that $R/S$ is smooth, this map is an isomorphism due to the \textbf{Hochschild-Kostant-Rosenberg} (HKR) theorem (see \cite[Section~3.4]{loday2013cyclic}). 
@@ -248,7 +247,7 @@ Let R be an $\Einf$-ring spectrum, then the map $R\ra \THH(R)$ is initial as a n
 \end{proof}
 The same is also true for relative $\THH$. We have that $\THH(R/S)$ is the colimit of the functor $S^1\ra \CAlg_S$ with constant value $R$.
 \\
-We also need to address the monoidality $\THH$.
+Let us also address the monoidality of $\THH$.
 \begin{prop}\label{THHmonoidal}
     For any commutative ring spectrum $S$, the functor \\ $\THH(-/S): \Alg_S\ra \Mod_S$ is symmetric monoidal. In particular, $\THH:\Alg\to \Sp$ is symmetric monoidal and thus $\THH$ of an $\En$-ring spectrum is $\mathbb{E}_{n-1}$. Most importantly $\THH$ of a commutative ring spectrum is again a commutative ring spectrum.
 \end{prop}
@@ -264,9 +263,10 @@ To define it, we first need to discuss our equivariant setup. Let us stress that
     %or $\pg$ (the $p$-Prüfer group\footnote{The group of all roots of unity in $S^1\subset \C$ of $p$-power order.}. 
     A \textbf{spectrum with $G$-action} is a functor $BG\to \Sp$ from the classifying space of $G$ to spectra. A \textbf{$G$-equivariant map} is a natural transformation i.e. a 1-cell in the functor category $\Fun(BG,\Sp)$. The \textbf{homotopy orbits} and \textbf{homotopy fixed points} of a spectrum with $G$-action $X:BG\to \Sp$ are defined as the colimit and limit of the functor.
     \begin{equation*}
-        X^{hG}\coloneqq \lim(F:BG\to \Sp),\quad X_{hG}\coloneqq \colim(F:BG\to \Sp)
+        X_{hG}\coloneqq \colim(F:BG\to \Sp),\quad
+        X^{hG}\coloneqq \lim(F:BG\to \Sp) 
     \end{equation*}
-    There is also a third operation that we need, called the \textbf{Tate construction} $X^{tG}$, which comes equipped with a canonical map from the fixed points $X^{hG}\xrightarrow{\mathrm{can}}X^{tG}$ . 
+    There is also a third functor that we need, called the \textbf{Tate construction} $X^{tG}$, which comes equipped with a natural map from the fixed points $X^{hG}\xrightarrow{\mathrm{can}}X^{tG}$ . 
     %\todo{Do I need something else?}
 \end{defn}
 
@@ -306,14 +306,14 @@ First of all we define \textbf{negative topological cyclic homology} and \textbf
 \begin{defn}
     Let $X$ be a cyclotomic spectrum with structure maps $\varphi_p:X\ra X^{tC_p}$,\ $p\in\pP$. We define its \textbf{topological cyclic homology} as the following fiber:
     \begin{equation*}
-        \TC(X)\ra X^{hS^1}\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\textrm{can}^{hS^1} \right)}\prod_{p\in\pP}(X^{tC_p})^{hS^1} 
+        \TC(X)\ra X^{hS^1}\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\mathrm{can}^{hS^1} \right)}\prod_{p\in\pP}(X^{tC_p})^{hS^1} 
     \end{equation*}
-    We implicitly consider the map $\textrm{can}^{hS^1}$ as being precomposed with an identification of its domain $\textrm{can}^{hS^1}:X^{hS^1}\simeq (X^{hC_p})^{hS^1}\ra(X^{tC_p})^{hS^1}$.
+    We implicitly consider the map $\mathrm{can}^{hS^1}$ as being precomposed with an identification of its domain $\mathrm{can}^{hS^1}:X^{hS^1}\simeq (X^{hC_p})^{hS^1}\ra(X^{tC_p})^{hS^1}$.
     For $R\in \Alg$ we define $\TC(R)\coloneqq \TC(\THH(R))$.
 \end{defn}
 If $X$ is bounded below (e.g. $\THH(R)$ for $R$ connective) we can rewrite the last term in an easier way using the result \cite[Lemma~II.4.2]{NS} that $(X^{tCp})^{hS^1}\simeq (X^{tS^1})_p^{\wedge}$. We thus get the formula
 \begin{equation*}
-    \TC(X)=\fib\left(  \TCm(X)\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\textrm{can} \right)}\prod_{p\in\pP} \TP(X)^{\wedge}_p\right).
+    \TC(X)=\fib\left(  \TCm(X)\xrightarrow{\prod_{p\in\pP}\left( (\varphi_p)^{hS^1}-\textrm{can}^{hS^1} \right)}\prod_{p\in\pP} \TP(X)^{\wedge}_p\right).
 \end{equation*}
 The crucial relationship with K-theory is provided via the \textbf{cyclotomic trace}, which is a natural transformation $K\xrightarrow{\tr} \TC$. A conceptual definition using a universal characterization of K-theory is given in \cite[Section~10.3]{BGTuniversal}.
 The first crucial theorem establishing the intimate relationship between K-theory and $\TC$ was proven by Dundas-Goodwillie-McCarthy .

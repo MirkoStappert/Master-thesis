@@ -8,6 +8,10 @@
 *.acr
 *.alg
 *.bbl
+*.bcf
+*.fls
+*.xml
+*.tdo
 *.blg
 *.dvi
 *.glg
